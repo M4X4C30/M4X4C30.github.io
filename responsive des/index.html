@@ -1,0 +1,130 @@
+<html>
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <div class="main_container">
+
+        <div class="nav_bar">
+
+            <div class="title_div">
+                <h2>Logo</h2>
+            </div>
+
+            <div class="menu_div">
+                
+                    <img class="nav_menu nav_menu_btn" tabindex="0"
+                    src="assets/menu_icon.png">
+
+            </div>
+
+        </div>
+
+        <div class="container content_div1">
+
+            <h1>
+                <label>Name</label> <br>
+                <label>Lorem ipsum, dolor sit amet<br> lorem</label>
+            </h1>
+            
+
+            <div class="_div"></div>
+            <div class="_div"></div>
+            <div class="_div"></div>
+
+        </div>
+
+        <div class="option_div">
+
+            <div class="MenuOptions_div">
+
+                <div class="MenuOption">
+                    <div class="Menu_Container">
+                        <div class="Dot">&nbsp&nbsp&nbsp</div>
+                    </div>
+                    <div class="Menu_Button">
+                        <label class="MB_About">About</label>
+                    </div>
+                </div>
+
+                <div class="MenuOption">
+                    <div class="Menu_Container">
+                        <div class="Dot">&nbsp&nbsp&nbsp</div>
+                    </div>
+                    <div class="Menu_Button">
+                        <label class="MB_Projects">Projects</label>
+                    </div>
+                </div>
+
+                <div class="MenuOption">
+                    <div class="Menu_Container">
+                        <div class="Dot">&nbsp&nbsp&nbsp</div>
+                    </div>
+                    <div class="Menu_Button">
+                        <label class="MB_Contacts">Contacts</label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const btnAbout = document.querySelector('.MB_About');
+        const btnProjects = document.querySelector('.MB_Projects');
+        const btnContacts = document.querySelector('.MB_Contacts');
+
+        btnAbout.addEventListener("click", () => {
+            window.location.href = "about/";
+        })
+
+        btnProjects.addEventListener('click', () => {
+            window.location.href = "projects/";
+        });
+        btnContacts.addEventListener('click', () => {
+            window.location.href = "";
+        });
+
+    </script>
+
+    <script>
+
+        const showMenu = document.querySelector('.nav_menu_btn')
+        const closeMenu = document.querySelector("[close-dialog]")
+        const Menu = document.querySelector('.option_div')
+
+        showMenu.addEventListener("click", () => {
+            Menu.style.display = "block";
+        })
+        // closeMenu.addEventListener("click", () => {
+        //     Menu.style.display = "none";
+        // })
+        // Menu.addEventListener("click", e => {
+        //     const dialogDimensions = Menu.getBoundingClientRect()
+        //     if (
+        //         e.clientX < dialogDimensions.left ||
+        //         e.clientX > dialogDimensions.right ||
+        //         e.clientY < dialogDimensions.top ||
+        //         e.clientY > dialogDimensions.bottom
+        //     ) {
+        //         Menu.close()
+        //     }
+        //     })
+        window.addEventListener("mousedown", (event) => {
+            if (!Menu.contains(event.target) && event.target !== showMenu) {
+                Menu.style.display = "none";
+            }
+        });
+
+    </script>
+
+</body>
+</html>

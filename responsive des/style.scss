@@ -1,0 +1,176 @@
+/* <Variables> */
+    $Dborder_R: 1px red solid;
+    $Dborder_C: 1px cyan solid;
+    $Dborder_L: 1px lime solid;
+
+/* </Variables? */
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 10px;
+}
+body {
+    background-image: radial-gradient(circle, #11004e, #000025);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+#navbar_container {
+    border: $Dborder_L;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    .Logo_container {
+        font-size: 2.5rem;
+    }
+
+
+/*-----------------------------clicked---------------------------------------*/
+    .option_container_clicked {
+        border: $Dborder_R;
+        position: absolute;
+        width: 10.5rem;
+        height: 7rem;
+        transform: scale(1);
+        right: 0.5rem;
+        top: 7rem;
+
+        .option_wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+            .options_div {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+                .dot_div {
+                    border: 1px rgba(255, 255, 255, 0.8) solid;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 50rem;
+                }
+                .option_btn {
+                    border: 1px rgba(255, 255, 255, 0.8) solid;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 7.5rem;
+                    height: 1.5rem;
+                    border-radius: 50rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem;
+                    label {
+                        display: block;
+                    }
+                }
+    }
+/*-----------------------------unclicked---------------------------------------*/
+    .option_container_unclicked {
+        border: $Dborder_R;
+        position: absolute;
+        width: 9rem;
+        height: 5rem;
+        transform: scale(0.8);
+        right: -0.5rem;   
+
+        .option_wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+            .options_div {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+                .dot_div {
+                    border: 1px rgba(255, 255, 255, 0.8) solid;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50rem;
+                }
+                .option_btn {
+                    border: 1px rgba(255, 255, 255, 0.8) solid;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 7rem;
+                    height: 1rem;
+                    border-radius: 50rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem;
+                    label {
+                        display: none;
+                    }
+                }
+    }
+}
+
+
+#content_container {
+    border: $Dborder_R;
+    position: relative;
+    top: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    #My_pic {
+        width: 8rem;
+        border-radius: 50%;
+    }
+}
+
+@media (min-width: 475px) {
+    #btn_nav_Menu {
+        display: none;
+    }
+}
+
+@media (min-width: 640px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
+
+@media (min-width: 1536px) {
+
+}

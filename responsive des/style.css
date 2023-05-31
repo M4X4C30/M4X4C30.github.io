@@ -1,147 +1,144 @@
+/* <Variables> */
+/* </Variables? */
 html {
-    font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 10px;
 }
+
 body {
-    background-image: radial-gradient(circle, #11004e, #000025);
-    /* background-size: cover;
-    background-attachment: fixed; */
-    margin: 0%;
-    padding: 0%;
-    color: white;
-}
-.main_container {
-    border: 1px red solid;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    margin: 0%;
-    padding: 0.5rem;
+  background-image: radial-gradient(circle, #11004e, #000025);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.container {
-    border: 1px red solid;
-    overflow: hidden;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#navbar_container {
+  border: 1px lime solid;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  /*-----------------------------clicked---------------------------------------*/
+  /*-----------------------------unclicked---------------------------------------*/
 }
-.nav_bar {
-    border: 1px white solid;
-    position: fixed;
-    top: 0%;
-    right: 0%;
-    left: 0%;
-    margin: 0%;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    padding: 0.5rem;
+#navbar_container .Logo_container {
+  font-size: 2.5rem;
 }
-    
-    .menu_div {
-        position: relative;
-        /* border: 1px red solid; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent;
-    }
-        .nav_menu {
-            height: 4rem;
-            /* border: 1px red solid; */
-        }
-
-.option_div {
-    position: fixed;
-    top: 4.1rem;
-    left: 0%;
-    margin: 0%;
-    display: none;
-    width: 10%;
+#navbar_container .option_container_clicked {
+  border: 1px red solid;
+  position: absolute;
+  width: 10.5rem;
+  height: 7rem;
+  transform: scale(1);
+  right: 0.5rem;
+  top: 7rem;
 }
-    .MenuOptions_div {
-        position: relative;
-        text-align: right;
-        color: white;
-        display: flex;
-        align-items: start;
-        justify-content: left;
-        flex-direction: column;
-        gap: 0.2rem;
-    }
-        .MenuOption {
-            position: relative;
-            padding: 0.3rem;
-            color: white;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            gap: 1rem;
-        }
-            .Menu_Container {
-                position: relative;
-                margin: 0%;
-                width: 100%;
-                height: 100%;
-            }
-            .Dot {
-                border: 0.1vw rgba(255, 255, 255, 0.5) solid;
-                background-color: rgba(0, 0, 0, 0.8);
-                border-radius: 50%;
-                width: 100%;
-                padding: 0.1rem;
-            }
-            .Menu_Button {
-                border: 0.1vw rgba(255, 255, 255, 0.5) solid;
-                background-color: rgba(0, 0, 0, 0.8);
-                border-radius: 1rem;
-                padding: 0.2rem;
-                font-size: 0.8rem;
-            }
+#navbar_container .option_container_clicked .option_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#navbar_container .option_container_clicked .options_div {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#navbar_container .option_container_clicked .dot_div {
+  border: 1px rgba(255, 255, 255, 0.8) solid;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50rem;
+}
+#navbar_container .option_container_clicked .option_btn {
+  border: 1px rgba(255, 255, 255, 0.8) solid;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 7.5rem;
+  height: 1.5rem;
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+#navbar_container .option_container_clicked .option_btn label {
+  display: block;
+}
+#navbar_container .option_container_unclicked {
+  border: 1px red solid;
+  position: absolute;
+  width: 9rem;
+  height: 5rem;
+  transform: scale(0.8);
+  right: -0.5rem;
+}
+#navbar_container .option_container_unclicked .option_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#navbar_container .option_container_unclicked .options_div {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#navbar_container .option_container_unclicked .dot_div {
+  border: 1px rgba(255, 255, 255, 0.8) solid;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50rem;
+}
+#navbar_container .option_container_unclicked .option_btn {
+  border: 1px rgba(255, 255, 255, 0.8) solid;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 7rem;
+  height: 1rem;
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+#navbar_container .option_container_unclicked .option_btn label {
+  display: none;
+}
 
-
-.content_div1 {
-    margin-top: 5rem;
-    text-align: center;
+#content_container {
+  border: 1px red solid;
+  position: relative;
+  top: 8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+#content_container #My_pic {
+  width: 8rem;
+  border-radius: 50%;
 }
 
 @media (min-width: 475px) {
-    h1 {
-        color: red;
-    }
-    .menu_div {
-        display: none;
-    }
-    .option_div {
-        display: none !important;
-    }
-}
-
-@media (min-width: 640px) {
-    h1 {
-        color: rgb(0, 119, 255);
-    }
-}
-
-@media (min-width: 768px) {
-
-}
-
-@media (min-width: 1024px) {
-
-}
-
-@media (min-width: 1280px) {
-
-}
-
-@media (min-width: 1536px) {
-
-}
+  #btn_nav_Menu {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 /* <Variables> */
 /* </Variables? */
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   color: white;
   font-size: 10px;
   margin: 0%;
@@ -51,14 +51,24 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
+@keyframes fadein_clicked {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #navbar_container .option_container_clicked .options_div {
+  border-radius: 0.5rem;
   width: 100%;
   height: 30%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  animation: fadein_clicked 1s ease-in-out;
 }
-#navbar_container .option_container_clicked .options_div:hover {
+#navbar_container .option_container_clicked .options_div:active {
   background-color: rgba(44, 15, 146, 0.5);
   box-shadow: 0px 0px 20px #2c0f92;
 }
@@ -103,12 +113,21 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
+@keyframes fadein_unclicked {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #navbar_container .option_container_unclicked .options_div {
   width: 100%;
   height: 30%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  animation: fadein_unclicked 0.5s ease-in-out;
 }
 #navbar_container .option_container_unclicked .dot_div {
   border: 1px rgba(118, 103, 170, 0.8) solid;
@@ -153,10 +172,6 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-#navbar_container .option_container_expanded .options_div:hover {
-  background-color: rgba(44, 15, 146, 0.5);
-  box-shadow: 0px 0px 20px #2c0f92;
-}
 #navbar_container .option_container_expanded .dot_div {
   display: none;
 }
@@ -173,6 +188,13 @@ body {
 }
 #navbar_container .option_container_expanded .option_btn label {
   display: block;
+}
+#navbar_container .option_container_expanded .option_btn:hover {
+  box-shadow: 0px 0px 20px #2c0f92;
+}
+#navbar_container .option_container_expanded .option_btn:focus {
+  outline: none !important;
+  box-shadow: 0px 0px 20px #2c0f92;
 }
 
 #content_container {
@@ -191,14 +213,29 @@ body {
   width: 8rem;
   border-radius: 50%;
 }
+#content_container .Txt_Name {
+  font-size: 3rem;
+}
+#content_container .Txt_Description {
+  font-size: 2rem;
+}
+#content_container label {
+  font-weight: bold;
+}
 
 @media (min-width: 475px) {
   #content_container {
     flex-direction: row;
+    gap: 1rem;
   }
   #content_container #My_pic {
     width: 12.5rem;
     border-radius: 50%;
+  }
+  #content_container .Txt_My_pic {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
   #content_container .Txt_Name {
     font-size: 3rem;

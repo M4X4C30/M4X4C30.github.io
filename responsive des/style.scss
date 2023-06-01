@@ -11,7 +11,7 @@
 /* </Variables? */
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     color: white;
     font-size: 10px;
     margin: 0%;
@@ -62,14 +62,26 @@ body {
             justify-content: space-between;
             flex-direction: column;
         }
+        
+            @keyframes fadein_clicked {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
             .options_div {
+                // border: $Dborder_L;
+                border-radius: 0.5rem;
                 width: 100%;
                 height: 30%;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+                animation: fadein_clicked 1s ease-in-out;
 
-                &:hover {
+                &:active {
                     background-color: rgba(44, 15, 146, 0.5);
                     box-shadow: 0px 0px 20px #2c0f92;
                 }
@@ -119,12 +131,21 @@ body {
             justify-content: space-between;
             flex-direction: column;
         }
+            @keyframes fadein_unclicked {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
             .options_div {
                 width: 100%;
                 height: 30%;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+                animation: fadein_unclicked 0.5s ease-in-out;
             }
                 .dot_div {
                     border: 1px rgba(118, 103, 170, 0.8) solid;
@@ -173,10 +194,6 @@ body {
                 align-items: center;
                 justify-content: space-around;
 
-                &:hover {
-                    background-color: rgba(44, 15, 146, 0.5);
-                    box-shadow: 0px 0px 20px #2c0f92;
-                }
             }
                 .dot_div {
                     display: none;
@@ -191,12 +208,26 @@ body {
                     align-items: center;
                     justify-content: center;
                     font-size: 1rem;
+
                     label {
                         display: block;
                     }
+
+                    &:hover {
+                        // background-color: rgba(44, 15, 146, 0.5);
+                        box-shadow: 0px 0px 20px #2c0f92;
+                    }
+
+                    &:focus {
+                        outline: none !important;
+                        // background-color: rgba(44, 15, 146, 0.5);
+                        box-shadow: 0px 0px 20px #2c0f92;
+                    }
+
                 }
     }
 }
+
 
 
 #content_container {
@@ -215,22 +246,41 @@ body {
         width: 8rem;
         border-radius: 50%;
     }
+
+    .Txt_Name {
+        font-size: $Txt_Size_3;
+    }
+
+    .Txt_Description {
+        font-size: $Txt_Size_2;
+    }
+
+    label {
+        font-weight: bold;
+    }
 }
 
 
 
 @media (min-width: 475px) {
     #content_container {
-        flex-direction: row;
+            flex-direction: row;
+            gap: 1rem;
     
         #My_pic {
             width: 12.5rem;
             border-radius: 50%;
         }
-        
+
+        .Txt_My_pic {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
         .Txt_Name {
             font-size: $Txt_Size_3;
         }
+
         .Txt_Description {
             font-size: $Txt_Size_2;
         }

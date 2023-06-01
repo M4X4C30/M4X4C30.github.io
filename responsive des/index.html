@@ -13,14 +13,14 @@
         <img id="My_pic"
         src="assets/mrbiiiiisssss.png">
 
-        <h1>
+        <div class="Txt_My_pic">
             <div>
                 <label class="Txt_Name">Name</label>
             </div>
             <div>
-                <label class="Txt_Description">Lorem ipsum dolor sit amet consectetur adipisicing elit</label>
+                <label class="Txt_Description">Full-stack web developer</label>
             </div>
-        </h1>
+        </div>
 
         <p></p>
 
@@ -80,6 +80,11 @@
     <script>
         const openMenuBtn = document.querySelector('#btn_nav_Menu');
 
+        const btnAbout = document.querySelector('#direct_About_req');
+        const btnProjects = document.querySelector('#direct_Projects_req');
+        const btnContacts = document.querySelector('#direct_Contacts_req');
+
+        const option_btn = document.querySelectorAll('.options_div');
         
         //expanded menu design
         var expdScreenSize = window.matchMedia("(min-width: 600px)");
@@ -92,7 +97,37 @@
                 var wipeAllClass = document.querySelector('#btn_nav_Menu');
                 wipeAllClass.className = "";
 
-                openMenuBtn.classList.add('option_container_expanded');  
+                openMenuBtn.classList.add('option_container_expanded');
+                    // option_btn.forEach((OButtons) => {
+                    //     OButtons.setAttribute('tabindex', '0');
+                    // });
+                btnAbout.setAttribute('tabindex', '0');
+                btnProjects.setAttribute('tabindex', '0');
+                btnContacts.setAttribute('tabindex', '0');
+                
+                const addEnterKeyListener = (element) => {
+
+                btnAbout.addEventListener('keyup', (event) => {
+                    if (event.key === 'Enter') {
+                        window.location.href = 'about/';
+                    }
+                });
+
+                btnProjects.addEventListener('keyup', (event) => {
+                    if (event.key === 'Enter') {
+                        window.location.href = 'projects/';
+                    }
+                });
+
+                btnContacts.addEventListener('keyup', (event) => {
+                    if (event.key === 'Enter') {
+                        window.location.href = 'contacts/';
+                    }
+                });
+                
+                }
+                addEnterKeyListener(btnAbout);
+
             }
             //not expanded mode --------------
             else
@@ -101,6 +136,12 @@
                 wipeAllClass.className = "";
 
                 openMenuBtn.classList.add('option_container_unclicked');
+                    // option_btn.forEach((OButtons) => {
+                    //     OButtons.removeAttribute('tabindex', '0');
+                    // }); 
+                btnAbout.removeAttribute('tabindex');
+                btnProjects.removeAttribute('tabindex');
+                btnContacts.removeAttribute('tabindex');
                 
                 //clicked and unclicked ---------------
                 if (!openMenuBtn.classList.contains('option_container_expanded') && !expdScreenSize.matches) 
@@ -148,9 +189,7 @@
 
 
         //navigation
-        const btnAbout = document.querySelector('#direct_About_req');
-        const btnProjects = document.querySelector('#direct_Projects_req');
-        const btnContacts = document.querySelector('#direct_Contacts_req');
+        
 
         btnAbout.addEventListener('click', () => {
             if (openMenuBtn.classList.contains('option_container_clicked') 
@@ -167,11 +206,12 @@
         btnContacts.addEventListener('click', () => {
             if (openMenuBtn.classList.contains('option_container_clicked') 
             || openMenuBtn.classList.contains('option_container_expanded')) {
-                window.location.href = '';
+                window.location.href = 'contacts/';
             }
         });
 
     </script>
+
 
 </body>
 </html>

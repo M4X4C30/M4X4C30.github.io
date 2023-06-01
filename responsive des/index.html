@@ -14,9 +14,15 @@
         src="assets/mrbiiiiisssss.png">
 
         <h1>
-            <label>Name</label> <br>
-            <label>Lorem ipsum dolor sit amet consectetur adipisicing elit</label>
+            <div>
+                <label>Name</label>
+            </div>
+            <div>
+                <label>Lorem ipsum dolor sit amet consectetur adipisicing elit</label>
+            </div>
         </h1>
+
+        <p></p>
 
     </div>
 
@@ -72,20 +78,73 @@
 
     <!--Menu Button Script-->
     <script>
-        //clicked and uncliked
         const openMenuBtn = document.querySelector('#btn_nav_Menu');
-        
-        openMenuBtn.addEventListener('click', () => {
-            openMenuBtn.classList.remove('option_container_unclicked');
-            openMenuBtn.classList.add('option_container_clicked')
-        })
 
-        window.addEventListener('click', (event) => {
-            if (!openMenuBtn.contains(event.target) && event.target !== openMenuBtn) {
+        
+        //expanded menu design
+        var expdScreenSize = window.matchMedia("(min-width: 475px)");
+
+        function checkingScreenSize(expdScreenSize) 
+        {
+            //expanded mode ----------------
+            if (expdScreenSize.matches)
+            {
+                var wipeAllClass = document.querySelector('#btn_nav_Menu');
+                wipeAllClass.className = "";
+
+                openMenuBtn.classList.add('option_container_expanded');  
+            }
+            //not expanded mode --------------
+            else
+            {
+                var wipeAllClass = document.querySelector('#btn_nav_Menu');
+                wipeAllClass.className = "";
+
                 openMenuBtn.classList.add('option_container_unclicked');
-                openMenuBtn.classList.remove('option_container_clicked');
+                
+                //clicked and unclicked ---------------
+                if (!openMenuBtn.classList.contains('option_container_expanded') && !expdScreenSize.matches) 
+                {
+                    openMenuBtn.addEventListener('click', () => 
+                    {
+                        if (!expdScreenSize.matches && !openMenuBtn.classList.contains('option_container_expanded')) 
+                        {
+                            var wipeAllClass = document.querySelector('#btn_nav_Menu');
+                            wipeAllClass.className = "";
+
+                            openMenuBtn.classList.add('option_container_clicked');
+                        }
+                    });
+
+                    window.addEventListener('click', (event) => {
+                        if (!openMenuBtn.contains(event.target) && event.target !== openMenuBtn 
+                        && !expdScreenSize.matches && !openMenuBtn.classList.contains('option_container_expanded')) 
+                        {
+                            var wipeAllClass = document.querySelector('#btn_nav_Menu');
+                            wipeAllClass.className = "";
+
+                            openMenuBtn.classList.add('option_container_unclicked'); 
+                        }
+                    });
+                    window.addEventListener('scroll', (event) => {
+                        if (!openMenuBtn.contains(event.target) && event.target !== openMenuBtn 
+                        && !expdScreenSize.matches && !openMenuBtn.classList.contains('option_container_expanded')) 
+                        {
+                            var wipeAllClass = document.querySelector('#btn_nav_Menu');
+                            wipeAllClass.className = "";
+
+                            openMenuBtn.classList.add('option_container_unclicked');
+                        }
+                    });
+                }
+            }       
         }
-        })
+
+        checkingScreenSize(expdScreenSize);
+
+        window.addEventListener('resize', function() {
+            checkingScreenSize(expdScreenSize);
+        });
 
 
         //navigation
@@ -94,17 +153,20 @@
         const btnContacts = document.querySelector('#direct_Contacts_req');
 
         btnAbout.addEventListener('click', () => {
-            if (openMenuBtn.classList.contains('option_container_clicked')) {
+            if (openMenuBtn.classList.contains('option_container_clicked') 
+            || openMenuBtn.classList.contains('option_container_expanded')) {
                 window.location.href = 'about/';
             }
         });
         btnProjects.addEventListener('click', () => {
-            if (openMenuBtn.classList.contains('option_container_clicked')) {
+            if (openMenuBtn.classList.contains('option_container_clicked') 
+            || openMenuBtn.classList.contains('option_container_expanded')) {
                 window.location.href = 'projects/';
             }
         });
         btnContacts.addEventListener('click', () => {
-            if (openMenuBtn.classList.contains('option_container_clicked')) {
+            if (openMenuBtn.classList.contains('option_container_clicked') 
+            || openMenuBtn.classList.contains('option_container_expanded')) {
                 window.location.href = '';
             }
         });

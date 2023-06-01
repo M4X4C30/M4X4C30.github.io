@@ -4,16 +4,20 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-size: 10px;
+  margin: 0%;
 }
 
 body {
   background-image: radial-gradient(circle, #11004e, #000025);
   background-attachment: fixed;
   background-size: cover;
+  margin: 0%;
 }
 
 #navbar_container {
-  border: 1px lime solid;
+  background-color: rgba(0, 0, 37, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px #2c0f92;
   position: fixed;
   top: 0%;
   left: 0%;
@@ -32,7 +36,6 @@ body {
   font-size: 2.5rem;
 }
 #navbar_container .option_container_clicked {
-  border: 1px red solid;
   position: absolute;
   width: 10.5rem;
   height: 7rem;
@@ -55,15 +58,19 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+#navbar_container .option_container_clicked .options_div:hover {
+  background-color: rgba(44, 15, 146, 0.5);
+  box-shadow: 0px 0px 20px #2c0f92;
+}
 #navbar_container .option_container_clicked .dot_div {
-  border: 1px rgba(255, 255, 255, 0.8) solid;
+  border: 1px rgba(118, 103, 170, 0.8) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50rem;
 }
 #navbar_container .option_container_clicked .option_btn {
-  border: 1px rgba(255, 255, 255, 0.8) solid;
+  border: 1px rgba(118, 103, 170, 0.8) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 7.5rem;
   height: 1.5rem;
@@ -77,12 +84,16 @@ body {
   display: block;
 }
 #navbar_container .option_container_unclicked {
-  border: 1px red solid;
+  border-radius: 1rem;
   position: absolute;
   width: 9rem;
   height: 5rem;
   transform: scale(0.8);
   right: -0.5rem;
+}
+#navbar_container .option_container_unclicked:hover {
+  background-color: rgba(44, 15, 146, 0.5);
+  box-shadow: 0px 0px 20px #2c0f92;
 }
 #navbar_container .option_container_unclicked .option_wrapper {
   width: 100%;
@@ -100,14 +111,14 @@ body {
   justify-content: space-around;
 }
 #navbar_container .option_container_unclicked .dot_div {
-  border: 1px rgba(255, 255, 255, 0.8) solid;
+  border: 1px rgba(118, 103, 170, 0.8) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 1rem;
   height: 1rem;
   border-radius: 50rem;
 }
 #navbar_container .option_container_unclicked .option_btn {
-  border: 1px rgba(255, 255, 255, 0.8) solid;
+  border: 1px rgba(118, 103, 170, 0.8) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 7rem;
   height: 1rem;
@@ -121,7 +132,6 @@ body {
   display: none;
 }
 #navbar_container .option_container_expanded {
-  border: 1px red solid;
   position: relative;
   height: 7rem;
   transform: scale(1);
@@ -143,19 +153,18 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+#navbar_container .option_container_expanded .options_div:hover {
+  background-color: rgba(44, 15, 146, 0.5);
+  box-shadow: 0px 0px 20px #2c0f92;
+}
 #navbar_container .option_container_expanded .dot_div {
-  border: 1px rgba(255, 255, 255, 0.8) solid;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50rem;
   display: none;
 }
 #navbar_container .option_container_expanded .option_btn {
-  border: 1px rgba(255, 255, 255, 0.8) solid;
+  border: 1px rgba(118, 103, 170, 0.8) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 7.5rem;
-  height: 1.5rem;
+  height: 2rem;
   border-radius: 50rem;
   display: flex;
   align-items: center;
@@ -184,13 +193,23 @@ body {
 }
 
 @media (min-width: 475px) {
-  h1 {
-    color: purple;
+  #content_container {
+    flex-direction: row;
+  }
+  #content_container #My_pic {
+    width: 12.5rem;
+    border-radius: 50%;
+  }
+  #content_container .Txt_Name {
+    font-size: 3rem;
+  }
+  #content_container .Txt_Description {
+    font-size: 2rem;
   }
 }
 @media (min-width: 640px) {
-  h1 {
-    color: red;
+  .option_wrapper {
+    gap: 2rem;
   }
 }
 @media (min-width: 768px) {

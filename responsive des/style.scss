@@ -8,7 +8,7 @@
     $Txt_Size_3: 3rem;
     $Txt_Size_4: 4rem;
     $Txt_Size_5: 5rem;
-/* </Variables? */
+/* </Variables> */
 
 html {
     font-family: sans-serif;
@@ -17,17 +17,25 @@ html {
     margin: 0%;
 }
 body {
-    background-image: radial-gradient(circle, #11004e, #000025);
+    background-image: radial-gradient(circle, hsl(253, 100%, 15%), hsl(240, 100%, 7%));
     background-attachment: fixed;
     background-size: cover;
     margin: 0%;
 }
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    // box-shadow: 0px 0px 0.1rem 0.1rem rgba(255, 255, 255, 0.5);
+}
 
 
 #navbar_container {
-    background-color: rgba(0, 0, 37, 0.8);
-    border-radius: 1rem;
-    box-shadow: 0px 5px 10px #2c0f92;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 5px hsl(260, 80%, 35%);
     position: fixed;
     top: 0%;
     left: 0%;
@@ -49,7 +57,7 @@ body {
         // border: $Dborder_R;
         position: absolute;
         width: 10.5rem;
-        height: 7rem;
+        height: 10rem;
         transform: scale(1);
         right: 0.5rem;
         top: 7rem;
@@ -75,7 +83,7 @@ body {
                 // border: $Dborder_L;
                 border-radius: 0.5rem;
                 width: 100%;
-                height: 30%;
+                height: 40%;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
@@ -89,15 +97,15 @@ body {
                 .dot_div {
                     border: 1px rgba(118, 103, 170, 0.8) solid;
                     background-color: rgba(0, 0, 0, 0.7);
-                    width: 1.5rem;
-                    height: 1.5rem;
+                    width: 2rem;
+                    height: 2rem;
                     border-radius: 50rem;
                 }
                 .option_btn {
                     border: 1px rgba(118, 103, 170, 0.8) solid;
                     background-color: rgba(0, 0, 0, 0.7);
                     width: 7.5rem;
-                    height: 1.5rem;
+                    height: 2rem;
                     border-radius: 50rem;
                     display: flex;
                     align-items: center;
@@ -179,6 +187,7 @@ body {
         right: 0.5rem;
 
         .option_wrapper {
+            // border: $Dborder_R;
             width: 100%;
             height: 100%;
             display: flex;
@@ -229,67 +238,138 @@ body {
 }
 
 
-
-#content_container {
-    border: $Dborder_R;
-    position: relative;
-    top: 8rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
+#main_content {
+    // border: 1px orangered solid;
+    position: fixed;
+    overflow-y: scroll;
+    top: 6rem;
+    bottom: 0%;
+    left: 1rem;
+    right: 0%;
+    display: grid;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+    gap: 1rem;
 
-    #My_pic {
-        width: 8rem;
-        border-radius: 50%;
+    .contents_div {
+        // border: $Dborder_L;
+        position: relative;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
-    .Txt_Name {
-        font-size: $Txt_Size_3;
-    }
-
-    .Txt_Description {
-        font-size: $Txt_Size_2;
-    }
-
-    label {
-        font-weight: bold;
-    }
-}
-
-
-
-@media (min-width: 475px) {
-    #content_container {
-            flex-direction: row;
-            gap: 1rem;
+    #content_1_container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     
         #My_pic {
-            width: 12.5rem;
+            width: 8rem;
             border-radius: 50%;
         }
-
-        .Txt_My_pic {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
+    
         .Txt_Name {
+            // border: $Dborder_L;
             font-size: $Txt_Size_3;
         }
-
+    
         .Txt_Description {
+            // border: $Dborder_L;
             font-size: $Txt_Size_2;
+        }
+    
+        label {
+            font-weight: bold;
         }
     }
 }
 
-@media (min-width: 640px) { //current wide menu display is set to 600px
-    .option_wrapper {
-        gap: 2rem;
+
+
+
+@media (min-width: 475px) { //current wide menu display is set to 475px
+    
+    #navbar_container {
+        height: 8rem;
+    }
+
+    #main_content {
+        top: 8rem;
+        flex-direction: row;
+        gap: 1rem;
+    
+        .contents_div {
+            position: relative;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    
+        #content_1_container {
+            flex-direction: row;
+        
+            #My_pic {
+                width: 12.5rem;
+                border-radius: 50%;
+            }
+        
+            
+            .Txt_Name {
+                font-size: $Txt_Size_3;
+            }
+        
+            .Txt_Description {
+                font-size: $Txt_Size_2;
+            }
+        
+            label {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) { 
+
+    #navbar_container {
+
+        .option_container_expanded {
+        
+            .option_btn {
+                width: 8.5rem;
+                height: 2.5rem;
+            }
+
+        }
+    }
+
+    #main_content {
+    
+        .contents_div {
+            position: relative;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    
+        #content_1_container {
+            flex-direction: row;
+            
+            .Txt_Name {
+                font-size: $Txt_Size_3;
+            }
+        
+            .Txt_Description {
+                font-size: $Txt_Size_2;
+            }
+        
+            label {
+                font-weight: bold;
+            }
+        }
     }
 }
 
@@ -300,13 +380,19 @@ body {
 }
 
 @media (min-width: 1024px) {
-
+    h1 {
+        color: indigo;
+    }
 }
 
 @media (min-width: 1280px) {
-
+    h1 {
+        color: indigo;
+    }
 }
 
 @media (min-width: 1536px) {
-
+    h1 {
+        color: indigo;
+    }
 }

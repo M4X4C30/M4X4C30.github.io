@@ -1,0 +1,66 @@
+/* Animations --------------------- */
+@keyframes Fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slidefromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slidefromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes Scalein {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes Rotatein {
+    0%{
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Classes --------------------- */
+.An_Fadein {
+    animation: Fadein 1s ease-in-out;
+}
+
+.An_slidefromLeft {
+    animation: slidefromLeft 0.5s ease-in;
+}
+
+.An_slidefromRight {
+    animation: slidefromRight 0.5s ease-in;
+}
+
+.An_Scalein {
+    animation: Scalein 0.3s ease-in-out;
+}
+
+.An_Rotatein {
+    animation: Rotatein 0.5s ease-in-out;
+}

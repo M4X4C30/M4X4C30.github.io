@@ -3,6 +3,6 @@ html {
     color: white;
 }
 body {
-    background-image: radial-gradient(circle, #11004e, #000025);
+    background-image: radial-gradient(circle, hsl(253, 100%, 15%), hsl(240, 100%, 7%));
     margin: 0%;
 }

@@ -9,7 +9,7 @@ const OPTION_BTN = document.querySelectorAll('.options_div');
 //expanded menu design
 var expandScreenSize = window.matchMedia("(min-width: 475px)");
 
-function checkingScreenSize(expandScreenSize) 
+function checkingScreenSize(expandScreenSize)
 {
     //expanded mode ----------------
     if (expandScreenSize.matches)

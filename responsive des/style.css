@@ -6,6 +6,9 @@ html {
   font-size: 10px;
   margin: 0%;
 }
+html .Accent_Text {
+  color: hsl(242, 100%, 68%);
+}
 
 body {
   background-image: radial-gradient(circle, hsl(253, 100%, 15%), hsl(240, 100%, 7%));
@@ -82,14 +85,14 @@ body {
   box-shadow: 0px 0px 20px #2c0f92;
 }
 #navbar_container .option_container_clicked .dot_div {
-  border: 1px rgba(118, 103, 170, 0.8) solid;
+  border: 1px hsl(58, 100%, 77%) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 2rem;
   height: 2rem;
   border-radius: 50rem;
 }
 #navbar_container .option_container_clicked .option_btn {
-  border: 1px rgba(118, 103, 170, 0.8) solid;
+  border: 1px hsl(58, 100%, 77%) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 7.5rem;
   height: 2rem;
@@ -139,14 +142,14 @@ body {
   animation: fadein_unclicked 0.5s ease-in-out;
 }
 #navbar_container .option_container_unclicked .dot_div {
-  border: 1px rgba(118, 103, 170, 0.8) solid;
+  border: 1px hsl(58, 100%, 77%) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 1rem;
   height: 1rem;
   border-radius: 50rem;
 }
 #navbar_container .option_container_unclicked .option_btn {
-  border: 1px rgba(118, 103, 170, 0.8) solid;
+  border: 1px hsl(58, 100%, 77%) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 7rem;
   height: 1rem;
@@ -185,7 +188,7 @@ body {
   display: none;
 }
 #navbar_container .option_container_expanded .option_btn {
-  border: 1px rgba(118, 103, 170, 0.8) solid;
+  border: 1px hsl(58, 100%, 77%) solid;
   background-color: rgba(0, 0, 0, 0.7);
   width: 7.5rem;
   height: 2rem;
@@ -207,11 +210,12 @@ body {
 }
 
 #main_content {
+  border: 1px orangered solid;
   position: fixed;
   overflow-y: scroll;
   top: 6rem;
   bottom: 0%;
-  left: 1rem;
+  left: 0%;
   right: 0%;
   display: grid;
   align-items: center;
@@ -232,18 +236,25 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  gap: 0%;
 }
-#main_content #content_1_container #My_pic {
+#main_content #content_1_container #My_pic_div {
+  overflow: hidden;
+}
+#main_content #content_1_container #My_pic_div #My_pic {
   width: 8rem;
   border-radius: 50%;
 }
-#main_content #content_1_container .Txt_Name {
+#main_content #content_1_container #Txt_My_pic {
+  overflow: hidden;
+}
+#main_content #content_1_container #Txt_My_pic .Txt_Name {
   font-size: 3rem;
 }
-#main_content #content_1_container .Txt_Description {
+#main_content #content_1_container #Txt_My_pic .Txt_Description {
   font-size: 2rem;
 }
-#main_content #content_1_container label {
+#main_content #content_1_container #Txt_My_pic label {
   font-weight: bold;
 }
 
@@ -264,46 +275,28 @@ body {
   #main_content #content_1_container {
     flex-direction: row;
   }
-  #main_content #content_1_container #My_pic {
+  #main_content #content_1_container #My_pic_div {
+    border-right: 2px white solid;
+    padding-right: 0.5rem;
+  }
+  #main_content #content_1_container #My_pic_div #My_pic {
     width: 12.5rem;
     border-radius: 50%;
   }
-  #main_content #content_1_container .Txt_Name {
-    font-size: 3rem;
-  }
-  #main_content #content_1_container .Txt_Description {
-    font-size: 2rem;
-  }
-  #main_content #content_1_container label {
-    font-weight: bold;
+  #main_content #content_1_container #Txt_My_pic {
+    padding-left: 0.5rem;
   }
 }
 @media (min-width: 640px) {
-  #navbar_container .option_container_expanded .option_btn {
-    width: 8.5rem;
-    height: 2.5rem;
-  }
-  #main_content .contents_div {
-    position: relative;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  #main_content #content_1_container {
+  #main_content {
+    top: 8rem;
     flex-direction: row;
-  }
-  #main_content #content_1_container .Txt_Name {
-    font-size: 3rem;
-  }
-  #main_content #content_1_container .Txt_Description {
-    font-size: 2rem;
-  }
-  #main_content #content_1_container label {
-    font-weight: bold;
+    gap: 1rem;
   }
 }
 @media (min-width: 768px) {
-  h1 {
-    color: indigo;
+  #main_content .contents_div {
+    transform: scale(1.1);
   }
 }
 @media (min-width: 1024px) {

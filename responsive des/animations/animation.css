@@ -7,17 +7,17 @@
     opacity: 1;
   }
 }
-@keyframes slidefromLeft {
+@keyframes slidetoRight {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-120%);
   }
   100% {
     transform: translateX(0%);
   }
 }
-@keyframes slidefromRight {
+@keyframes slidetoLeft {
   0% {
-    transform: translateX(100%);
+    transform: translateX(120%);
   }
   100% {
     transform: translateX(0%);
@@ -31,12 +31,12 @@
     transform: scale(1);
   }
 }
-@keyframes Rotatein {
+@keyframes RotatetoLeft {
   0% {
-    transform: rotate(360deg);
+    transform: translateX(100%) rotate(360deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: translateX(0%) rotate(0deg);
   }
 }
 /* Classes --------------------- */
@@ -44,18 +44,18 @@
   animation: Fadein 1s ease-in-out;
 }
 
-.An_slidefromLeft {
-  animation: slidefromLeft 0.5s ease-in;
+.An_slidetoLeft {
+  animation: slidetoLeft 0.5s ease-in;
 }
 
-.An_slidefromRight {
-  animation: slidefromRight 0.5s ease-in;
+.An_slidetoRight {
+  animation: slidetoRight 0.5s ease-in;
 }
 
 .An_Scalein {
   animation: Scalein 0.3s ease-in-out;
 }
 
-.An_Rotatein {
-  animation: Rotatein 0.5s ease-in-out;
+.An_RotatetoLeft {
+  animation: RotatetoLeft 0.5s 1;
 }/*# sourceMappingURL=animation.css.map */

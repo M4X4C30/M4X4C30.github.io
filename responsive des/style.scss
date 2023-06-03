@@ -8,16 +8,29 @@
     $Txt_Size_3: 3rem;
     $Txt_Size_4: 4rem;
     $Txt_Size_5: 5rem;
+
+    $Background_Color: hsl(253, 100%, 15%), hsl(240, 100%, 7%);
+    $Primary_Color: hsl(240, 100%, 7%);
+    $Secondary_Color: hsl(253, 100%, 15%);
+    $Accent_Color: hsl(58, 100%, 77%);
+    $Text_Color: white;
+    $Text_Accent_Color: hsl(242, 100%, 68%);
+
+    $__old_Accent_color: rgba(118, 103, 170, 0.8);
 /* </Variables> */
 
 html {
     font-family: sans-serif;
-    color: white;
+    color: $Text_Color;
     font-size: 10px;
     margin: 0%;
+
+    .Accent_Text {
+        color: $Text_Accent_Color;
+    }
 }
 body {
-    background-image: radial-gradient(circle, hsl(253, 100%, 15%), hsl(240, 100%, 7%));
+    background-image: radial-gradient(circle, $Background_Color);
     background-attachment: fixed;
     background-size: cover;
     margin: 0%;
@@ -30,6 +43,7 @@ body {
     border-radius: 1rem;
     // box-shadow: 0px 0px 0.1rem 0.1rem rgba(255, 255, 255, 0.5);
 }
+
 
 
 #navbar_container {
@@ -95,14 +109,14 @@ body {
                 }
             }
                 .dot_div {
-                    border: 1px rgba(118, 103, 170, 0.8) solid;
+                    border: 1px $Accent_Color solid;
                     background-color: rgba(0, 0, 0, 0.7);
                     width: 2rem;
                     height: 2rem;
                     border-radius: 50rem;
                 }
                 .option_btn {
-                    border: 1px rgba(118, 103, 170, 0.8) solid;
+                    border: 1px $Accent_Color solid;
                     background-color: rgba(0, 0, 0, 0.7);
                     width: 7.5rem;
                     height: 2rem;
@@ -156,14 +170,14 @@ body {
                 animation: fadein_unclicked 0.5s ease-in-out;
             }
                 .dot_div {
-                    border: 1px rgba(118, 103, 170, 0.8) solid;
+                    border: 1px $Accent_Color solid;
                     background-color: rgba(0, 0, 0, 0.7);
                     width: 1rem;
                     height: 1rem;
                     border-radius: 50rem;
                 }
                 .option_btn {
-                    border: 1px rgba(118, 103, 170, 0.8) solid;
+                    border: 1px $Accent_Color solid;
                     background-color: rgba(0, 0, 0, 0.7);
                     width: 7rem;
                     height: 1rem;
@@ -208,7 +222,7 @@ body {
                     display: none;
                 }
                 .option_btn {
-                    border: 1px rgba(118, 103, 170, 0.8) solid;
+                    border: 1px $Accent_Color solid;
                     background-color: rgba(0, 0, 0, 0.7);
                     width: 7.5rem;
                     height: 2rem;
@@ -239,12 +253,12 @@ body {
 
 
 #main_content {
-    // border: 1px orangered solid;
+    border: 1px orangered solid;
     position: fixed;
     overflow-y: scroll;
     top: 6rem;
     bottom: 0%;
-    left: 1rem;
+    left: 0%;
     right: 0%;
     display: grid;
     align-items: center;
@@ -261,30 +275,42 @@ body {
     }
 
     #content_1_container {
+        // border: $Dborder_C;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         text-align: center;
+        gap: 0%;
     
-        #My_pic {
-            width: 8rem;
-            border-radius: 50%;
+        #My_pic_div {
+            // border: $Dborder_C;
+            overflow: hidden;
+
+            #My_pic {
+                width: 8rem;
+                border-radius: 50%;
+            }
         }
     
-        .Txt_Name {
-            // border: $Dborder_L;
-            font-size: $Txt_Size_3;
-        }
-    
-        .Txt_Description {
-            // border: $Dborder_L;
-            font-size: $Txt_Size_2;
-        }
-    
-        label {
-            font-weight: bold;
+        #Txt_My_pic {
+            // border: $Dborder_C;
+            overflow: hidden;
+
+            .Txt_Name {
+                // border: $Dborder_L;
+                font-size: $Txt_Size_3;
+            }
+        
+            .Txt_Description {
+                // border: $Dborder_L;
+                font-size: $Txt_Size_2;
+            }
+        
+            label {
+                font-weight: bold;
+            }
         }
     }
 }
@@ -311,71 +337,40 @@ body {
     
         #content_1_container {
             flex-direction: row;
-        
-            #My_pic {
-                width: 12.5rem;
-                border-radius: 50%;
+
+            #My_pic_div {
+                border-right: 2px white solid;
+                padding-right: 0.5rem;
+    
+                #My_pic {
+                    width: 12.5rem;
+                    border-radius: 50%;
+                }
             }
         
-            
-            .Txt_Name {
-                font-size: $Txt_Size_3;
-            }
-        
-            .Txt_Description {
-                font-size: $Txt_Size_2;
-            }
-        
-            label {
-                font-weight: bold;
+            #Txt_My_pic {
+                padding-left: 0.5rem;
+
             }
         }
     }
 }
 
 @media (min-width: 640px) { 
-
-    #navbar_container {
-
-        .option_container_expanded {
-        
-            .option_btn {
-                width: 8.5rem;
-                height: 2.5rem;
-            }
-
-        }
-    }
-
     #main_content {
+        top: 8rem;
+        flex-direction: row;
+        gap: 1rem;
     
-        .contents_div {
-            position: relative;
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
-    
-        #content_1_container {
-            flex-direction: row;
-            
-            .Txt_Name {
-                font-size: $Txt_Size_3;
-            }
-        
-            .Txt_Description {
-                font-size: $Txt_Size_2;
-            }
-        
-            label {
-                font-weight: bold;
-            }
-        }
     }
 }
 
 @media (min-width: 768px) {
-    h1 {
-        color: indigo;
+    #main_content {
+    
+        .contents_div {
+            transform: scale(1.1);
+        }
     }
 }
 

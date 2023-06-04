@@ -1,40 +1,100 @@
+/* Attributes --------------------- */
+    /* Duration --------------------- */
+        .An_duration_1-5s {
+            animation-duration: 1.5s;
+        }
+        .An_duration_1-3s {
+            animation-duration: 1.3s;
+        }
+        .An_duration_1s {
+            animation-duration: 1s;
+        }
+        .An_duration_0-8s {
+            animation-duration: 0.8s;
+        }
+        .An_duration_0-7s {
+            animation-duration: 0.7s;
+        }
+        .An_duration_0-5s {
+            animation-duration: 0.5s;
+        }
+        .An_duration_0-3s {
+            animation-duration: 0.3s;
+        }
+
+    /* Delay --------------------- */
+        .An_delay_0-5s {
+            animation-delay: 0.5s;
+        }
+
+    /* Iteration count --------------------- */
+        .An_Count_2 {
+            animation-iteration-count: 2;
+        }
+
+
 /* Animations --------------------- */
-@keyframes Fadein {
-    0% {
-        opacity: 0;
+.An_Fadein {
+    @keyframes Fadein {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    100% {
-        opacity: 1;
-    }
+    animation-name: Fadein;
 }
 
-@keyframes slidetoRight {
-    0% {
-        transform: translateX(-120%);
+.An_slidetoLeft {
+    @keyframes slidetoLeft {
+        0% {
+            transform: translateX(120%);
+            opacity: 0;
+        }
+        50% {
+            transform: translateX(-5%);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
     }
-    100% {
-        transform: translateX(0%);
-    }
+    animation-name: slidetoLeft;
 }
 
-@keyframes slidetoLeft {
-    0% {
-        transform: translateX(120%);
+.An_slidetoRight {
+    @keyframes slidetoRight {
+        0% {
+            transform: translateX(-120%);
+            opacity: 0;
+        }
+        50% {
+            transform: translateX(10%);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
     }
-    100% {
-        transform: translateX(0%);
-    }
+    animation-name: slidetoRight;
 }
 
-@keyframes Scalein {
-    0% {
-        transform: scale(0);
+.An_Scalein {
+    @keyframes Scalein {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
-    100% {
-        transform: scale(1);
-    }
+    animation-name: Scalein;
 }
 
+// .An_Rotatein {
 // @keyframes Rotatein {
 //     0%{
 //         transform: rotate(360deg);
@@ -43,37 +103,27 @@
 //         transform: rotate(0deg);
 //     }
 // }
-
-@keyframes RotatetoLeft {
-    0% {
-        transform: translateX(100%) rotate(360deg);
-    }
-    100% {
-        transform: translateX(0%) rotate(0deg);
-    }
-}
-
-/* Classes --------------------- */
-.An_Fadein {
-    animation: Fadein 1s ease-in-out;
-}
-
-.An_slidetoLeft {
-    animation: slidetoLeft 0.5s ease-in;
-}
-
-.An_slidetoRight {
-    animation: slidetoRight 0.5s ease-in;
-}
-
-.An_Scalein {
-    animation: Scalein 0.3s ease-in-out;
-}
-
-// .An_Rotatein {
 //     animation: Rotatein 0.5s ease-in-out;
 // }
 
 .An_RotatetoLeft {
-    animation: RotatetoLeft 0.5s 1;
+    
+    @keyframes RotatetoLeft {
+        0% {
+            transform: translateX(100%) rotate(360deg);
+            opacity: 1;
+        }
+        
+        50% {
+            transform: translateX(-9.5%) rotate(-28deg);
+        }
+        60% {
+            transform: translateX(-10%) rotate(-30deg);
+        }
+        100% {
+            transform: translateX(0%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+    animation-name: RotatetoLeft;
 }

@@ -13,6 +13,7 @@
     $Primary_Color: hsl(240, 100%, 7%);
     $Secondary_Color: hsl(253, 100%, 15%);
     $Accent_Color: hsl(58, 100%, 77%);
+    // $Accent_Color: hsl(303, 51%, 49%);
     $Text_Color: white;
     $Text_Accent_Color: hsl(242, 100%, 68%);
 
@@ -49,7 +50,8 @@ body {
 #navbar_container {
     background-color: hsla(0, 0%, 0%, 0.5);
     border-radius: 0.5rem;
-    box-shadow: 0px 3px 5px hsl(260, 80%, 35%);
+    box-shadow: 0px 3px 5px $Text_Accent_Color;
+    // box-shadow: 0px 3px 5px hsl(260, 80%, 35%);
     position: fixed;
     top: 0%;
     left: 0%;
@@ -63,6 +65,7 @@ body {
 
     .Logo_container {
         font-size: 2.5rem;
+        user-select: none;
     }
 
 
@@ -128,6 +131,7 @@ body {
 
                     label {
                         display: block;
+                        user-select: none;
                     }
                 }
     }
@@ -188,6 +192,7 @@ body {
                     font-size: 1rem;
                     label {
                         display: none;
+                        user-select: none;
                     }
                 }
 
@@ -223,7 +228,7 @@ body {
                 }
                 .option_btn {
                     border: 1px $Accent_Color solid;
-                    background-color: rgba(0, 0, 0, 0.7);
+                    background-color: rgba(0, 0, 0, 0.1);
                     width: 7.5rem;
                     height: 2rem;
                     border-radius: 50rem;
@@ -234,6 +239,7 @@ body {
 
                     label {
                         display: block;
+                        user-select: none;
                     }
 
                     &:hover {
@@ -286,26 +292,36 @@ body {
     
         #My_pic_div {
             // border: $Dborder_C;
+            padding-left: 1.5rem;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
             overflow: hidden;
 
             #My_pic {
                 width: 8rem;
                 border-radius: 50%;
+                opacity: 0;
+                user-select: none;
             }
         }
     
         #Txt_My_pic {
             // border: $Dborder_C;
+            padding-left: 1rem;
             overflow: hidden;
 
             .Txt_Name {
                 // border: $Dborder_L;
                 font-size: $Txt_Size_3;
+                user-select: none;
+                opacity: 0;
             }
         
             .Txt_Description {
                 // border: $Dborder_L;
                 font-size: $Txt_Size_2;
+                user-select: none;
+                opacity: 0;
             }
         
             label {
@@ -339,7 +355,19 @@ body {
             flex-direction: row;
 
             #My_pic_div {
-                border-right: 2px white solid;
+                @keyframes Expand_Line {
+                    0% {
+                        height: 0rem;
+                        border-right: 2px rgba(255, 255, 255, 0.9) solid;
+                    }
+                    100% {
+                        height: 10rem;
+                        border-right: 2px rgba(255, 255, 255, 0.6) solid;
+                    }
+                }
+                animation: Expand_Line 0.4s;
+                
+                border-right: 2px rgba(255, 255, 255, 0.6) solid;
                 padding-right: 0.5rem;
     
                 #My_pic {
@@ -347,10 +375,9 @@ body {
                     border-radius: 50%;
                 }
             }
-        
+
             #Txt_My_pic {
                 padding-left: 0.5rem;
-
             }
         }
     }

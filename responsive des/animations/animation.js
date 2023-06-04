@@ -7,10 +7,18 @@ const observer = new IntersectionObserver((entries) => {
             }
             if (entry.target.classList.contains('To_slidetoRight')) {
                 entry.target.classList.add('An_slidetoRight');
+
+                entry.target.addEventListener('animationend', function() {
+                    entry.target.style.opacity = 1;
+                });
             }
 
             if (entry.target.classList.contains('To_slidetoLeft')) {
                 entry.target.classList.add('An_slidetoLeft');
+
+                entry.target.addEventListener('animationend', function() {
+                    entry.target.style.opacity = 1;
+                })
             }
 
             if (entry.target.classList.contains('To_Fadein')) {
@@ -19,6 +27,10 @@ const observer = new IntersectionObserver((entries) => {
 
             if (entry.target.classList.contains('To_RotatetoLeft')) {
                 entry.target.classList.add('An_RotatetoLeft');
+
+                entry.target.addEventListener('animationend', function() {
+                    entry.target.style.opacity = 1;
+                });
             }
 
         }

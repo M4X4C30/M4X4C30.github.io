@@ -29,7 +29,7 @@ body {
 #navbar_container {
   background-color: hsla(0, 0%, 0%, 0.5);
   border-radius: 0.5rem;
-  box-shadow: 0px 3px 5px hsl(260, 80%, 35%);
+  box-shadow: 0px 3px 5px hsl(242, 100%, 68%);
   position: fixed;
   top: 0%;
   left: 0%;
@@ -46,6 +46,9 @@ body {
 }
 #navbar_container .Logo_container {
   font-size: 2.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #navbar_container .option_container_clicked {
   position: absolute;
@@ -104,6 +107,9 @@ body {
 }
 #navbar_container .option_container_clicked .option_btn label {
   display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #navbar_container .option_container_unclicked {
   border-radius: 1rem;
@@ -161,6 +167,9 @@ body {
 }
 #navbar_container .option_container_unclicked .option_btn label {
   display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #navbar_container .option_container_expanded {
   position: relative;
@@ -189,7 +198,7 @@ body {
 }
 #navbar_container .option_container_expanded .option_btn {
   border: 1px hsl(58, 100%, 77%) solid;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
   width: 7.5rem;
   height: 2rem;
   border-radius: 50rem;
@@ -200,6 +209,9 @@ body {
 }
 #navbar_container .option_container_expanded .option_btn label {
   display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #navbar_container .option_container_expanded .option_btn:hover {
   box-shadow: 0px 0px 20px #2c0f92;
@@ -238,20 +250,36 @@ body {
   gap: 0%;
 }
 #main_content #content_1_container #My_pic_div {
+  padding-left: 1.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   overflow: hidden;
 }
 #main_content #content_1_container #My_pic_div #My_pic {
   width: 8rem;
   border-radius: 50%;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #main_content #content_1_container #Txt_My_pic {
+  padding-left: 1rem;
   overflow: hidden;
 }
 #main_content #content_1_container #Txt_My_pic .Txt_Name {
   font-size: 3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  opacity: 0;
 }
 #main_content #content_1_container #Txt_My_pic .Txt_Description {
   font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  opacity: 0;
 }
 #main_content #content_1_container #Txt_My_pic label {
   font-weight: bold;
@@ -275,8 +303,19 @@ body {
     flex-direction: row;
   }
   #main_content #content_1_container #My_pic_div {
-    border-right: 2px white solid;
+    animation: Expand_Line 0.4s;
+    border-right: 2px rgba(255, 255, 255, 0.6) solid;
     padding-right: 0.5rem;
+  }
+  @keyframes Expand_Line {
+    0% {
+      height: 0rem;
+      border-right: 2px rgba(255, 255, 255, 0.9) solid;
+    }
+    100% {
+      height: 10rem;
+      border-right: 2px rgba(255, 255, 255, 0.6) solid;
+    }
   }
   #main_content #content_1_container #My_pic_div #My_pic {
     width: 12.5rem;

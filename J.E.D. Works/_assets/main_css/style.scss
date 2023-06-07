@@ -1,0 +1,1027 @@
+/* <Variables> */
+    $Dborder_R: 1px red solid;
+    $Dborder_C: 1px cyan solid;
+    $Dborder_L: 1px lime solid;
+
+    $Txt_Size_1: 1rem;
+    $Txt_Size_2: 2rem;
+    $Txt_Size_3: 3rem;
+    $Txt_Size_4: 4rem;
+    $Txt_Size_5: 5rem;
+
+    $Background_Color: hsl(253, 100%, 15%), hsl(240, 100%, 7%);
+    $Primary_Color: hsl(240, 100%, 7%);
+    $Secondary_Color: hsl(253, 100%, 15%);
+    // $Accent_Color: #5f5aff;
+    // $Accent_Color: hsl(58, 100%, 77%);
+    // $Accent_Color: hsl(303, 49%, 55%);
+    $Accent_Color: white;
+    $Text_Color: white;
+    $Text_Accent_Color: hsl(242, 100%, 68%);
+    $Shade-1_Text_Accent_Color: hsl(251, 38%, 41%);
+
+    $__old_Accent_color: rgba(118, 103, 170, 0.8);
+/* </Variables> */
+
+html {
+    font-family: sans-serif;
+    color: $Text_Color;
+    font-size: 10px;
+    margin: 0%;
+
+    .Accent_Text {
+        color: $Text_Accent_Color;
+    }
+}
+body {
+    background-image: radial-gradient(circle, $Background_Color);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0%;
+}
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    // box-shadow: 0px 0px 0.1rem 0.1rem rgba(255, 255, 255, 0.5);
+}
+
+
+
+#navbar_container {
+    background-color: hsla(0, 0%, 0%, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 5px $Text_Accent_Color;
+    // box-shadow: 0px 3px 5px hsl(260, 80%, 35%);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    .Logo_container {
+        font-size: 2.5rem;
+        user-select: none;
+    }
+
+
+/*-----------------------------clicked---------------------------------------*/
+    .option_container_clicked {
+        // border: $Dborder_R;
+        position: absolute;
+        width: 10.5rem;
+        height: 10rem;
+        transform: scale(1);
+        right: 0.5rem;
+        top: 7rem;
+
+        .option_wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        
+            @keyframes fadein_clicked {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            .options_div {
+                // border: $Dborder_L;
+                border-radius: 0.5rem;
+                width: 100%;
+                height: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                animation: fadein_clicked 1s ease-in-out;
+
+                &:active {
+                    background-color: rgba(44, 15, 146, 0.5);
+                    box-shadow: 0px 0px 20px #2c0f92;
+                }
+            }
+                .dot_div {
+                    border: 1px $Accent_Color solid;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50rem;
+                }
+                .option_btn {
+                    border: 1px $Accent_Color solid;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 7.5rem;
+                    height: 2rem;
+                    border-radius: 50rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem;
+
+                    label {
+                        display: block;
+                        user-select: none;
+                    }
+                }
+    }
+/*-----------------------------unclicked---------------------------------------*/
+    .option_container_unclicked {
+        // border: $Dborder_R;
+        border-radius: 1rem;
+        position: absolute;
+        width: 9rem;
+        height: 5rem;
+        transform: scale(0.8);
+        right: -0.5rem;   
+    &:hover {
+        background-color: rgba(44, 15, 146, 0.5);
+        box-shadow: 0px 0px 20px #2c0f92;
+    }
+
+        .option_wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+            @keyframes fadein_unclicked {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            .options_div {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                animation: fadein_unclicked 0.5s ease-in-out;
+            }
+                .dot_div {
+                    border: 1px $Accent_Color solid;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50rem;
+                }
+                .option_btn {
+                    border: 1px $Accent_Color solid;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 7rem;
+                    height: 1rem;
+                    border-radius: 50rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem;
+                    label {
+                        display: none;
+                        user-select: none;
+                    }
+                }
+
+    }
+/*-----------------------------expanded---------------------------------------*/
+    .option_container_expanded {
+        // border: $Dborder_R;
+        position: relative;
+        height: 7rem;
+        transform: scale(1);
+        right: 0.5rem;
+
+        .option_wrapper {
+            // border: $Dborder_R;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 1rem;
+        }
+            .options_div {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+            }
+                .dot_div {
+                    display: none;
+                }
+                .option_btn {
+                    border: 1px $Accent_Color solid;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    width: 7.5rem;
+                    height: 2rem;
+                    border-radius: 50rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem;
+
+                    label {
+                        display: block;
+                        user-select: none;
+                    }
+
+                    &:hover {
+                        // background-color: rgba(44, 15, 146, 0.5);
+                        box-shadow: 0px 0px 20px #2c0f92;
+                    }
+
+                    &:focus {
+                        outline: none !important;
+                        // background-color: rgba(44, 15, 146, 0.5);
+                        box-shadow: 0px 0px 20px #2c0f92;
+                    }
+
+                }
+    }
+}
+
+
+
+#main_content {
+    // border: 1px purple solid;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 6rem;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+
+    perspective: 1rem;
+
+    #mc_wrapper {
+        // border: 1px orangered solid;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        height: 150rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        gap: 1rem;
+
+        transform-style: preserve-3d;
+
+        #content_scroll_container {
+            // border: $Dborder_C;
+            position: relative;
+            top: 3rem;
+            width: 90%;
+            height: 140rem;
+            display: flex;
+            flex-direction: column;
+            gap: 20rem;
+
+            transform-style: preserve-3d;
+
+            #content_title_container {
+                // border: $Dborder_R;
+                position: relative;
+                width: 100%;
+                height: 30rem;
+                transform: translateZ(-0.4rem);
+    
+                #content_title_wrapper {
+                    // border: $Dborder_C;
+                    height: 90%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 0%;
+                    margin-bottom: 3rem;
+                
+                    #My_pic_div {
+                        // border: $Dborder_C;
+                        padding-left: 1.5rem;
+                        padding-top: 0.2rem;
+                        padding-bottom: 0.2rem;
+                        overflow: hidden;
+    
+                        #My_pic {
+                            width: 8rem;
+                            border-radius: 50%;
+                            opacity: 0;
+                            user-select: none;
+                        }
+                    }
+                
+                    #Txt_My_pic {
+                        // border: $Dborder_C;
+                        padding-left: 1rem;
+                        overflow: hidden;
+    
+                        .Txt_Name {
+                            // border: $Dborder_L;
+                            font-size: $Txt_Size_3;
+                            user-select: none;
+                            opacity: 0;
+                        }
+                    
+                        .Txt_Description {
+                            // border: $Dborder_L;
+                            font-size: $Txt_Size_2;
+                            user-select: none;
+                            opacity: 0;
+                        }
+                    
+                        label {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            #interactable_boxes {
+                // border: yellow 1px solid;
+                position: relative;
+                display: grid;
+                gap: 20rem;
+                transform: translateZ(-0.3rem);
+
+                .interactable_box_container {
+                    // border: white 1px solid;
+                    // background-color: rgba(95, 90, 255, 0.1);
+                    position: relative;
+                    height: 10rem;
+                    left: 0rem;
+                    right: 0rem;
+
+                    #interactable_box_programming {
+                        background-color: $Text_Accent_Color;
+                        height: 95%;
+                        width: 15rem;
+                        position: absolute;
+                        left: 2.5rem;
+                        top: -2rem;
+                    }
+                    #interactable_box_2 {
+                        background-color: $Text_Accent_Color;
+                        height: 88%;
+                        width: 13rem;
+                        position: absolute;
+                        right: -1rem;
+                        top: 0rem;
+                    }
+                    #interactable_box_3 {
+                        background-color: $Text_Accent_Color;
+                        height: 100%;
+                        width: 15rem;
+                        position: absolute;
+                        left: 1rem;
+                        top: 0rem;
+                    }
+                    #interactable_box_4 {
+                        background-color: $Text_Accent_Color;
+                        height: 100%;
+                        width: 15rem;
+                        position: absolute;
+                        right: 1rem;
+                        top: -1rem;
+                    }
+                }
+            }
+
+            #front_interactable_boxes {
+                // border: lime 1px solid;
+                position: absolute;
+                top: 40rem;
+                width: 100%;
+                display: grid;
+                gap: 19rem;
+                transform: translateZ(-0.1rem);
+
+                .front_interactable_box_container {
+                    // border: red 1px solid;
+                    // background-color: rgba(79, 64, 144, 0.1);
+                    height: 10rem;
+                    position: relative;
+                    left: 0rem;
+                    right: 0rem;
+
+                    #front_interactable_box_programming-1 {
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 6rem;
+                        width: 8rem;
+                        position: absolute;
+                        left: 13rem;
+                        bottom: -1rem;
+                    }
+                    #front_interactable_box_programming-2 {
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 5rem;
+                        width: 6rem;
+                        position: absolute;
+                        left: 1rem;
+                        bottom: -4rem;
+                    }
+
+                    #front_interactable_box_2-1 {
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 3rem;
+                        width: 4rem;
+                        position: absolute;
+                        right: 11rem;
+                        bottom: 1rem;
+                    }
+                    #front_interactable_box_2-2 {
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 4rem;
+                        width: 6rem;
+                        position: absolute;
+                        right: 18rem;
+                        bottom: -1rem;
+                    }
+                    #front_interactable_box_2-3 {   
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 3rem;
+                        width: 3.5rem;
+                        position: absolute;
+                        right: -1rem;
+                        bottom: -1rem;
+                    }
+
+                    #front_interactable_box_3-1 {
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 4rem;
+                        width: 6rem;
+                        position: absolute;
+                        left: -1rem;
+                        bottom: -0.5rem;
+                    }
+                    #front_interactable_box_3-2 {
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 4.5rem;
+                        width: 6.5rem;
+                        position: absolute;
+                        left: 14rem;
+                        top: -1rem;
+                    }
+                    
+                    #front_interactable_box_4-1 {
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 4.5rem;
+                        width: 6.5rem;
+                        position: absolute;
+                        right: 14rem;
+                        top: -0.5rem;
+                    }
+                    #front_interactable_box_4-2 {
+                        background-color: $Shade-1_Text_Accent_Color;
+                        height: 6rem;
+                        width: 8rem;
+                        position: absolute;
+                        right: -2rem;
+                        top: -7rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+@media (min-width: 475px) { //current wide menu display is set to 475px
+    #navbar_container {
+        height: 8rem;
+    }
+
+    #main_content {
+        top: 8rem;
+    }
+}
+
+
+@media (min-width: 640px) { 
+    #main_content {
+        position: fixed;
+    
+        perspective: 1rem;
+    
+        #mc_wrapper {
+            position: absolute;
+            height: 150rem;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: column;
+            gap: 1rem;
+    
+            transform-style: preserve-3d;
+    
+            #content_scroll_container {
+                // border: $Dborder_C;
+                position: relative;
+                width: 30rem;
+                height: 140rem;
+                display: flex;
+                flex-direction: column;
+                gap: 20rem;
+    
+                transform: translateX(-15rem);
+                transform-style: preserve-3d;
+    
+                #content_title_container {
+                    // border: $Dborder_R;
+                    position: absolute;
+                    width: 100%;
+                    height: 30rem;
+                    transform: translateZ(-10rem) scale(8) translateX(25rem);
+        
+                    #content_title_wrapper {
+                        // border: $Dborder_C;
+                        height: 90%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 0%;
+                        margin-bottom: 3rem;
+                    
+                        #My_pic_div {
+                            // border: $Dborder_C;
+                            padding-left: 1.5rem;
+                            padding-top: 0.2rem;
+                            padding-bottom: 0.2rem;
+                            overflow: hidden;
+        
+                            #My_pic {
+                                width: 8rem;
+                                border-radius: 50%;
+                                opacity: 0;
+                                user-select: none;
+                            }
+                        }
+                    
+                        #Txt_My_pic {
+                            // border: $Dborder_C;
+                            padding-left: 1rem;
+                            overflow: hidden;
+        
+                            .Txt_Name {
+                                // border: $Dborder_L;
+                                font-size: $Txt_Size_3;
+                                user-select: none;
+                                opacity: 0;
+                            }
+                        
+                            .Txt_Description {
+                                // border: $Dborder_L;
+                                font-size: $Txt_Size_2;
+                                user-select: none;
+                                opacity: 0;
+                            }
+                        
+                            label {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+    
+                #interactable_boxes {
+                    // border: yellow 1px solid;
+                    position: relative;
+                    top: 8rem;
+                    display: grid;
+                    gap: 30rem;
+                    transform: translateZ(-0.5rem) translateX(-7rem);
+    
+                    .interactable_box_container {
+                        // border: white 1px solid;
+                        position: relative;
+                        height: 10rem;
+                        left: 0rem;
+                        right: 0rem;
+    
+                        #interactable_box_programming {
+                            background-color: $Text_Accent_Color;
+                            height: 95%;
+                            width: 15rem;
+                            position: absolute;
+                            left: 2.5rem;
+                            top: -2rem;
+                        }
+                        #interactable_box_2 {
+                            background-color: $Text_Accent_Color;
+                            height: 88%;
+                            width: 13rem;
+                            position: absolute;
+                            right: -1rem;
+                            top: 0rem;
+                        }
+                        #interactable_box_3 {
+                            background-color: $Text_Accent_Color;
+                            height: 100%;
+                            width: 15rem;
+                            position: absolute;
+                            left: 1rem;
+                            top: 0rem;
+                        }
+                        #interactable_box_4 {
+                            background-color: $Text_Accent_Color;
+                            height: 100%;
+                            width: 15rem;
+                            position: absolute;
+                            right: 1rem;
+                            top: -1rem;
+                        }
+                    }
+                }
+    
+                #front_interactable_boxes {
+                    position: absolute;
+                    top: 8rem;
+                    width: 100%;
+                    display: grid;
+                    gap: 29rem;
+                    transform: translateZ(-0.1rem) translateX(-1.5rem);
+    
+                    .front_interactable_box_container {
+                        height: 10rem;
+                        position: relative;
+                        left: 0rem;
+                        right: 0rem;
+    
+                        #front_interactable_box_programming-1 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 6rem;
+                            width: 8rem;
+                            position: absolute;
+                            left: 13rem;
+                            bottom: -1rem;
+                        }
+                        #front_interactable_box_programming-2 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: 1rem;
+                            bottom: -4rem;
+                        }
+    
+                        #front_interactable_box_2-1 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 3rem;
+                            width: 4rem;
+                            position: absolute;
+                            right: 11rem;
+                            bottom: 1rem;
+                        }
+                        #front_interactable_box_2-2 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 4rem;
+                            width: 6rem;
+                            position: absolute;
+                            right: 18rem;
+                            bottom: -1rem;
+                        }
+                        #front_interactable_box_2-3 {   
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 3rem;
+                            width: 3.5rem;
+                            position: absolute;
+                            right: -1rem;
+                            bottom: -1rem;
+                        }
+    
+                        #front_interactable_box_3-1 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 4rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: -1rem;
+                            bottom: -0.5rem;
+                        }
+                        #front_interactable_box_3-2 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 4.5rem;
+                            width: 6.5rem;
+                            position: absolute;
+                            left: 14rem;
+                            top: -1rem;
+                        }
+                        
+                        #front_interactable_box_4-1 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 4.5rem;
+                            width: 6.5rem;
+                            position: absolute;
+                            right: 14rem;
+                            top: -0.5rem;
+                        }
+                        #front_interactable_box_4-2 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 6rem;
+                            width: 8rem;
+                            position: absolute;
+                            right: -2rem;
+                            top: -7rem;
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #main_content {
+        position: fixed;
+    
+        perspective: 1rem;
+    
+        #mc_wrapper {
+            position: absolute;
+            height: 150rem;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: column;
+            gap: 1rem;
+    
+            transform-style: preserve-3d;
+    
+            #content_scroll_container {
+                // border: $Dborder_C;
+                position: relative;
+                width: 30rem;
+                height: 140rem;
+                display: flex;
+                flex-direction: column;
+                gap: 20rem;
+    
+                transform: translateX(-15rem);
+                transform-style: preserve-3d;
+    
+                #content_title_container {
+                    // border: $Dborder_R;
+                    position: absolute;
+                    width: 100%;
+                    height: 30rem;
+                    transform: translateZ(-10rem) scale(8) translateX(25rem);
+        
+                    #content_title_wrapper {
+                        // border: $Dborder_C;
+                        height: 90%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                        text-align: center;
+                        gap: 0%;
+                        margin-bottom: 3rem;
+                    
+                        #My_pic_div {
+                            // border: $Dborder_C;
+                            padding-left: 1.5rem;
+                            padding-top: 0.2rem;
+                            padding-bottom: 0.2rem;
+                            overflow: hidden;
+
+                            @keyframes Expand_Line {
+                                0% {
+                                    height: 0rem;
+                                    border-right: 2px rgba(255, 255, 255, 0.9) solid;
+                                }
+                                100% {
+                                    height: 10rem;
+                                    border-right: 2px rgba(255, 255, 255, 0.6) solid;
+                                }
+                            }
+                            animation: Expand_Line 0.4s;
+                            border-right: 2px rgba(255, 255, 255, 0.6) solid;
+        
+                            #My_pic {
+                                width: 8rem;
+                                border-radius: 50%;
+                                opacity: 0;
+                                user-select: none;
+                            }
+                        }
+                    
+                        #Txt_My_pic {
+                            // border: $Dborder_C;
+                            padding-left: 1rem;
+                            overflow: hidden;
+        
+                            .Txt_Name {
+                                // border: $Dborder_L;
+                                font-size: $Txt_Size_3;
+                                user-select: none;
+                                opacity: 0;
+                            }
+                        
+                            .Txt_Description {
+                                // border: $Dborder_L;
+                                font-size: $Txt_Size_2;
+                                user-select: none;
+                                opacity: 0;
+                            }
+                        
+                            label {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+    
+                #interactable_boxes {
+                    // border: yellow 1px solid;
+                    position: relative;
+                    top: 8rem;
+                    display: grid;
+                    gap: 30rem;
+                    transform: translateZ(-0.5rem) translateX(-7rem);
+    
+                    .interactable_box_container {
+                        // border: white 1px solid;
+                        position: relative;
+                        height: 10rem;
+                        left: 0rem;
+                        right: 0rem;
+    
+                        #interactable_box_programming {
+                            background-color: $Text_Accent_Color;
+                            height: 95%;
+                            width: 15rem;
+                            position: absolute;
+                            left: 2.5rem;
+                            top: -2rem;
+                        }
+                        #interactable_box_2 {
+                            background-color: $Text_Accent_Color;
+                            height: 88%;
+                            width: 13rem;
+                            position: absolute;
+                            right: -1rem;
+                            top: 0rem;
+                        }
+                        #interactable_box_3 {
+                            background-color: $Text_Accent_Color;
+                            height: 100%;
+                            width: 15rem;
+                            position: absolute;
+                            left: 1rem;
+                            top: 0rem;
+                        }
+                        #interactable_box_4 {
+                            background-color: $Text_Accent_Color;
+                            height: 100%;
+                            width: 15rem;
+                            position: absolute;
+                            right: 1rem;
+                            top: -1rem;
+                        }
+                    }
+                }
+    
+                #front_interactable_boxes {
+                    position: absolute;
+                    top: 8rem;
+                    width: 100%;
+                    display: grid;
+                    gap: 29rem;
+                    transform: translateZ(-0.1rem) translateX(-1.5rem);
+    
+                    .front_interactable_box_container {
+                        height: 10rem;
+                        position: relative;
+                        left: 0rem;
+                        right: 0rem;
+    
+                        #front_interactable_box_programming-1 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 6rem;
+                            width: 8rem;
+                            position: absolute;
+                            left: 13rem;
+                            bottom: -1rem;
+                        }
+                        #front_interactable_box_programming-2 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: 1rem;
+                            bottom: -4rem;
+                        }
+    
+                        #front_interactable_box_2-1 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 3rem;
+                            width: 4rem;
+                            position: absolute;
+                            right: 11rem;
+                            bottom: 1rem;
+                        }
+                        #front_interactable_box_2-2 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 4rem;
+                            width: 6rem;
+                            position: absolute;
+                            right: 18rem;
+                            bottom: -1rem;
+                        }
+                        #front_interactable_box_2-3 {   
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 3rem;
+                            width: 3.5rem;
+                            position: absolute;
+                            right: -1rem;
+                            bottom: -1rem;
+                        }
+    
+                        #front_interactable_box_3-1 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 4rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: -1rem;
+                            bottom: -0.5rem;
+                        }
+                        #front_interactable_box_3-2 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 4.5rem;
+                            width: 6.5rem;
+                            position: absolute;
+                            left: 14rem;
+                            top: -1rem;
+                        }
+                        
+                        #front_interactable_box_4-1 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 4.5rem;
+                            width: 6.5rem;
+                            position: absolute;
+                            right: 14rem;
+                            top: -0.5rem;
+                        }
+                        #front_interactable_box_4-2 {
+                            background-color: $Shade-1_Text_Accent_Color;
+                            height: 6rem;
+                            width: 8rem;
+                            position: absolute;
+                            right: -2rem;
+                            top: -7rem;
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+// @media (min-width: 1024px) {
+//     h1 {
+//         color: indigo;
+//     }
+// }
+
+// @media (min-width: 1280px) {
+//     h1 {
+//         color: indigo;
+//     }
+// }
+
+// @media (min-width: 1536px) {
+//     h1 {
+//         color: indigo;
+//     }
+// }

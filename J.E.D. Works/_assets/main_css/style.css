@@ -1,0 +1,877 @@
+/* <Variables> */
+/* </Variables> */
+html {
+  font-family: sans-serif;
+  color: white;
+  font-size: 10px;
+  margin: 0%;
+}
+html .Accent_Text {
+  color: hsl(242, 100%, 68%);
+}
+
+body {
+  background-image: radial-gradient(circle, hsl(253, 100%, 15%), hsl(240, 100%, 7%));
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0%;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+
+#navbar_container {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 5px hsl(242, 100%, 68%);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  /*-----------------------------clicked---------------------------------------*/
+  /*-----------------------------unclicked---------------------------------------*/
+  /*-----------------------------expanded---------------------------------------*/
+}
+#navbar_container .Logo_container {
+  font-size: 2.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#navbar_container .option_container_clicked {
+  position: absolute;
+  width: 10.5rem;
+  height: 10rem;
+  transform: scale(1);
+  right: 0.5rem;
+  top: 7rem;
+}
+#navbar_container .option_container_clicked .option_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@keyframes fadein_clicked {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#navbar_container .option_container_clicked .options_div {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: fadein_clicked 1s ease-in-out;
+}
+#navbar_container .option_container_clicked .options_div:active {
+  background-color: rgba(44, 15, 146, 0.5);
+  box-shadow: 0px 0px 20px #2c0f92;
+}
+#navbar_container .option_container_clicked .dot_div {
+  border: 1px white solid;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50rem;
+}
+#navbar_container .option_container_clicked .option_btn {
+  border: 1px white solid;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 7.5rem;
+  height: 2rem;
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+#navbar_container .option_container_clicked .option_btn label {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#navbar_container .option_container_unclicked {
+  border-radius: 1rem;
+  position: absolute;
+  width: 9rem;
+  height: 5rem;
+  transform: scale(0.8);
+  right: -0.5rem;
+}
+#navbar_container .option_container_unclicked:hover {
+  background-color: rgba(44, 15, 146, 0.5);
+  box-shadow: 0px 0px 20px #2c0f92;
+}
+#navbar_container .option_container_unclicked .option_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@keyframes fadein_unclicked {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#navbar_container .option_container_unclicked .options_div {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: fadein_unclicked 0.5s ease-in-out;
+}
+#navbar_container .option_container_unclicked .dot_div {
+  border: 1px white solid;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50rem;
+}
+#navbar_container .option_container_unclicked .option_btn {
+  border: 1px white solid;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 7rem;
+  height: 1rem;
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+#navbar_container .option_container_unclicked .option_btn label {
+  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#navbar_container .option_container_expanded {
+  position: relative;
+  height: 7rem;
+  transform: scale(1);
+  right: 0.5rem;
+}
+#navbar_container .option_container_expanded .option_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
+}
+#navbar_container .option_container_expanded .options_div {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#navbar_container .option_container_expanded .dot_div {
+  display: none;
+}
+#navbar_container .option_container_expanded .option_btn {
+  border: 1px white solid;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 7.5rem;
+  height: 2rem;
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+#navbar_container .option_container_expanded .option_btn label {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#navbar_container .option_container_expanded .option_btn:hover {
+  box-shadow: 0px 0px 20px #2c0f92;
+}
+#navbar_container .option_container_expanded .option_btn:focus {
+  outline: none !important;
+  box-shadow: 0px 0px 20px #2c0f92;
+}
+
+#main_content {
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 6rem;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  perspective: 1rem;
+}
+#main_content #mc_wrapper {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 150rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 1rem;
+  transform-style: preserve-3d;
+}
+#main_content #mc_wrapper #content_scroll_container {
+  position: relative;
+  top: 3rem;
+  width: 90%;
+  height: 140rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  transform-style: preserve-3d;
+}
+#main_content #mc_wrapper #content_scroll_container #content_title_container {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  transform: translateZ(-0.4rem);
+}
+#main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper {
+  height: 90%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0%;
+  margin-bottom: 3rem;
+}
+#main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #My_pic_div {
+  padding-left: 1.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  overflow: hidden;
+}
+#main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #My_pic_div #My_pic {
+  width: 8rem;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic {
+  padding-left: 1rem;
+  overflow: hidden;
+}
+#main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic .Txt_Name {
+  font-size: 3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  opacity: 0;
+}
+#main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic .Txt_Description {
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  opacity: 0;
+}
+#main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic label {
+  font-weight: bold;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes {
+  position: relative;
+  display: grid;
+  gap: 20rem;
+  transform: translateZ(-0.3rem);
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container {
+  position: relative;
+  height: 10rem;
+  left: 0rem;
+  right: 0rem;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_programming {
+  background-color: hsl(242, 100%, 68%);
+  height: 95%;
+  width: 15rem;
+  position: absolute;
+  left: 2.5rem;
+  top: -2rem;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_2 {
+  background-color: hsl(242, 100%, 68%);
+  height: 88%;
+  width: 13rem;
+  position: absolute;
+  right: -1rem;
+  top: 0rem;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_3 {
+  background-color: hsl(242, 100%, 68%);
+  height: 100%;
+  width: 15rem;
+  position: absolute;
+  left: 1rem;
+  top: 0rem;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_4 {
+  background-color: hsl(242, 100%, 68%);
+  height: 100%;
+  width: 15rem;
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes {
+  position: absolute;
+  top: 40rem;
+  width: 100%;
+  display: grid;
+  gap: 19rem;
+  transform: translateZ(-0.1rem);
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container {
+  height: 10rem;
+  position: relative;
+  left: 0rem;
+  right: 0rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-1 {
+  background-color: hsl(251, 38%, 41%);
+  height: 6rem;
+  width: 8rem;
+  position: absolute;
+  left: 13rem;
+  bottom: -1rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-2 {
+  background-color: hsl(251, 38%, 41%);
+  height: 5rem;
+  width: 6rem;
+  position: absolute;
+  left: 1rem;
+  bottom: -4rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-1 {
+  background-color: hsl(251, 38%, 41%);
+  height: 3rem;
+  width: 4rem;
+  position: absolute;
+  right: 11rem;
+  bottom: 1rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-2 {
+  background-color: hsl(251, 38%, 41%);
+  height: 4rem;
+  width: 6rem;
+  position: absolute;
+  right: 18rem;
+  bottom: -1rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-3 {
+  background-color: hsl(251, 38%, 41%);
+  height: 3rem;
+  width: 3.5rem;
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-1 {
+  background-color: hsl(251, 38%, 41%);
+  height: 4rem;
+  width: 6rem;
+  position: absolute;
+  left: -1rem;
+  bottom: -0.5rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-2 {
+  background-color: hsl(251, 38%, 41%);
+  height: 4.5rem;
+  width: 6.5rem;
+  position: absolute;
+  left: 14rem;
+  top: -1rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-1 {
+  background-color: hsl(251, 38%, 41%);
+  height: 4.5rem;
+  width: 6.5rem;
+  position: absolute;
+  right: 14rem;
+  top: -0.5rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-2 {
+  background-color: hsl(251, 38%, 41%);
+  height: 6rem;
+  width: 8rem;
+  position: absolute;
+  right: -2rem;
+  top: -7rem;
+}
+
+@media (min-width: 475px) {
+  #navbar_container {
+    height: 8rem;
+  }
+  #main_content {
+    top: 8rem;
+  }
+}
+@media (min-width: 640px) {
+  #main_content {
+    position: fixed;
+    perspective: 1rem;
+  }
+  #main_content #mc_wrapper {
+    position: absolute;
+    height: 150rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 1rem;
+    transform-style: preserve-3d;
+  }
+  #main_content #mc_wrapper #content_scroll_container {
+    position: relative;
+    width: 30rem;
+    height: 140rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    transform: translateX(-15rem);
+    transform-style: preserve-3d;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container {
+    position: absolute;
+    width: 100%;
+    height: 30rem;
+    transform: translateZ(-10rem) scale(8) translateX(25rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper {
+    height: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 0%;
+    margin-bottom: 3rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #My_pic_div {
+    padding-left: 1.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    overflow: hidden;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #My_pic_div #My_pic {
+    width: 8rem;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic {
+    padding-left: 1rem;
+    overflow: hidden;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic .Txt_Name {
+    font-size: 3rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    opacity: 0;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic .Txt_Description {
+    font-size: 2rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    opacity: 0;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic label {
+    font-weight: bold;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes {
+    position: relative;
+    top: 8rem;
+    display: grid;
+    gap: 30rem;
+    transform: translateZ(-0.5rem) translateX(-7rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container {
+    position: relative;
+    height: 10rem;
+    left: 0rem;
+    right: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_programming {
+    background-color: hsl(242, 100%, 68%);
+    height: 95%;
+    width: 15rem;
+    position: absolute;
+    left: 2.5rem;
+    top: -2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_2 {
+    background-color: hsl(242, 100%, 68%);
+    height: 88%;
+    width: 13rem;
+    position: absolute;
+    right: -1rem;
+    top: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_3 {
+    background-color: hsl(242, 100%, 68%);
+    height: 100%;
+    width: 15rem;
+    position: absolute;
+    left: 1rem;
+    top: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_4 {
+    background-color: hsl(242, 100%, 68%);
+    height: 100%;
+    width: 15rem;
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: grid;
+    gap: 29rem;
+    transform: translateZ(-0.1rem) translateX(-1.5rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container {
+    height: 10rem;
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-1 {
+    background-color: hsl(251, 38%, 41%);
+    height: 6rem;
+    width: 8rem;
+    position: absolute;
+    left: 13rem;
+    bottom: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-2 {
+    background-color: hsl(251, 38%, 41%);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    left: 1rem;
+    bottom: -4rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-1 {
+    background-color: hsl(251, 38%, 41%);
+    height: 3rem;
+    width: 4rem;
+    position: absolute;
+    right: 11rem;
+    bottom: 1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-2 {
+    background-color: hsl(251, 38%, 41%);
+    height: 4rem;
+    width: 6rem;
+    position: absolute;
+    right: 18rem;
+    bottom: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-3 {
+    background-color: hsl(251, 38%, 41%);
+    height: 3rem;
+    width: 3.5rem;
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-1 {
+    background-color: hsl(251, 38%, 41%);
+    height: 4rem;
+    width: 6rem;
+    position: absolute;
+    left: -1rem;
+    bottom: -0.5rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-2 {
+    background-color: hsl(251, 38%, 41%);
+    height: 4.5rem;
+    width: 6.5rem;
+    position: absolute;
+    left: 14rem;
+    top: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-1 {
+    background-color: hsl(251, 38%, 41%);
+    height: 4.5rem;
+    width: 6.5rem;
+    position: absolute;
+    right: 14rem;
+    top: -0.5rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-2 {
+    background-color: hsl(251, 38%, 41%);
+    height: 6rem;
+    width: 8rem;
+    position: absolute;
+    right: -2rem;
+    top: -7rem;
+  }
+}
+@media (min-width: 768px) {
+  #main_content {
+    position: fixed;
+    perspective: 1rem;
+  }
+  #main_content #mc_wrapper {
+    position: absolute;
+    height: 150rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 1rem;
+    transform-style: preserve-3d;
+  }
+  #main_content #mc_wrapper #content_scroll_container {
+    position: relative;
+    width: 30rem;
+    height: 140rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    transform: translateX(-15rem);
+    transform-style: preserve-3d;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container {
+    position: absolute;
+    width: 100%;
+    height: 30rem;
+    transform: translateZ(-10rem) scale(8) translateX(25rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper {
+    height: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    gap: 0%;
+    margin-bottom: 3rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #My_pic_div {
+    padding-left: 1.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    overflow: hidden;
+    animation: Expand_Line 0.4s;
+    border-right: 2px rgba(255, 255, 255, 0.6) solid;
+  }
+  @keyframes Expand_Line {
+    0% {
+      height: 0rem;
+      border-right: 2px rgba(255, 255, 255, 0.9) solid;
+    }
+    100% {
+      height: 10rem;
+      border-right: 2px rgba(255, 255, 255, 0.6) solid;
+    }
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #My_pic_div #My_pic {
+    width: 8rem;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic {
+    padding-left: 1rem;
+    overflow: hidden;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic .Txt_Name {
+    font-size: 3rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    opacity: 0;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic .Txt_Description {
+    font-size: 2rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    opacity: 0;
+  }
+  #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #Txt_My_pic label {
+    font-weight: bold;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes {
+    position: relative;
+    top: 8rem;
+    display: grid;
+    gap: 30rem;
+    transform: translateZ(-0.5rem) translateX(-7rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container {
+    position: relative;
+    height: 10rem;
+    left: 0rem;
+    right: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_programming {
+    background-color: hsl(242, 100%, 68%);
+    height: 95%;
+    width: 15rem;
+    position: absolute;
+    left: 2.5rem;
+    top: -2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_2 {
+    background-color: hsl(242, 100%, 68%);
+    height: 88%;
+    width: 13rem;
+    position: absolute;
+    right: -1rem;
+    top: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_3 {
+    background-color: hsl(242, 100%, 68%);
+    height: 100%;
+    width: 15rem;
+    position: absolute;
+    left: 1rem;
+    top: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_4 {
+    background-color: hsl(242, 100%, 68%);
+    height: 100%;
+    width: 15rem;
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: grid;
+    gap: 29rem;
+    transform: translateZ(-0.1rem) translateX(-1.5rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container {
+    height: 10rem;
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-1 {
+    background-color: hsl(251, 38%, 41%);
+    height: 6rem;
+    width: 8rem;
+    position: absolute;
+    left: 13rem;
+    bottom: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-2 {
+    background-color: hsl(251, 38%, 41%);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    left: 1rem;
+    bottom: -4rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-1 {
+    background-color: hsl(251, 38%, 41%);
+    height: 3rem;
+    width: 4rem;
+    position: absolute;
+    right: 11rem;
+    bottom: 1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-2 {
+    background-color: hsl(251, 38%, 41%);
+    height: 4rem;
+    width: 6rem;
+    position: absolute;
+    right: 18rem;
+    bottom: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-3 {
+    background-color: hsl(251, 38%, 41%);
+    height: 3rem;
+    width: 3.5rem;
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-1 {
+    background-color: hsl(251, 38%, 41%);
+    height: 4rem;
+    width: 6rem;
+    position: absolute;
+    left: -1rem;
+    bottom: -0.5rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-2 {
+    background-color: hsl(251, 38%, 41%);
+    height: 4.5rem;
+    width: 6.5rem;
+    position: absolute;
+    left: 14rem;
+    top: -1rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-1 {
+    background-color: hsl(251, 38%, 41%);
+    height: 4.5rem;
+    width: 6.5rem;
+    position: absolute;
+    right: 14rem;
+    top: -0.5rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-2 {
+    background-color: hsl(251, 38%, 41%);
+    height: 6rem;
+    width: 8rem;
+    position: absolute;
+    right: -2rem;
+    top: -7rem;
+  }
+}/*# sourceMappingURL=style.css.map */

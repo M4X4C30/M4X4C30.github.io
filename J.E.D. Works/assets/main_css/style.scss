@@ -18,7 +18,11 @@
     $Accent_Color: white;
     $Text_Color: white;
     $Text_Accent_Color: hsl(242, 100%, 68%);
-    $Shade-1_Text_Accent_Color: hsl(251, 38%, 41%);
+    $Box_Accent_Color: hsla(242, 100%, 68%, 60%);
+    $Shade-1_Box_Accent_Color: hsla(251, 38%, 41%, 60%);
+    $Shade-2_Box_Accent_Color: hsla(252, 41%, 37%, 50%);
+    $Shade-3_Box_Accent_Color: hsla(252, 58%, 25%, 0.5);
+    $Shade-4_Box_Accent_Color: hsla(252, 66%, 23%, 0.5);
 
     $__old_Accent_color: rgba(118, 103, 170, 0.8);
 /* </Variables> */
@@ -306,7 +310,7 @@ body {
                 position: relative;
                 width: 100%;
                 height: 30rem;
-                transform: translateZ(-0.4rem);
+                transform: translateZ(-0.5rem);
     
                 #content_title_wrapper {
                     // border: $Dborder_C;
@@ -323,6 +327,7 @@ body {
                     #My_pic_div {
                         // border: $Dborder_C;
                         padding-left: 1.5rem;
+                        padding-right: 0.5rem;
                         padding-top: 0.2rem;
                         padding-bottom: 0.2rem;
                         overflow: hidden;
@@ -362,14 +367,14 @@ body {
             }
 
             #interactable_boxes {
-                // border: yellow 1px solid;
+                // border: rgba(255, 255, 0, 0.1) 1px solid;
                 position: relative;
                 display: grid;
                 gap: 20rem;
-                transform: translateZ(-0.3rem);
+                transform: translateZ(-0.4rem) scale(1);
 
                 .interactable_box_container {
-                    // border: white 1px solid;
+                    // border: rgba(255, 255, 255, 0.1) 1px solid;
                     // background-color: rgba(95, 90, 255, 0.1);
                     position: relative;
                     height: 10rem;
@@ -377,42 +382,70 @@ body {
                     right: 0rem;
 
                     #interactable_box_programming {
-                        background-color: $Text_Accent_Color;
+                        background-color: $Box_Accent_Color;
                         height: 95%;
                         width: 15rem;
                         position: absolute;
                         left: 2.5rem;
                         top: -2rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 2.5rem;
+                        }
                     }
                     #interactable_box_2 {
-                        background-color: $Text_Accent_Color;
+                        background-color: $Box_Accent_Color;
                         height: 88%;
                         width: 13rem;
                         position: absolute;
                         right: -1rem;
                         top: 0rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 2.5rem;
+                        }
                     }
                     #interactable_box_3 {
-                        background-color: $Text_Accent_Color;
+                        background-color: $Box_Accent_Color;
                         height: 100%;
                         width: 15rem;
                         position: absolute;
                         left: 1rem;
                         top: 0rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 2.5rem;
+                        }
                     }
                     #interactable_box_4 {
-                        background-color: $Text_Accent_Color;
+                        background-color: $Box_Accent_Color;
                         height: 100%;
                         width: 15rem;
                         position: absolute;
                         right: 1rem;
                         top: -1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 2.5rem;
+                        }
                     }
                 }
             }
 
             #front_interactable_boxes {
-                // border: lime 1px solid;
+                // border: rgba(0, 255, 0, 0.1) 1px solid;
                 position: absolute;
                 top: 40rem;
                 width: 100%;
@@ -421,7 +454,7 @@ body {
                 transform: translateZ(-0.1rem);
 
                 .front_interactable_box_container {
-                    // border: red 1px solid;
+                    // border: rgba(255, 0, 0, 0.1) 1px solid;
                     // background-color: rgba(79, 64, 144, 0.1);
                     height: 10rem;
                     position: relative;
@@ -429,79 +462,407 @@ body {
                     right: 0rem;
 
                     #front_interactable_box_programming-1 {
-                        background-color: $Shade-1_Text_Accent_Color;
+                        background-color: $Shade-1_Box_Accent_Color;
                         height: 6rem;
                         width: 8rem;
                         position: absolute;
                         left: 13rem;
                         bottom: -1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.5rem;
+                        }
                     }
                     #front_interactable_box_programming-2 {
-                        background-color: $Shade-1_Text_Accent_Color;
+                        background-color: $Shade-1_Box_Accent_Color;
                         height: 5rem;
-                        width: 6rem;
+                        width: 7rem;
                         position: absolute;
-                        left: 1rem;
-                        bottom: -4rem;
+                        right: 0.1rem;
+                        top: -6rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
 
                     #front_interactable_box_2-1 {
-                        background-color: $Shade-1_Text_Accent_Color;
-                        height: 3rem;
-                        width: 4rem;
-                        position: absolute;
-                        right: 11rem;
-                        bottom: 1rem;
-                    }
-                    #front_interactable_box_2-2 {
-                        background-color: $Shade-1_Text_Accent_Color;
-                        height: 4rem;
-                        width: 6rem;
+                        background-color: $Shade-1_Box_Accent_Color;
+                        height: 4.5rem;
+                        width: 6.5rem;
                         position: absolute;
                         right: 18rem;
                         bottom: -1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.3rem;
+                        }
                     }
-                    #front_interactable_box_2-3 {   
-                        background-color: $Shade-1_Text_Accent_Color;
-                        height: 3rem;
-                        width: 3.5rem;
+                    #front_interactable_box_2-2 {
+                        background-color: $Shade-1_Box_Accent_Color;
+                        height: 4.5rem;
+                        width: 6rem;
                         position: absolute;
-                        right: -1rem;
-                        bottom: -1rem;
+                        left: 1rem;
+                        top: -7rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
 
                     #front_interactable_box_3-1 {
-                        background-color: $Shade-1_Text_Accent_Color;
+                        background-color: $Shade-1_Box_Accent_Color;
                         height: 4rem;
                         width: 6rem;
                         position: absolute;
                         left: -1rem;
                         bottom: -0.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.4rem;
+                        }
                     }
                     #front_interactable_box_3-2 {
-                        background-color: $Shade-1_Text_Accent_Color;
+                        background-color: $Shade-1_Box_Accent_Color;
                         height: 4.5rem;
                         width: 6.5rem;
                         position: absolute;
                         left: 14rem;
                         top: -1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.4rem;
+                        }
+                    }
+                    #front_interactable_box_3-3 {
+                        background-color: $Shade-1_Box_Accent_Color;
+                        height: 3.5rem;
+                        width: 6rem;
+                        position: absolute;
+                        right: 1rem;
+                        bottom: -3rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                     
                     #front_interactable_box_4-1 {
-                        background-color: $Shade-1_Text_Accent_Color;
-                        height: 4.5rem;
-                        width: 6.5rem;
-                        position: absolute;
-                        right: 14rem;
-                        top: -0.5rem;
-                    }
-                    #front_interactable_box_4-2 {
-                        background-color: $Shade-1_Text_Accent_Color;
+                        background-color: $Shade-1_Box_Accent_Color;
                         height: 6rem;
                         width: 8rem;
                         position: absolute;
                         right: -2rem;
                         top: -7rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    #front_interactable_box_4-2 {
+                        background-color: $Shade-1_Box_Accent_Color;
+                        height: 6rem;
+                        width: 8rem;
+                        position: absolute;
+                        left: -2rem;
+                        bottom: -7rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            #second_layer_interactable_boxes {
+                // border: rgba(0, 255, 0, 0.1) 1px solid;
+                position: absolute;
+                top: 40rem;
+                width: 100%;
+                display: grid;
+                gap: 19rem;
+                transform: translateZ(-0.3rem);
+
+                .second_layer_interactable_box_container {
+                    // border: rgba(255, 0, 0, 0.1) 1px solid;
+                    // background-color: rgba(79, 64, 144, 0.1);
+                    height: 10rem;
+                    position: relative;
+                    left: 0rem;
+                    right: 0rem;
+
+                    #second_layer_interactable_box_programming-1 {
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 5rem;
+                        width: 6rem;
+                        position: absolute;
+                        left: 1rem;
+                        bottom: -3rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.3rem;
+                        }
+                    }
+                    #second_layer_interactable_box_programming-2 {
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 5rem;
+                        width: 6rem;
+                        position: absolute;
+                        left: 12rem;
+                        top: -6rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.3rem;
+                        }
+                    }
+                    #second_layer_interactable_box_programming-3 {
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 5.5rem;
+                        width: 6.5rem;
+                        position: absolute;
+                        right: -6rem;
+                        bottom: -5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    #second_layer_interactable_box_2-1 {
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 4rem;
+                        width: 5rem;
+                        position: absolute;
+                        right: 11rem;
+                        bottom: 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    #second_layer_interactable_box_2-2 {   
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 3.5rem;
+                        width: 5rem;
+                        position: absolute;
+                        right: -1rem;
+                        bottom: -1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    #second_layer_interactable_box_2-3 {   
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 3.5rem;
+                        width: 5rem;
+                        position: absolute;
+                        left: -1rem;
+                        bottom: -4rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    #second_layer_interactable_box_3-1 {
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 3rem;
+                        width: 5rem;
+                        position: absolute;
+                        right: 9rem;
+                        top: -8rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    #second_layer_interactable_box_3-2   {
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 3rem;
+                        width: 5rem;
+                        position: absolute;
+                        left: 4rem;
+                        bottom: -8rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    #second_layer_interactable_box_4-1 {
+                        background-color: $Shade-2_Box_Accent_Color;
+                        height: 5.5rem;
+                        width: 7.5rem;
+                        position: absolute;
+                        right: 14rem;
+                        top: -0.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        label {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+
+            #back_layer_1_interactable_boxes {
+                // border: rgba(0, 255, 0, 0.1) 1px solid;
+                position: absolute;
+                top: 40rem;
+                width: 100%;
+                display: grid;
+                gap: 19rem;
+                transform: translateZ(-0.6rem);
+
+                .back_layer_1_interactable_box_container {
+                    // border: rgba(0, 238, 255, 0.349) 1px solid;
+                    // background-color: rgba(79, 64, 144, 0.1);
+                    height: 10rem;
+                    position: relative;
+                    left: 0rem;
+                    right: 0rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    #back_layer_1_interactable_box_programming-1 {
+                        background-color: $Shade-3_Box_Accent_Color;
+                        height: 4rem;
+                        width: 6rem;
+                        position: absolute;
+                        left: -8rem;
+                        top: -6rem;
+                    }
+                    #back_layer_1_interactable_box_programming-2 {
+                        background-color: $Shade-3_Box_Accent_Color;
+                        height: 5rem;
+                        width: 6rem;
+                        position: absolute;
+                        top: -11rem;
+                        right: 11rem;
+                    }
+                    #back_layer_1_interactable_box_programming-3 {
+                        background-color: $Shade-3_Box_Accent_Color;
+                        height: 4rem;
+                        width: 5.5rem;
+                        position: absolute;
+                        transform: translateX(-2rem) translateY(12rem);
+                    }
+
+                    #back_layer_1_interactable_box_2-1 {   
+                        background-color: $Shade-3_Box_Accent_Color;
+                        height: 3.5rem;
+                        width: 7rem;
+                        position: absolute;
+                        transform: translateX(-5rem) translateY(12rem);
+                    }
+
+                    #back_layer_1_interactable_box_3-1 {
+                        background-color: $Shade-3_Box_Accent_Color;
+                        height: 4rem;
+                        width: 5rem;
+                        position: absolute;
+                        transform: translateX(6rem);
+                    }
+                    
+                    #back_layer_1_interactable_box_4-1 {
+                        background-color: $Shade-3_Box_Accent_Color;
+                        height: 5.5rem;
+                        width: 7.5rem;
+                        position: absolute;
+                        transform: translateX(-12rem) translateY(5rem);
+                    }
+                }
+            }
+
+            #back_layer_2_interactable_boxes {
+                // border: rgba(0, 255, 0, 0.1) 1px solid;
+                position: absolute;
+                top: 40rem;
+                width: 100%;
+                display: grid;
+                gap: 19rem;
+                transform: translateZ(-0.8rem);
+
+                .back_layer_2_interactable_box_container {
+                    // border: rgba(102, 255, 0, 0.349) 1px solid;
+                    // background-color: rgba(79, 64, 144, 0.1);
+                    height: 10rem;
+                    position: relative;
+                    left: 0rem;
+                    right: 0rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    #back_layer_2_interactable_box_programming-1 {
+                        background-color: $Shade-4_Box_Accent_Color;
+                        height: 4rem;
+                        width: 5.5rem;
+                        position: absolute;
+                        transform: translateX(12rem);
+                    }
+
+                    #back_layer_2_interactable_box_2-1 {
+                        background-color: $Shade-4_Box_Accent_Color;
+                        height: 4rem;
+                        width: 5rem;
+                        position: absolute;
+                        transform: translateX(-18rem) translateY(-2rem);
+                    }
+
+                    #back_layer_2_interactable_box_3-1   {
+                        background-color: $Shade-4_Box_Accent_Color;
+                        height: 4.5rem;
+                        width: 6rem;
+                        position: absolute;
+                        transform: translateX(18rem) translateY(4rem);
+                    }
+                    
+                    #back_layer_2_interactable_box_4-1 {
+                        background-color: $Shade-4_Box_Accent_Color;
+                        height: 5rem;
+                        width: 6rem;
+                        position: absolute;
+                        transform: translateX(24rem) translateY(15rem);
+                    }
+                    #back_layer_2_interactable_box_4-2 {
+                        background-color: $Shade-4_Box_Accent_Color;
+                        height: 4rem;
+                        width: 6rem;
+                        position: absolute;
+                        transform: translateX(2rem) translateY(24rem);
                     }
                 }
             }
@@ -628,7 +989,7 @@ body {
                         right: 0rem;
     
                         #interactable_box_programming {
-                            background-color: $Text_Accent_Color;
+                            background-color: $Box_Accent_Color;
                             height: 95%;
                             width: 15rem;
                             position: absolute;
@@ -636,7 +997,7 @@ body {
                             top: -2rem;
                         }
                         #interactable_box_2 {
-                            background-color: $Text_Accent_Color;
+                            background-color: $Box_Accent_Color;
                             height: 88%;
                             width: 13rem;
                             position: absolute;
@@ -644,7 +1005,7 @@ body {
                             top: 0rem;
                         }
                         #interactable_box_3 {
-                            background-color: $Text_Accent_Color;
+                            background-color: $Box_Accent_Color;
                             height: 100%;
                             width: 15rem;
                             position: absolute;
@@ -652,7 +1013,7 @@ body {
                             top: 0rem;
                         }
                         #interactable_box_4 {
-                            background-color: $Text_Accent_Color;
+                            background-color: $Box_Accent_Color;
                             height: 100%;
                             width: 15rem;
                             position: absolute;
@@ -677,24 +1038,16 @@ body {
                         right: 0rem;
     
                         #front_interactable_box_programming-1 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 6rem;
                             width: 8rem;
                             position: absolute;
                             left: 13rem;
                             bottom: -1rem;
                         }
-                        #front_interactable_box_programming-2 {
-                            background-color: $Shade-1_Text_Accent_Color;
-                            height: 5rem;
-                            width: 6rem;
-                            position: absolute;
-                            left: 1rem;
-                            bottom: -4rem;
-                        }
     
                         #front_interactable_box_2-1 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 3rem;
                             width: 4rem;
                             position: absolute;
@@ -702,7 +1055,7 @@ body {
                             bottom: 1rem;
                         }
                         #front_interactable_box_2-2 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 4rem;
                             width: 6rem;
                             position: absolute;
@@ -710,7 +1063,7 @@ body {
                             bottom: -1rem;
                         }
                         #front_interactable_box_2-3 {   
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 3rem;
                             width: 3.5rem;
                             position: absolute;
@@ -719,7 +1072,7 @@ body {
                         }
     
                         #front_interactable_box_3-1 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 4rem;
                             width: 6rem;
                             position: absolute;
@@ -727,7 +1080,7 @@ body {
                             bottom: -0.5rem;
                         }
                         #front_interactable_box_3-2 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 4.5rem;
                             width: 6.5rem;
                             position: absolute;
@@ -736,7 +1089,7 @@ body {
                         }
                         
                         #front_interactable_box_4-1 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 4.5rem;
                             width: 6.5rem;
                             position: absolute;
@@ -744,7 +1097,7 @@ body {
                             top: -0.5rem;
                         }
                         #front_interactable_box_4-2 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 6rem;
                             width: 8rem;
                             position: absolute;
@@ -753,11 +1106,243 @@ body {
                         }
                     }
                 }
+
+                #second_layer_interactable_boxes {
+                    // border: rgba(0, 255, 0, 0.1) 1px solid;
+                    position: absolute;
+                    top: 8rem;
+                    width: 100%;
+                    display: grid;
+                    gap: 19rem;
+                    transform: translateZ(-0.3rem) translateX(-4rem);
+    
+                    .second_layer_interactable_box_container {
+                        // border: rgba(255, 0, 0, 0.1) 1px solid;
+                        // background-color: rgba(79, 64, 144, 0.1);
+                        height: 10rem;
+                        position: relative;
+                        left: 0rem;
+                        right: 0rem;
+    
+                        #second_layer_interactable_box_programming-1 {
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: 1rem;
+                            bottom: -3rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.3rem;
+                            }
+                        }
+                        #second_layer_interactable_box_programming-2 {
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: 12rem;
+                            top: -6rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.3rem;
+                            }
+                        }
+    
+                        #second_layer_interactable_box_2-1 {
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 3rem;
+                            width: 4rem;
+                            position: absolute;
+                            right: 11rem;
+                            bottom: 1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.2rem;
+                            }
+                        }
+                        #second_layer_interactable_box_2-2 {   
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 3rem;
+                            width: 4.5rem;
+                            position: absolute;
+                            right: -1rem;
+                            bottom: -1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.2rem;
+                            }
+                        }
+    
+                        //blank2
+                        
+                        #second_layer_interactable_box_4-1 {
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 5.5rem;
+                            width: 7.5rem;
+                            position: absolute;
+                            right: 14rem;
+                            top: -0.5rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+
+                #back_layer_1_interactable_boxes {
+                    // border: rgba(0, 255, 0, 0.1) 1px solid;
+                    position: absolute;
+                    top: 8rem;
+                    width: 100%;
+                    display: grid;
+                    gap: 19rem;
+                    transform: translateZ(-0.6rem) translateX(-4rem);
+    
+                    .back_layer_1_interactable_box_container {
+                        // border: rgba(0, 238, 255, 0.349) 1px solid;
+                        // background-color: rgba(79, 64, 144, 0.1);
+                        height: 10rem;
+                        position: relative;
+                        left: 0rem;
+                        right: 0rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 2rem;
+    
+                        #back_layer_1_interactable_box_programming-1 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 4rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: -8rem;
+                            top: -6rem;
+                        }
+                        #back_layer_1_interactable_box_programming-2 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            top: -11rem;
+                            right: 11rem;
+                        }
+                        #back_layer_1_interactable_box_programming-3 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 4rem;
+                            width: 5.5rem;
+                            position: absolute;
+                            transform: translateX(-2rem) translateY(12rem);
+                        }
+    
+                        #back_layer_1_interactable_box_2-1 {   
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 3.5rem;
+                            width: 7rem;
+                            position: absolute;
+                            transform: translateX(-5rem) translateY(12rem);
+                        }
+    
+                        #back_layer_1_interactable_box_3-1 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 4rem;
+                            width: 5rem;
+                            position: absolute;
+                            transform: translateX(6rem);
+                        }
+                        
+                        #back_layer_1_interactable_box_4-1 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 5.5rem;
+                            width: 7.5rem;
+                            position: absolute;
+                            transform: translateX(-12rem) translateY(5rem);
+                        }
+                    }
+                }
+    
+                #back_layer_2_interactable_boxes {
+                    position: absolute;
+                    top: 8rem;
+                    width: 100%;
+                    display: grid;
+                    gap: 19rem;
+                    transform: translateZ(-0.8rem) translateX(-4rem);
+    
+                    .back_layer_2_interactable_box_container {
+                        height: 10rem;
+                        position: relative;
+                        left: 0rem;
+                        right: 0rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 2rem;
+    
+                        #back_layer_2_interactable_box_programming-1 {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 4rem;
+                            width: 5.5rem;
+                            position: absolute;
+                            transform: translateX(12rem);
+                        }
+    
+                        #back_layer_2_interactable_box_2-1 {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 4rem;
+                            width: 5rem;
+                            position: absolute;
+                            transform: translateX(-18rem) translateY(-2rem);
+                        }
+    
+                        #back_layer_2_interactable_box_3-1   {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 4.5rem;
+                            width: 6rem;
+                            position: absolute;
+                            transform: translateX(18rem) translateY(4rem);
+                        }
+                        
+                        #back_layer_2_interactable_box_4-1 {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            transform: translateX(24rem) translateY(15rem);
+                        }
+                        #back_layer_2_interactable_box_4-2 {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 4rem;
+                            width: 6rem;
+                            position: absolute;
+                            transform: translateX(2rem) translateY(24rem);
+                        }
+                    }
+                }
     
             }
         }
     }
 }
+
 
 @media (min-width: 768px) {
     #main_content {
@@ -779,7 +1364,7 @@ body {
             #content_scroll_container {
                 // border: $Dborder_C;
                 position: relative;
-                width: 30rem;
+                width: 40rem;
                 height: 140rem;
                 display: flex;
                 flex-direction: column;
@@ -927,24 +1512,16 @@ body {
                         right: 0rem;
     
                         #front_interactable_box_programming-1 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 6rem;
                             width: 8rem;
                             position: absolute;
                             left: 13rem;
                             bottom: -1rem;
                         }
-                        #front_interactable_box_programming-2 {
-                            background-color: $Shade-1_Text_Accent_Color;
-                            height: 5rem;
-                            width: 6rem;
-                            position: absolute;
-                            left: 1rem;
-                            bottom: -4rem;
-                        }
     
                         #front_interactable_box_2-1 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 3rem;
                             width: 4rem;
                             position: absolute;
@@ -952,7 +1529,7 @@ body {
                             bottom: 1rem;
                         }
                         #front_interactable_box_2-2 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 4rem;
                             width: 6rem;
                             position: absolute;
@@ -960,7 +1537,7 @@ body {
                             bottom: -1rem;
                         }
                         #front_interactable_box_2-3 {   
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 3rem;
                             width: 3.5rem;
                             position: absolute;
@@ -969,7 +1546,7 @@ body {
                         }
     
                         #front_interactable_box_3-1 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 4rem;
                             width: 6rem;
                             position: absolute;
@@ -977,7 +1554,7 @@ body {
                             bottom: -0.5rem;
                         }
                         #front_interactable_box_3-2 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 4.5rem;
                             width: 6.5rem;
                             position: absolute;
@@ -986,7 +1563,7 @@ body {
                         }
                         
                         #front_interactable_box_4-1 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 4.5rem;
                             width: 6.5rem;
                             position: absolute;
@@ -994,12 +1571,243 @@ body {
                             top: -0.5rem;
                         }
                         #front_interactable_box_4-2 {
-                            background-color: $Shade-1_Text_Accent_Color;
+                            background-color: $Shade-1_Box_Accent_Color;
                             height: 6rem;
                             width: 8rem;
                             position: absolute;
                             right: -2rem;
                             top: -7rem;
+                        }
+                    }
+                }
+
+                #second_layer_interactable_boxes {
+                    // border: rgba(0, 255, 0, 0.1) 1px solid;
+                    position: absolute;
+                    top: 8rem;
+                    width: 100%;
+                    display: grid;
+                    gap: 19rem;
+                    transform: translateZ(-0.3rem) translateX(-4rem);
+    
+                    .second_layer_interactable_box_container {
+                        // border: rgba(255, 0, 0, 0.1) 1px solid;
+                        // background-color: rgba(79, 64, 144, 0.1);
+                        height: 10rem;
+                        position: relative;
+                        left: 0rem;
+                        right: 0rem;
+    
+                        #second_layer_interactable_box_programming-1 {
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: 1rem;
+                            bottom: -3rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.3rem;
+                            }
+                        }
+                        #second_layer_interactable_box_programming-2 {
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: 12rem;
+                            top: -6rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.3rem;
+                            }
+                        }
+    
+                        #second_layer_interactable_box_2-1 {
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 3rem;
+                            width: 4rem;
+                            position: absolute;
+                            right: 11rem;
+                            bottom: 1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.2rem;
+                            }
+                        }
+                        #second_layer_interactable_box_2-2 {   
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 3rem;
+                            width: 4.5rem;
+                            position: absolute;
+                            right: -1rem;
+                            bottom: -1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.2rem;
+                            }
+                        }
+    
+                        //blank2
+                        
+                        #second_layer_interactable_box_4-1 {
+                            background-color: $Shade-2_Box_Accent_Color;
+                            height: 5.5rem;
+                            width: 7.5rem;
+                            position: absolute;
+                            right: 14rem;
+                            top: -0.5rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            label {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+
+                #back_layer_1_interactable_boxes {
+                    // border: rgba(0, 255, 0, 0.1) 1px solid;
+                    position: absolute;
+                    top: 8rem;
+                    width: 100%;
+                    display: grid;
+                    gap: 19rem;
+                    transform: translateZ(-0.6rem) translateX(-4rem);
+    
+                    .back_layer_1_interactable_box_container {
+                        // border: rgba(0, 238, 255, 0.349) 1px solid;
+                        // background-color: rgba(79, 64, 144, 0.1);
+                        height: 10rem;
+                        position: relative;
+                        left: 0rem;
+                        right: 0rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 2rem;
+    
+                        #back_layer_1_interactable_box_programming-1 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 4rem;
+                            width: 6rem;
+                            position: absolute;
+                            left: -8rem;
+                            top: -6rem;
+                        }
+                        #back_layer_1_interactable_box_programming-2 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            top: -11rem;
+                            right: 11rem;
+                        }
+                        #back_layer_1_interactable_box_programming-3 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 4rem;
+                            width: 5.5rem;
+                            position: absolute;
+                            transform: translateX(-2rem) translateY(12rem);
+                        }
+    
+                        #back_layer_1_interactable_box_2-1 {   
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 3.5rem;
+                            width: 7rem;
+                            position: absolute;
+                            transform: translateX(-5rem) translateY(12rem);
+                        }
+    
+                        #back_layer_1_interactable_box_3-1 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 4rem;
+                            width: 5rem;
+                            position: absolute;
+                            transform: translateX(6rem);
+                        }
+                        
+                        #back_layer_1_interactable_box_4-1 {
+                            background-color: $Shade-3_Box_Accent_Color;
+                            height: 5.5rem;
+                            width: 7.5rem;
+                            position: absolute;
+                            transform: translateX(-12rem) translateY(5rem);
+                        }
+                    }
+                }
+    
+                #back_layer_2_interactable_boxes {
+                    position: absolute;
+                    top: 8rem;
+                    width: 100%;
+                    display: grid;
+                    gap: 19rem;
+                    transform: translateZ(-0.8rem) translateX(-4rem);
+    
+                    .back_layer_2_interactable_box_container {
+                        height: 10rem;
+                        position: relative;
+                        left: 0rem;
+                        right: 0rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 2rem;
+    
+                        #back_layer_2_interactable_box_programming-1 {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 4rem;
+                            width: 5.5rem;
+                            position: absolute;
+                            transform: translateX(12rem);
+                        }
+    
+                        #back_layer_2_interactable_box_2-1 {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 4rem;
+                            width: 5rem;
+                            position: absolute;
+                            transform: translateX(-18rem) translateY(-2rem);
+                        }
+    
+                        #back_layer_2_interactable_box_3-1   {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 4.5rem;
+                            width: 6rem;
+                            position: absolute;
+                            transform: translateX(18rem) translateY(4rem);
+                        }
+                        
+                        #back_layer_2_interactable_box_4-1 {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 5rem;
+                            width: 6rem;
+                            position: absolute;
+                            transform: translateX(24rem) translateY(15rem);
+                        }
+                        #back_layer_2_interactable_box_4-2 {
+                            background-color: $Shade-4_Box_Accent_Color;
+                            height: 4rem;
+                            width: 6rem;
+                            position: absolute;
+                            transform: translateX(2rem) translateY(24rem);
                         }
                     }
                 }

@@ -258,7 +258,7 @@ body {
   position: relative;
   width: 100%;
   height: 30rem;
-  transform: translateZ(-0.4rem);
+  transform: translateZ(-0.5rem);
 }
 #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper {
   height: 90%;
@@ -273,6 +273,7 @@ body {
 }
 #main_content #mc_wrapper #content_scroll_container #content_title_container #content_title_wrapper #My_pic_div {
   padding-left: 1.5rem;
+  padding-right: 0.5rem;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   overflow: hidden;
@@ -310,7 +311,7 @@ body {
   position: relative;
   display: grid;
   gap: 20rem;
-  transform: translateZ(-0.3rem);
+  transform: translateZ(-0.4rem) scale(1);
 }
 #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container {
   position: relative;
@@ -319,36 +320,60 @@ body {
   right: 0rem;
 }
 #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_programming {
-  background-color: hsl(242, 100%, 68%);
+  background-color: hsla(242, 100%, 68%, 0.6);
   height: 95%;
   width: 15rem;
   position: absolute;
   left: 2.5rem;
   top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_programming label {
+  font-size: 2.5rem;
 }
 #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_2 {
-  background-color: hsl(242, 100%, 68%);
+  background-color: hsla(242, 100%, 68%, 0.6);
   height: 88%;
   width: 13rem;
   position: absolute;
   right: -1rem;
   top: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_2 label {
+  font-size: 2.5rem;
 }
 #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_3 {
-  background-color: hsl(242, 100%, 68%);
+  background-color: hsla(242, 100%, 68%, 0.6);
   height: 100%;
   width: 15rem;
   position: absolute;
   left: 1rem;
   top: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_3 label {
+  font-size: 2.5rem;
 }
 #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_4 {
-  background-color: hsl(242, 100%, 68%);
+  background-color: hsla(242, 100%, 68%, 0.6);
   height: 100%;
   width: 15rem;
   position: absolute;
   right: 1rem;
   top: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_4 label {
+  font-size: 2.5rem;
 }
 #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes {
   position: absolute;
@@ -365,76 +390,366 @@ body {
   right: 0rem;
 }
 #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-1 {
-  background-color: hsl(251, 38%, 41%);
+  background-color: hsla(251, 38%, 41%, 0.6);
   height: 6rem;
   width: 8rem;
   position: absolute;
   left: 13rem;
   bottom: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-1 label {
+  font-size: 1.5rem;
 }
 #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-2 {
-  background-color: hsl(251, 38%, 41%);
+  background-color: hsla(251, 38%, 41%, 0.6);
   height: 5rem;
-  width: 6rem;
+  width: 7rem;
   position: absolute;
-  left: 1rem;
-  bottom: -4rem;
+  right: 0.1rem;
+  top: -6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-1 {
-  background-color: hsl(251, 38%, 41%);
-  height: 3rem;
-  width: 4rem;
-  position: absolute;
-  right: 11rem;
-  bottom: 1rem;
-}
-#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-2 {
-  background-color: hsl(251, 38%, 41%);
-  height: 4rem;
-  width: 6rem;
+  background-color: hsla(251, 38%, 41%, 0.6);
+  height: 4.5rem;
+  width: 6.5rem;
   position: absolute;
   right: 18rem;
   bottom: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-3 {
-  background-color: hsl(251, 38%, 41%);
-  height: 3rem;
-  width: 3.5rem;
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-1 label {
+  font-size: 1.3rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-2 {
+  background-color: hsla(251, 38%, 41%, 0.6);
+  height: 4.5rem;
+  width: 6rem;
   position: absolute;
-  right: -1rem;
-  bottom: -1rem;
+  left: 1rem;
+  top: -7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-1 {
-  background-color: hsl(251, 38%, 41%);
+  background-color: hsla(251, 38%, 41%, 0.6);
   height: 4rem;
   width: 6rem;
   position: absolute;
   left: -1rem;
   bottom: -0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-1 label {
+  font-size: 1.4rem;
 }
 #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-2 {
-  background-color: hsl(251, 38%, 41%);
+  background-color: hsla(251, 38%, 41%, 0.6);
   height: 4.5rem;
   width: 6.5rem;
   position: absolute;
   left: 14rem;
   top: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-2 label {
+  font-size: 1.4rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-3 {
+  background-color: hsla(251, 38%, 41%, 0.6);
+  height: 3.5rem;
+  width: 6rem;
+  position: absolute;
+  right: 1rem;
+  bottom: -3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-1 {
-  background-color: hsl(251, 38%, 41%);
-  height: 4.5rem;
-  width: 6.5rem;
-  position: absolute;
-  right: 14rem;
-  top: -0.5rem;
-}
-#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-2 {
-  background-color: hsl(251, 38%, 41%);
+  background-color: hsla(251, 38%, 41%, 0.6);
   height: 6rem;
   width: 8rem;
   position: absolute;
   right: -2rem;
   top: -7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-1 label {
+  font-size: 1.5rem;
+}
+#main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-2 {
+  background-color: hsla(251, 38%, 41%, 0.6);
+  height: 6rem;
+  width: 8rem;
+  position: absolute;
+  left: -2rem;
+  bottom: -7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes {
+  position: absolute;
+  top: 40rem;
+  width: 100%;
+  display: grid;
+  gap: 19rem;
+  transform: translateZ(-0.3rem);
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container {
+  height: 10rem;
+  position: relative;
+  left: 0rem;
+  right: 0rem;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-1 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 5rem;
+  width: 6rem;
+  position: absolute;
+  left: 1rem;
+  bottom: -3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-1 label {
+  font-size: 1.3rem;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-2 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 5rem;
+  width: 6rem;
+  position: absolute;
+  left: 12rem;
+  top: -6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-2 label {
+  font-size: 1.3rem;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-3 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 5.5rem;
+  width: 6.5rem;
+  position: absolute;
+  right: -6rem;
+  bottom: -5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-3 label {
+  font-size: 1.5rem;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-1 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 4rem;
+  width: 5rem;
+  position: absolute;
+  right: 11rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-1 label {
+  font-size: 1.2rem;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-2 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 3.5rem;
+  width: 5rem;
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-2 label {
+  font-size: 1.2rem;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-3 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 3.5rem;
+  width: 5rem;
+  position: absolute;
+  left: -1rem;
+  bottom: -4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_3-1 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 3rem;
+  width: 5rem;
+  position: absolute;
+  right: 9rem;
+  top: -8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_3-2 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 3rem;
+  width: 5rem;
+  position: absolute;
+  left: 4rem;
+  bottom: -8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_4-1 {
+  background-color: hsla(252, 41%, 37%, 0.5);
+  height: 5.5rem;
+  width: 7.5rem;
+  position: absolute;
+  right: 14rem;
+  top: -0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_4-1 label {
+  font-size: 1.3rem;
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes {
+  position: absolute;
+  top: 40rem;
+  width: 100%;
+  display: grid;
+  gap: 19rem;
+  transform: translateZ(-0.6rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container {
+  height: 10rem;
+  position: relative;
+  left: 0rem;
+  right: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-1 {
+  background-color: hsla(252, 58%, 25%, 0.5);
+  height: 4rem;
+  width: 6rem;
+  position: absolute;
+  left: -8rem;
+  top: -6rem;
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-2 {
+  background-color: hsla(252, 58%, 25%, 0.5);
+  height: 5rem;
+  width: 6rem;
+  position: absolute;
+  top: -11rem;
+  right: 11rem;
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-3 {
+  background-color: hsla(252, 58%, 25%, 0.5);
+  height: 4rem;
+  width: 5.5rem;
+  position: absolute;
+  transform: translateX(-2rem) translateY(12rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_2-1 {
+  background-color: hsla(252, 58%, 25%, 0.5);
+  height: 3.5rem;
+  width: 7rem;
+  position: absolute;
+  transform: translateX(-5rem) translateY(12rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_3-1 {
+  background-color: hsla(252, 58%, 25%, 0.5);
+  height: 4rem;
+  width: 5rem;
+  position: absolute;
+  transform: translateX(6rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_4-1 {
+  background-color: hsla(252, 58%, 25%, 0.5);
+  height: 5.5rem;
+  width: 7.5rem;
+  position: absolute;
+  transform: translateX(-12rem) translateY(5rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes {
+  position: absolute;
+  top: 40rem;
+  width: 100%;
+  display: grid;
+  gap: 19rem;
+  transform: translateZ(-0.8rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container {
+  height: 10rem;
+  position: relative;
+  left: 0rem;
+  right: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_programming-1 {
+  background-color: hsla(252, 66%, 23%, 0.5);
+  height: 4rem;
+  width: 5.5rem;
+  position: absolute;
+  transform: translateX(12rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_2-1 {
+  background-color: hsla(252, 66%, 23%, 0.5);
+  height: 4rem;
+  width: 5rem;
+  position: absolute;
+  transform: translateX(-18rem) translateY(-2rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_3-1 {
+  background-color: hsla(252, 66%, 23%, 0.5);
+  height: 4.5rem;
+  width: 6rem;
+  position: absolute;
+  transform: translateX(18rem) translateY(4rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_4-1 {
+  background-color: hsla(252, 66%, 23%, 0.5);
+  height: 5rem;
+  width: 6rem;
+  position: absolute;
+  transform: translateX(24rem) translateY(15rem);
+}
+#main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_4-2 {
+  background-color: hsla(252, 66%, 23%, 0.5);
+  height: 4rem;
+  width: 6rem;
+  position: absolute;
+  transform: translateX(2rem) translateY(24rem);
 }
 
 @media (min-width: 475px) {
@@ -536,7 +851,7 @@ body {
     right: 0rem;
   }
   #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_programming {
-    background-color: hsl(242, 100%, 68%);
+    background-color: hsla(242, 100%, 68%, 0.6);
     height: 95%;
     width: 15rem;
     position: absolute;
@@ -544,7 +859,7 @@ body {
     top: -2rem;
   }
   #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_2 {
-    background-color: hsl(242, 100%, 68%);
+    background-color: hsla(242, 100%, 68%, 0.6);
     height: 88%;
     width: 13rem;
     position: absolute;
@@ -552,7 +867,7 @@ body {
     top: 0rem;
   }
   #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_3 {
-    background-color: hsl(242, 100%, 68%);
+    background-color: hsla(242, 100%, 68%, 0.6);
     height: 100%;
     width: 15rem;
     position: absolute;
@@ -560,7 +875,7 @@ body {
     top: 0rem;
   }
   #main_content #mc_wrapper #content_scroll_container #interactable_boxes .interactable_box_container #interactable_box_4 {
-    background-color: hsl(242, 100%, 68%);
+    background-color: hsla(242, 100%, 68%, 0.6);
     height: 100%;
     width: 15rem;
     position: absolute;
@@ -582,23 +897,15 @@ body {
     right: 0rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-1 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 6rem;
     width: 8rem;
     position: absolute;
     left: 13rem;
     bottom: -1rem;
   }
-  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-2 {
-    background-color: hsl(251, 38%, 41%);
-    height: 5rem;
-    width: 6rem;
-    position: absolute;
-    left: 1rem;
-    bottom: -4rem;
-  }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-1 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 3rem;
     width: 4rem;
     position: absolute;
@@ -606,7 +913,7 @@ body {
     bottom: 1rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-2 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 4rem;
     width: 6rem;
     position: absolute;
@@ -614,7 +921,7 @@ body {
     bottom: -1rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-3 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 3rem;
     width: 3.5rem;
     position: absolute;
@@ -622,7 +929,7 @@ body {
     bottom: -1rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-1 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 4rem;
     width: 6rem;
     position: absolute;
@@ -630,7 +937,7 @@ body {
     bottom: -0.5rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-2 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 4.5rem;
     width: 6.5rem;
     position: absolute;
@@ -638,7 +945,7 @@ body {
     top: -1rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-1 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 4.5rem;
     width: 6.5rem;
     position: absolute;
@@ -646,12 +953,213 @@ body {
     top: -0.5rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-2 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 6rem;
     width: 8rem;
     position: absolute;
     right: -2rem;
     top: -7rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: grid;
+    gap: 19rem;
+    transform: translateZ(-0.3rem) translateX(-4rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container {
+    height: 10rem;
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-1 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    left: 1rem;
+    bottom: -3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-1 label {
+    font-size: 1.3rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-2 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    left: 12rem;
+    top: -6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-2 label {
+    font-size: 1.3rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-1 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 3rem;
+    width: 4rem;
+    position: absolute;
+    right: 11rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-1 label {
+    font-size: 1.2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-2 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 3rem;
+    width: 4.5rem;
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-2 label {
+    font-size: 1.2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_4-1 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 5.5rem;
+    width: 7.5rem;
+    position: absolute;
+    right: 14rem;
+    top: -0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_4-1 label {
+    font-size: 1.3rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: grid;
+    gap: 19rem;
+    transform: translateZ(-0.6rem) translateX(-4rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container {
+    height: 10rem;
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-1 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 4rem;
+    width: 6rem;
+    position: absolute;
+    left: -8rem;
+    top: -6rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-2 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    top: -11rem;
+    right: 11rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-3 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 4rem;
+    width: 5.5rem;
+    position: absolute;
+    transform: translateX(-2rem) translateY(12rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_2-1 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 3.5rem;
+    width: 7rem;
+    position: absolute;
+    transform: translateX(-5rem) translateY(12rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_3-1 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 4rem;
+    width: 5rem;
+    position: absolute;
+    transform: translateX(6rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_4-1 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 5.5rem;
+    width: 7.5rem;
+    position: absolute;
+    transform: translateX(-12rem) translateY(5rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: grid;
+    gap: 19rem;
+    transform: translateZ(-0.8rem) translateX(-4rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container {
+    height: 10rem;
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_programming-1 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 4rem;
+    width: 5.5rem;
+    position: absolute;
+    transform: translateX(12rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_2-1 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 4rem;
+    width: 5rem;
+    position: absolute;
+    transform: translateX(-18rem) translateY(-2rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_3-1 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 4.5rem;
+    width: 6rem;
+    position: absolute;
+    transform: translateX(18rem) translateY(4rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_4-1 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    transform: translateX(24rem) translateY(15rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_4-2 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 4rem;
+    width: 6rem;
+    position: absolute;
+    transform: translateX(2rem) translateY(24rem);
   }
 }
 @media (min-width: 768px) {
@@ -671,7 +1179,7 @@ body {
   }
   #main_content #mc_wrapper #content_scroll_container {
     position: relative;
-    width: 30rem;
+    width: 40rem;
     height: 140rem;
     display: flex;
     flex-direction: column;
@@ -804,23 +1312,15 @@ body {
     right: 0rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-1 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 6rem;
     width: 8rem;
     position: absolute;
     left: 13rem;
     bottom: -1rem;
   }
-  #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_programming-2 {
-    background-color: hsl(251, 38%, 41%);
-    height: 5rem;
-    width: 6rem;
-    position: absolute;
-    left: 1rem;
-    bottom: -4rem;
-  }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-1 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 3rem;
     width: 4rem;
     position: absolute;
@@ -828,7 +1328,7 @@ body {
     bottom: 1rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-2 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 4rem;
     width: 6rem;
     position: absolute;
@@ -836,7 +1336,7 @@ body {
     bottom: -1rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_2-3 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 3rem;
     width: 3.5rem;
     position: absolute;
@@ -844,7 +1344,7 @@ body {
     bottom: -1rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-1 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 4rem;
     width: 6rem;
     position: absolute;
@@ -852,7 +1352,7 @@ body {
     bottom: -0.5rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_3-2 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 4.5rem;
     width: 6.5rem;
     position: absolute;
@@ -860,7 +1360,7 @@ body {
     top: -1rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-1 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 4.5rem;
     width: 6.5rem;
     position: absolute;
@@ -868,11 +1368,212 @@ body {
     top: -0.5rem;
   }
   #main_content #mc_wrapper #content_scroll_container #front_interactable_boxes .front_interactable_box_container #front_interactable_box_4-2 {
-    background-color: hsl(251, 38%, 41%);
+    background-color: hsla(251, 38%, 41%, 0.6);
     height: 6rem;
     width: 8rem;
     position: absolute;
     right: -2rem;
     top: -7rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: grid;
+    gap: 19rem;
+    transform: translateZ(-0.3rem) translateX(-4rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container {
+    height: 10rem;
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-1 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    left: 1rem;
+    bottom: -3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-1 label {
+    font-size: 1.3rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-2 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    left: 12rem;
+    top: -6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_programming-2 label {
+    font-size: 1.3rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-1 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 3rem;
+    width: 4rem;
+    position: absolute;
+    right: 11rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-1 label {
+    font-size: 1.2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-2 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 3rem;
+    width: 4.5rem;
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_2-2 label {
+    font-size: 1.2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_4-1 {
+    background-color: hsla(252, 41%, 37%, 0.5);
+    height: 5.5rem;
+    width: 7.5rem;
+    position: absolute;
+    right: 14rem;
+    top: -0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_content #mc_wrapper #content_scroll_container #second_layer_interactable_boxes .second_layer_interactable_box_container #second_layer_interactable_box_4-1 label {
+    font-size: 1.3rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: grid;
+    gap: 19rem;
+    transform: translateZ(-0.6rem) translateX(-4rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container {
+    height: 10rem;
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-1 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 4rem;
+    width: 6rem;
+    position: absolute;
+    left: -8rem;
+    top: -6rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-2 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    top: -11rem;
+    right: 11rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_programming-3 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 4rem;
+    width: 5.5rem;
+    position: absolute;
+    transform: translateX(-2rem) translateY(12rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_2-1 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 3.5rem;
+    width: 7rem;
+    position: absolute;
+    transform: translateX(-5rem) translateY(12rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_3-1 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 4rem;
+    width: 5rem;
+    position: absolute;
+    transform: translateX(6rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_1_interactable_boxes .back_layer_1_interactable_box_container #back_layer_1_interactable_box_4-1 {
+    background-color: hsla(252, 58%, 25%, 0.5);
+    height: 5.5rem;
+    width: 7.5rem;
+    position: absolute;
+    transform: translateX(-12rem) translateY(5rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    display: grid;
+    gap: 19rem;
+    transform: translateZ(-0.8rem) translateX(-4rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container {
+    height: 10rem;
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_programming-1 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 4rem;
+    width: 5.5rem;
+    position: absolute;
+    transform: translateX(12rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_2-1 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 4rem;
+    width: 5rem;
+    position: absolute;
+    transform: translateX(-18rem) translateY(-2rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_3-1 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 4.5rem;
+    width: 6rem;
+    position: absolute;
+    transform: translateX(18rem) translateY(4rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_4-1 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    transform: translateX(24rem) translateY(15rem);
+  }
+  #main_content #mc_wrapper #content_scroll_container #back_layer_2_interactable_boxes .back_layer_2_interactable_box_container #back_layer_2_interactable_box_4-2 {
+    background-color: hsla(252, 66%, 23%, 0.5);
+    height: 4rem;
+    width: 6rem;
+    position: absolute;
+    transform: translateX(2rem) translateY(24rem);
   }
 }/*# sourceMappingURL=style.css.map */

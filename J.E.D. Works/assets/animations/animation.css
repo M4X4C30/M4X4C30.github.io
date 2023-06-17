@@ -39,7 +39,12 @@
 }
 
 /* Animations --------------------- */
+.To_Fadein {
+  opacity: 0;
+}
+
 .An_Fadein {
+  opacity: 1;
   animation-name: Fadein;
 }
 @keyframes Fadein {
@@ -116,5 +121,30 @@
   100% {
     transform: translateX(0%) rotate(0deg);
     opacity: 1;
+  }
+}
+
+.An_flipUp {
+  transform: rotateX(-90deg);
+  animation: flipUp 0.8s;
+}
+@keyframes flipUp {
+  0% {
+    transform: rotateX(0deg) translateY(10rem);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+.An_flipSlideDown {
+  animation: flipSlideDown 0.4s alternate-reverse;
+}
+@keyframes flipSlideDown {
+  0% {
+    transform: translateY(20rem);
+  }
+  100% {
+    transform: rotateX(-90deg) translateY(-10rem);
   }
 }/*# sourceMappingURL=animation.css.map */

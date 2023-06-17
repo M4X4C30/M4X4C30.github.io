@@ -22,9 +22,49 @@ const observer = new IntersectionObserver((entries) => {
                 })
             }
 
-            if (entry.target.classList.contains('To_Fadein')) {
-                entry.target.classList.add('An_Fadein');
-            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting && entry.intersectionRatio === 1 && entry.target.classList.contains('To_Fadein')) {
+                    const delay = calculateDelay(entry.target);
+                    animateEntry(entry.target, delay);
+                  }
+                });
+              }, { threshold: 1 });
+              
+              const entries = document.querySelectorAll('.To_Fadein');
+              
+              entries.forEach((entry) => {
+                observer.observe(entry);
+              });
+              
+              function calculateDelay(entry) {
+                let delay = 0;
+                if (entry.classList.contains('_delay_front1')) {
+                  const front1Entries = document.querySelectorAll('.To_Fadein._delay_front1');
+                  const index = Array.from(front1Entries).indexOf(entry);
+                  delay = (index * 200) + 300;
+                } else if (entry.classList.contains('_delay_front2')) {
+                  const front2Entries = document.querySelectorAll('.To_Fadein._delay_front2');
+                  const index = Array.from(front2Entries).indexOf(entry);
+                  delay = (index * 200) + 500;
+                } else if (entry.classList.contains('_delay_back1')) {
+                  const back1Entries = document.querySelectorAll('.To_Fadein._delay_back1');
+                  const index = Array.from(back1Entries).indexOf(entry);
+                  delay = (index * 200) + 600;
+                } else if (entry.classList.contains('_delay_back2')) {
+                  const back2Entries = document.querySelectorAll('.To_Fadein._delay_back2');
+                  const index = Array.from(back2Entries).indexOf(entry);
+                  delay = (index * 200) + 700;
+                }
+                return delay;
+              }
+              
+              function animateEntry(entry, delay) {
+                setTimeout(function() {
+                  entry.classList.remove('To_Fadein');
+                  entry.classList.add('An_Fadein');
+                }, delay);
+              }
 
             if (entry.target.classList.contains('To_RotatetoLeft')) {
                 entry.target.classList.add('An_RotatetoLeft');

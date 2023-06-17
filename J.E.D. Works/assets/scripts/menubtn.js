@@ -39,7 +39,11 @@ function checkingScreenSize(expandScreenSize)
 
             BTN_CONTACTS.addEventListener('keyup', (event) => {
                 if (event.key === 'Enter') {
-                    window.location.href = 'contacts/';
+                    const MAIN_CONTENT = document.querySelector('#main_content');
+                    MAIN_CONTENT.scrollTo({
+                        top: MAIN_CONTENT.scrollHeight,
+                        behavior: 'smooth'
+                    });
                 }
             });
         
@@ -60,6 +64,7 @@ function checkingScreenSize(expandScreenSize)
         BTN_CONTACTS.removeAttribute('tabindex');
         
         //clicked and unclicked ---------------
+        var main_content_div = document.getElementById('main_content');
         if (!OPEN_MENU_BTN.classList.contains('option_container_expanded') && !expandScreenSize.matches) 
         {
             OPEN_MENU_BTN.addEventListener('click', () => 
@@ -83,7 +88,7 @@ function checkingScreenSize(expandScreenSize)
                     OPEN_MENU_BTN.classList.add('option_container_unclicked'); 
                 }
             });
-            window.addEventListener('scroll', (event) => {
+            main_content_div.addEventListener('scroll', (event) => {
                 if (!OPEN_MENU_BTN.contains(event.target) && event.target !== OPEN_MENU_BTN 
                 && !expandScreenSize.matches && !OPEN_MENU_BTN.classList.contains('option_container_expanded')) 
                 {
@@ -105,6 +110,8 @@ window.addEventListener('resize', function() {
 
 
 //navigation
+
+
 BTN_ABOUT.addEventListener('click', () => {
     if (OPEN_MENU_BTN.classList.contains('option_container_clicked') 
     || OPEN_MENU_BTN.classList.contains('option_container_expanded')) {
@@ -118,8 +125,12 @@ BTN_PROJECTS.addEventListener('click', () => {
     }
 });
 BTN_CONTACTS.addEventListener('click', () => {
-    if (OPEN_MENU_BTN.classList.contains('option_container_clicked') 
-    || OPEN_MENU_BTN.classList.contains('option_container_expanded')) {
-        window.location.href = 'contacts/';
+    if (OPEN_MENU_BTN.classList.contains('option_container_clicked') || OPEN_MENU_BTN.classList.contains('option_container_expanded')) {
+        // window.location.href = 'contacts/';
+        const MAIN_CONTENT = document.querySelector('#main_content');
+        MAIN_CONTENT.scrollTo({
+            top: MAIN_CONTENT.scrollHeight,
+            behavior: 'smooth'
+        });
     }
 });

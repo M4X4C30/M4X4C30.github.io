@@ -34,6 +34,10 @@
 
 
 /* Animations --------------------- */
+.To_Fadein {
+    opacity: 0;
+}
+
 .An_Fadein {
     @keyframes Fadein {
         0% {
@@ -43,6 +47,7 @@
             opacity: 1;
         }
     }
+    opacity: 1;
     animation-name: Fadein;
 }
 
@@ -126,4 +131,30 @@
         }
     }
     animation-name: RotatetoLeft;
+}
+
+.An_flipUp {
+    @keyframes flipUp {
+        0% {
+            transform: rotateX(0deg) translateY(10rem);
+        }
+        100% {
+            transform: rotateX(-90deg);
+        }
+    }
+    transform: rotateX(-90deg);
+    animation: flipUp 0.8s;
+}
+
+.An_flipSlideDown {
+    @keyframes flipSlideDown {
+        0% {
+            transform: translateY(20rem);
+        }
+        100% {
+            transform: rotateX(-90deg) translateY(-10rem);
+        }
+    }
+    // transform: rotateX(-90deg) translateY(0rem); 
+    animation: flipSlideDown 0.4s alternate-reverse;
 }

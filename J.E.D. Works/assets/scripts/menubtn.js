@@ -5,7 +5,7 @@ const BTN_PROJECTS = document.querySelector('#direct_Projects_req');
 const BTN_CONTACTS = document.querySelector('#direct_Contacts_req');
 
 const OPTION_BTN = document.querySelectorAll('.options_div');
-        
+
 //expanded menu design
 var expandScreenSize = window.matchMedia("(min-width: 475px)");
 
@@ -14,8 +14,8 @@ function checkingScreenSize(expandScreenSize)
     //expanded mode ----------------
     if (expandScreenSize.matches)
     {
-        var wipeAllClass = document.querySelector('#btn_nav_Menu');
-        wipeAllClass.className = "";
+        var wipeAllClass__btn_nav_Menu = document.querySelector('#btn_nav_Menu');
+        wipeAllClass__btn_nav_Menu.className = "";
 
         OPEN_MENU_BTN.classList.add('option_container_expanded');
             
@@ -39,11 +39,22 @@ function checkingScreenSize(expandScreenSize)
 
             BTN_CONTACTS.addEventListener('keyup', (event) => {
                 if (event.key === 'Enter') {
-                    const MAIN_CONTENT = document.querySelector('#main_content');
-                    MAIN_CONTENT.scrollTo({
-                        top: MAIN_CONTENT.scrollHeight,
-                        behavior: 'smooth'
-                    });
+                    if (
+                        OPEN_MENU_BTN.classList.contains('option_container_clicked') ||
+                        OPEN_MENU_BTN.classList.contains('option_container_expanded')
+                    ) {
+                        if (do_glow) {
+                            const FOOTER = document.querySelector('#footer_container');
+                            FOOTER.classList.add('An_glowEdge');
+                            removeafterGlow();
+                        } else {
+                            const MAIN_CONTENT = document.querySelector('#main_content');
+                            MAIN_CONTENT.scrollTo({
+                                top: MAIN_CONTENT.scrollHeight,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
                 }
             });
         
@@ -125,12 +136,27 @@ BTN_PROJECTS.addEventListener('click', () => {
     }
 });
 BTN_CONTACTS.addEventListener('click', () => {
-    if (OPEN_MENU_BTN.classList.contains('option_container_clicked') || OPEN_MENU_BTN.classList.contains('option_container_expanded')) {
-        // window.location.href = 'contacts/';
-        const MAIN_CONTENT = document.querySelector('#main_content');
-        MAIN_CONTENT.scrollTo({
-            top: MAIN_CONTENT.scrollHeight,
-            behavior: 'smooth'
-        });
+    if (
+        OPEN_MENU_BTN.classList.contains('option_container_clicked') ||
+        OPEN_MENU_BTN.classList.contains('option_container_expanded')
+    ) {
+        if (do_glow) {
+            const FOOTER = document.querySelector('#footer_container');
+            FOOTER.classList.add('An_glowEdge');
+            removeafterGlow();
+        } else {
+            const MAIN_CONTENT = document.querySelector('#main_content');
+            MAIN_CONTENT.scrollTo({
+                top: MAIN_CONTENT.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
     }
 });
+
+function removeafterGlow() {
+    const FOOTER = document.querySelector('#footer_container');
+    FOOTER.addEventListener('animationend', () => {
+        FOOTER.classList.remove('An_glowEdge');
+    });
+}

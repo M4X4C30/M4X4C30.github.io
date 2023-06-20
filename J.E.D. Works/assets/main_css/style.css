@@ -15,6 +15,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   margin: 0%;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -197,7 +198,6 @@ body {
   display: none;
 }
 #navbar_container .option_container_expanded .option_btn {
-  border: 1px white solid;
   background-color: rgba(0, 0, 0, 0.1);
   width: 7.5rem;
   height: 2rem;
@@ -227,20 +227,23 @@ body {
   overflow: hidden;
   position: absolute;
   bottom: 0rem;
-  left: 0rem;
-  right: 0rem;
+  left: 0.1rem;
+  right: 0.1rem;
   perspective: 80rem;
+  transform: translateY(100rem);
 }
 #footer_container #flip_container {
   position: relative;
-  width: 100%;
+  left: 0%;
+  right: 0%;
   height: 100%;
   transform-style: preserve-3d;
 }
 #footer_container #flip_container #footer_content {
   background-color: rgb(3, 0, 21);
   position: relative;
-  width: 100%;
+  left: 0%;
+  right: 0%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -789,6 +792,12 @@ body {
   }
 }
 @media (min-width: 640px) {
+  #navbar_container {
+    height: 6rem;
+  }
+  #main_content {
+    top: 6rem;
+  }
   #main_content #mc_wrapper {
     transform-style: preserve-3d;
   }
@@ -1836,8 +1845,54 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  #navbar_container {
+    height: 7.5rem;
+    /*-----------------------------expanded---------------------------------------*/
+  }
+  #navbar_container .Logo_container {
+    font-size: 2.5rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  #navbar_container .option_container_expanded {
+    position: relative;
+    height: 7rem;
+    transform: scale(1);
+    right: 0.5rem;
+  }
+  #navbar_container .option_container_expanded .option_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  #navbar_container .option_container_expanded .options_div {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #navbar_container .option_container_expanded .dot_div {
+    display: none;
+  }
+  #navbar_container .option_container_expanded .option_btn {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
   #main_content {
     position: fixed;
+    top: 7.5rem;
     perspective: 1rem;
   }
   #main_content #mc_wrapper {
@@ -2374,11 +2429,53 @@ body {
 }
 @media (min-width: 1280px) {
   #navbar_container {
-    height: 10rem;
+    height: 8rem;
+    /*-----------------------------expanded---------------------------------------*/
+  }
+  #navbar_container .Logo_container {
+    font-size: 2.5rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  #navbar_container .option_container_expanded {
+    position: relative;
+    height: 7rem;
+    transform: scale(1);
+    right: 0.5rem;
+  }
+  #navbar_container .option_container_expanded .option_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  #navbar_container .option_container_expanded .options_div {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #navbar_container .option_container_expanded .dot_div {
+    display: none;
+  }
+  #navbar_container .option_container_expanded .option_btn {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
   }
   #main_content {
     position: fixed;
-    top: 10rem;
+    top: 8rem;
     perspective: 1rem;
   }
   #main_content #mc_wrapper {
@@ -2915,11 +3012,11 @@ body {
 }
 @media (min-width: 1536px) {
   #navbar_container {
-    height: 12.5rem;
+    height: 8.5rem;
   }
   #main_content {
     position: fixed;
-    top: 12.5rem;
+    top: 8.5rem;
     perspective: 1rem;
   }
   #main_content #mc_wrapper {
@@ -3456,11 +3553,11 @@ body {
 }
 @media (min-width: 2048px) {
   #navbar_container {
-    height: 12.5rem;
+    height: 9rem;
   }
   #main_content {
     position: fixed;
-    top: 12.5rem;
+    top: 9rem;
     perspective: 1rem;
   }
   #main_content #mc_wrapper {

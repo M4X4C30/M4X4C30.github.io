@@ -37,7 +37,6 @@
 .To_Fadein {
     opacity: 0;
 }
-
 .An_Fadein {
     @keyframes Fadein {
         0% {
@@ -146,15 +145,44 @@
     animation: flipUp 0.8s;
 }
 
-.An_flipSlideDown {
+.An_flipOff {
     @keyframes flipSlideDown {
         0% {
-            transform: translateY(20rem);
+            transform: translateY(0rem);
         }
         100% {
-            transform: rotateX(-90deg) translateY(-10rem);
+            transform: rotateX(-90deg);
         }
     }
     // transform: rotateX(-90deg) translateY(0rem); 
-    animation: flipSlideDown 0.4s alternate-reverse;
+    animation: flipSlideDown 0.2s alternate-reverse;
+}
+
+._poofUp {
+    transform: translateY(0rem);
+}
+
+.An_glowEdge {
+    @keyframes glowEdge {
+        0% {
+            border: transparent;
+        }
+        100% {
+            border: 0.1vw rgba(255, 255, 255, 0.5) solid;
+        }
+    }
+    animation: glowEdge 0.3s ease-out
+}
+
+.An_slideDown {
+    @keyframes slideDown {
+        0% {
+            transform: translateY(0rem);
+        }
+        100% {
+            transform: translateY(100rem);
+        }
+    }
+    transform: translateY(100rem);
+    animation: slideDown 1.25s ease-out;
 }

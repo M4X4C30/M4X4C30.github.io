@@ -42,6 +42,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     margin: 0%;
+    overflow: hidden;
 }
 ::-webkit-scrollbar {
     width: 0.5rem;
@@ -234,7 +235,7 @@ body {
                     display: none;
                 }
                 .option_btn {
-                    border: 1px $Accent_Color solid;
+                    // border: 1px $Accent_Color solid;
                     background-color: rgba(0, 0, 0, 0.1);
                     width: 7.5rem;
                     height: 2rem;
@@ -267,25 +268,29 @@ body {
 
 
 #footer_container {
+    // background-color: rgb(3, 0, 10);
     margin: 0rem;
     height: 8rem;
     overflow: hidden;
     position: absolute;
     bottom: 0rem;
-    left: 0rem;
-    right: 0rem;
+    left: 0.1rem;
+    right: 0.1rem;
     perspective: 80rem;
+    transform: translateY(100rem);
 
     #flip_container {
         position: relative;
-        width: 100%;
+        left: 0%;
+        right: 0%;
         height: 100%;
         transform-style: preserve-3d;
 
         #footer_content {
             background-color: rgb(3, 0, 21);
             position: relative;
-            width: 100%;
+            left: 0%;
+            right: 0%;
             height: 100%;
             display: flex;
             align-items: center;
@@ -295,6 +300,7 @@ body {
         }
     }
 }
+
 
 
 
@@ -916,8 +922,13 @@ body {
 
 
 @media (min-width: 640px) { 
+    #navbar_container {
+        height: 6rem;
+    }
+
     #main_content {
-    
+        top: 6rem;
+
         #mc_wrapper {
     
             transform-style: preserve-3d;
@@ -2069,9 +2080,60 @@ body {
 }
 
 @media (min-width: 1024px) {
+    #navbar_container {
+        height: 7.5rem;
+    
+        .Logo_container {
+            font-size: 2.5rem;
+            user-select: none;
+        }
+    /*-----------------------------expanded---------------------------------------*/
+        .option_container_expanded {
+            // border: $Dborder_R;
+            position: relative;
+            height: 7rem;
+            transform: scale(1);
+            right: 0.5rem;
+    
+            .option_wrapper {
+                // border: $Dborder_R;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                gap: 1rem;
+            }
+                .options_div {
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+    
+                }
+                    .dot_div {
+                        display: none;
+                    }
+                    .option_btn {
+                        // border: 1px $Accent_Color solid;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        width: 9rem;
+                        height: 2.5rem;
+                        border-radius: 50rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.25rem;
+    
+                    }
+        }
+    }
+
     #main_content {
         position: fixed;
-    
+        top: 7.5rem;
         perspective: 1rem;
     
         #mc_wrapper {
@@ -2659,12 +2721,59 @@ body {
 
 @media (min-width: 1280px) {
     #navbar_container {
-        height: 10rem;
+        height: 8rem;
+    
+        .Logo_container {
+            font-size: 2.5rem;
+            user-select: none;
+        }
+    /*-----------------------------expanded---------------------------------------*/
+        .option_container_expanded {
+            // border: $Dborder_R;
+            position: relative;
+            height: 7rem;
+            transform: scale(1);
+            right: 0.5rem;
+    
+            .option_wrapper {
+                // border: $Dborder_R;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                gap: 1rem;
+            }
+                .options_div {
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+    
+                }
+                    .dot_div {
+                        display: none;
+                    }
+                    .option_btn {
+                        // border: 1px $Accent_Color solid;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        width: 9rem;
+                        height: 2.5rem;
+                        border-radius: 50rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.25rem;
+    
+                    }
+        }
     }
 
     #main_content {
         position: fixed;
-        top: 10rem;
+        top: 8rem;
         perspective: 1rem;
     
         #mc_wrapper {
@@ -3252,12 +3361,12 @@ body {
 
 @media (min-width: 1536px) {
     #navbar_container {
-        height: 12.5rem;
+        height: 8.5rem;
     }
 
     #main_content {
         position: fixed;
-        top: 12.5rem;
+        top: 8.5rem;
         perspective: 1rem;
     
         #mc_wrapper {
@@ -3845,12 +3954,12 @@ body {
 
 @media (min-width: 2048px) {
     #navbar_container {
-        height: 12.5rem;
+        height: 9rem;
     }
 
     #main_content {
         position: fixed;
-        top: 12.5rem;
+        top: 9rem;
         perspective: 1rem;
     
         #mc_wrapper {

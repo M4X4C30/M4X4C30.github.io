@@ -39,19 +39,27 @@ const observer = new IntersectionObserver((entries) => {
               
               function calculateDelay(entry) {
                 let delay = 0;
-                if (entry.classList.contains('_delay_front1')) {
+                if (entry.classList.contains('_delay_main_box')) {
+                  const main_boxEntries = document.querySelectorAll('.To_Fadein._delay_main_box');
+                  const index = Array.from(main_boxEntries).indexOf(entry);
+                  delay = (index * 100) + 200;
+                }
+                else if (entry.classList.contains('_delay_front1')) {
                   const front1Entries = document.querySelectorAll('.To_Fadein._delay_front1');
                   const index = Array.from(front1Entries).indexOf(entry);
                   delay = (index * 200) + 300;
-                } else if (entry.classList.contains('_delay_front2')) {
+                } 
+                else if (entry.classList.contains('_delay_front2')) {
                   const front2Entries = document.querySelectorAll('.To_Fadein._delay_front2');
                   const index = Array.from(front2Entries).indexOf(entry);
                   delay = (index * 200) + 500;
-                } else if (entry.classList.contains('_delay_back1')) {
+                } 
+                else if (entry.classList.contains('_delay_back1')) {
                   const back1Entries = document.querySelectorAll('.To_Fadein._delay_back1');
                   const index = Array.from(back1Entries).indexOf(entry);
                   delay = (index * 200) + 600;
-                } else if (entry.classList.contains('_delay_back2')) {
+                } 
+                else if (entry.classList.contains('_delay_back2')) {
                   const back2Entries = document.querySelectorAll('.To_Fadein._delay_back2');
                   const index = Array.from(back2Entries).indexOf(entry);
                   delay = (index * 200) + 700;

@@ -1,0 +1,6 @@
+$BackgroundColor: rgb(75, 75, 255), rgb(0, 45, 255);
+
+html {
+    background-image: radial-gradient(circle, $BackgroundColor);
+    font-family: sans-serif;
+}

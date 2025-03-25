@@ -140,7 +140,6 @@ function ChangeViewByRatio_Painting() {
         InstantSnap_Painting();
     }
 
-    console.log(viewDistance);
     // console.log(computedStyle.getPropertyValue("scroll-snap-align"));
 }
 

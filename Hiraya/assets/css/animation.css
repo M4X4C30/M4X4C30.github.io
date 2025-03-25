@@ -34,6 +34,22 @@
 }
 
 
+.Anim_Appear_Slide_Down {
+    animation-name: Appear_Slide_Down;
+    animation-fill-mode: forwards;
+}
+@keyframes Appear_Slide_Down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 .Anim_Scale_X_Expand {
     animation-name: Scale_X_Expand;
     animation-duration: 1s;

@@ -325,6 +325,14 @@
         /* border-top: 0.2vw solid #4c3d2e; */
         font-size: 3.5vh;
     }
+    .category_section h1 {
+        font-size: 3.25vh;
+        z-index: 101;
+        position: fixed;
+        top: 2vh;
+        left: 9vh;
+        color: white;
+    }
     .art_image_div img {
         border: 1vh solid #4c3d2e;
         border-radius: 0.2vw;
@@ -346,7 +354,7 @@
     }
     .view_details_button:hover {
         background-color: #4c3d2e;
-        transform: scale(1.1);
+        transform: scale(1.01);
     }
     .portrait_box_size {
         width: 40vh;
@@ -373,7 +381,6 @@
     }
     .view_more_button:hover {
         background-color: #4c3d2e;
-        transform: scale(1.1);
     }
 }
 

@@ -25,30 +25,30 @@ nav {
 }
 
 #drop_down_button_div {
-    z-index: 105;
+    z-index: 1010;
 }
 
 #nav_Paintings_button {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/paintings/The Blood Compact.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../assets/images/paintings/The Blood Compact.jpg");
 }
 #nav_Sculpture_button {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/sculptures/People Power Monument.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../assets/images/sculptures/People Power Monument.JPG");
 }
 #nav_Photography_button {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/photography/Mayon Volcano.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../assets/images/photography/Mayon Volcano.JPG");
 }
 #nav_Street_Arts_button {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
 }
 #nav_Mixed_Media_Installation_button {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
 }
 #nav_Crafts_Forms_button {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/crafts and forms/T’boli Beadwork.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../assets/images/crafts and forms/T’boli Beadwork.jpg");
 }
 
 #focus_div {
-    z-index: 100;
+    z-index: 104;
 }
 
 @media screen and (orientation: portrait) and (max-aspect-ratio: 9/10) {
@@ -140,7 +140,7 @@ nav {
         right: 2vw;
         display: flex;
         justify-content: end;
-        z-index: 101;
+        z-index: 110;
     }
     #category_options {
         /* border: cyan 1px solid; */
@@ -180,22 +180,22 @@ nav {
         /* background-color: #4c3d2e; */
     }
     #nav_Paintings_button:active {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/paintings/The Blood Compact.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/paintings/The Blood Compact.jpg");
     }
     #nav_Sculpture_button:active {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/sculptures/People Power Monument.JPG");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/sculptures/People Power Monument.JPG");
     }
     #nav_Photography_button:active {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/photography/Mayon Volcano.JPG");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/photography/Mayon Volcano.JPG");
     }
     #nav_Street_Arts_button:active {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
     }
     #nav_Mixed_Media_Installation_button:active {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
     }
     #nav_Crafts_Forms_button:active {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/crafts and forms/T’boli Beadwork.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/crafts and forms/T’boli Beadwork.jpg");
     }
 
     #focus_div {
@@ -299,7 +299,7 @@ nav {
         right: 2vw;
         display: flex;
         justify-content: end;
-        z-index: 101;
+        z-index: 110;
     }
     #category_options {
         /* border: cyan 1px solid; */
@@ -343,22 +343,22 @@ nav {
         /* background-color: #4c3d2e; */
     }
     #nav_Paintings_button:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/paintings/The Blood Compact.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/paintings/The Blood Compact.jpg");
     }
     #nav_Sculpture_button:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/sculptures/People Power Monument.JPG");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/sculptures/People Power Monument.JPG");
     }
     #nav_Photography_button:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/photography/Mayon Volcano.JPG");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/photography/Mayon Volcano.JPG");
     }
     #nav_Street_Arts_button:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
     }
     #nav_Mixed_Media_Installation_button:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
     }
     #nav_Crafts_Forms_button:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/crafts and forms/T’boli Beadwork.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/crafts and forms/T’boli Beadwork.jpg");
     }
 
     #focus_div {

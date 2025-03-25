@@ -3,15 +3,16 @@ function isElementOnScreen(element) {
     
     const rect = element.getBoundingClientRect();
     return (
-        rect.top >= 0 && rect.bottom <= window.innerHeight
-        // rect.top >= 0 &&
-        // rect.left >= 0 &&
-        // rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        // rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.top < window.innerHeight && rect.bottom > 0
+    );
+}
 
-        // const rect = elementWithAnimation.getBoundingClientRect();
-        // const isTopToBotVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-        // const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight && rect.left >= 0 && rect.right <= window.innerWidth;
+function isElementFullyOnScreen(element) {
+    if (!element) return false;
+    
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 && rect.bottom <= window.innerHeight
     );
 }
 
@@ -40,19 +41,23 @@ function checkVisibility() {
 
         // console.log(Category_Title.textContent, ": ", isElementOnScreen(Category_Title.parentElement.children[1].children[1].children[0]));
 
-        if (isElementOnScreen(Category_Title.parentElement.children[1].children[1].children[0])) {
+        if (isElementFullyOnScreen(Category_Title.parentElement.children[1].children[0]) && isElementOnScreen(Category_Title.parentElement.children[1].children[1].children[0])) {
             if (Category_Title.classList.contains("Anim_Fade_Out"))
                 Category_Title.classList.remove("Anim_Fade_Out");
 
-            if (!Category_Title.classList.contains("Anim_Fade_In"))
-                Category_Title.classList.add("Anim_Fade_In");
+            if (!Category_Title.classList.contains("Anim_Appear_Slide_Down")) {
+                Category_Title.style.animationDuration = "0.5s";
+                Category_Title.classList.add("Anim_Appear_Slide_Down");
+            }
         }
         else {
-            if (Category_Title.classList.contains("Anim_Fade_In")) {
-                Category_Title.classList.remove("Anim_Fade_In");
+            if (Category_Title.classList.contains("Anim_Appear_Slide_Down")) {
+                Category_Title.classList.remove("Anim_Appear_Slide_Down");
 
-                if (!Category_Title.classList.contains("Anim_Fade_Out"))
+                if (!Category_Title.classList.contains("Anim_Fade_Out")) {
+                    Category_Title.style.animationDuration = "0.25s";
                     Category_Title.classList.add("Anim_Fade_Out");
+                }
             }
         }
     });

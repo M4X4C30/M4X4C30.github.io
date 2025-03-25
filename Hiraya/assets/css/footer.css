@@ -1,0 +1,108 @@
+footer {
+    border-top: #66523e 0.2vw solid;
+}
+#footer_messages_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+}
+#footer_messages_div h3 {
+    font-family: 'Kenao';
+}
+#footer_messages_div h6 {
+    font-family: 'The Seasons'; 
+    font-weight: bold;
+    width: 80%;
+    text-align: center;
+}
+#footer_title_div {
+    /* background-image: url("assets/images/landing page/footer image.jpg"); */
+    background-size: cover;
+    color: white;
+}
+#hiraya_banner_div {
+    background-color: #32251dc7; 
+    width: 55%;
+    display: flex;
+    padding: 1vw;
+}
+footer h1 {
+    font-family: 'Kenao';
+    margin-left: 2vw;
+}
+#hiraya_web_info_lbl {
+    font-family: 'The Seasons';
+    margin-left: 2vw;
+}
+#disclaimer_label {
+    font-family: 'The Seasons';
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    text-align: right;
+    width: 80%;
+    align-self: flex-end;
+    margin-top: 1.5vw;
+}
+
+
+@media screen and (orientation: portrait) and (max-aspect-ratio: 9/10) {
+    footer {
+        margin-top: 10vw;
+    }
+    #footer_messages_div {
+        gap: 2vw;
+    }
+    #footer_messages_div h3 {
+        font-size: 3vw;
+    }
+    #footer_messages_div h6 {
+        font-size: 2vw;
+    }
+    #hiraya_banner_div {
+        flex-direction: column;
+        gap: 3vw;
+    }
+    footer h1 {
+        font-size: 10vw;
+    }
+    #hiraya_web_info_lbl {
+        font-size: 4vw;
+        width: 50%;
+    }
+    #disclaimer_label {
+        font-size: 1.5vw;
+    }
+}
+
+
+@media screen and (orientation: landscape), (min-aspect-ratio: 9/10) {
+    footer {
+        margin-top: 9vw;
+    }
+    #footer_messages_div {
+        gap: 1vw;
+    }
+    #footer_messages_div h3 {
+        font-size: 2vw;
+    }
+    #footer_messages_div h6 {
+        font-size: 1vw;
+    }
+    #hiraya_banner_div {
+        flex-direction: column;
+        gap: 1vw;
+        justify-content: space-between;
+    }
+    footer h1 {
+        font-size: 4vw;
+    }
+    #hiraya_web_info_lbl {
+        font-size: 1vw;
+        width: 50%;
+    }
+    #disclaimer_label {
+        font-size: 0.75vw;
+    }
+}

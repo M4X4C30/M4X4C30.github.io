@@ -1,0 +1,373 @@
+nav {
+    z-index: 101;
+}
+
+#Hiraya_logo_div {
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+#Hiraya_logo_div div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1vw;
+}
+
+#Hiraya_logo_div div h4 {
+    font-family: 'Kenao';
+    font-weight: bold;
+    transform: translateX(-1.2vh);
+}
+#Hiraya_logo_div div h5 {
+    font-family: 'The Seasons';
+    font-weight: bold;
+}
+
+#drop_down_button_div {
+    z-index: 105;
+}
+
+#nav_Paintings_button {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/paintings/The Blood Compact.jpg");
+}
+#nav_Sculpture_button {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/sculptures/People Power Monument.JPG");
+}
+#nav_Photography_button {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/photography/Mayon Volcano.JPG");
+}
+#nav_Street_Arts_button {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
+}
+#nav_Mixed_Media_Installation_button {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
+}
+#nav_Crafts_Forms_button {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/images/crafts and forms/T’boli Beadwork.jpg");
+}
+
+#focus_div {
+    z-index: 100;
+}
+
+@media screen and (orientation: portrait) and (max-aspect-ratio: 9/10) {
+    nav {
+        /* border: 1px red solid; */
+        background-color: #32251d;
+        position: fixed;
+        top: 0vw;
+        left: 0vw;
+        right: 0vw;
+        /* height: 6vh; */
+        height: 7vh;
+        display: flex;
+        flex-direction: row;
+        color: white;
+    }
+    #Hiraya_logo_div {
+        /* border: cyan 1px solid; */
+        width: auto;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #Hiraya_logo_div div {
+        font-size: 2vh;
+        margin-right: 2vw;
+    }
+    #Hiraya_logo img {
+        height: 100%;
+    }
+    #nav_bar {
+        background-color: #66523e;
+        width: 100%;
+        font-size: 2vh;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-right: 1vh;
+        gap: 2vh;
+        /* padding: 1vw; */
+    }
+    #nav_bar a {
+        /* border: red 1px solid; */
+        font-family: 'PlayfairDisplay-Regular';
+        font-size: 80%;
+        display: flex;
+        align-items: center;
+        height: 70%;
+        color: white;
+        text-decoration: none;
+        padding-left: 1vw; padding-right: 1vw;
+        /* padding-top: 0.1vw; padding-bottom: 0.1vw; */
+        border-radius: 0.75vw;
+    }
+    #nav_bar a:active {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+    img {
+       height: 100%;
+    }
+
+    #drop_down_button_div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #drop_down_button_div img {
+       height: 100%;
+    }
+    #x_icon_img {
+        display: none;
+    }
+    #burger_icon_img {
+        display: block;
+    }
+
+    #drop_down_options_div {
+        /* border: 1px red solid; */
+        /* background-color: #32251dc7; */
+        /* background-color: rgba(0, 0, 0, 0.25); */
+        visibility: hidden;
+        border-top-left-radius: 0.5vw; border-bottom-left-radius: 0.5vw;
+        position: fixed;
+        top: 8vh;
+        right: 2vw;
+        display: flex;
+        justify-content: end;
+        z-index: 101;
+    }
+    #category_options {
+        /* border: cyan 1px solid; */
+        /* background-color: #66523e; */
+        font-family: 'PlayfairDisplay-Regular';
+        font-size: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-evenly;
+        gap: 0.25vh;
+    }
+    #category_options a {
+        /* border: red 1px solid; */
+        background-color: #66523e;
+        /* border-radius: 0.5vw; */
+        clip-path: polygon(6% 0, 100% 0, 100% 50%, 97.5% 90%, 10% 100%);
+        /* width: 20vw; */
+        padding-top: 0.75vw;
+        padding-left: 8vw;
+        padding-right: 3vw;
+        padding-bottom: 1vw;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-align: left ;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #category_options a:active {
+        /* border: white 0.1vw solid; */
+        transform: scale(1.1);
+        transform: translate(-1vw, 0);
+        /* background-color: #4c3d2e; */
+    }
+    #nav_Paintings_button:active {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/paintings/The Blood Compact.jpg");
+    }
+    #nav_Sculpture_button:active {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/sculptures/People Power Monument.JPG");
+    }
+    #nav_Photography_button:active {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/photography/Mayon Volcano.JPG");
+    }
+    #nav_Street_Arts_button:active {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
+    }
+    #nav_Mixed_Media_Installation_button:active {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
+    }
+    #nav_Crafts_Forms_button:active {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/crafts and forms/T’boli Beadwork.jpg");
+    }
+
+    #focus_div {
+        visibility: hidden;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+        position: fixed;
+        top: 6vh;
+        left: 0; right: 0;
+        bottom: 0;
+    }
+}
+
+@media screen and (orientation: landscape), (min-aspect-ratio: 9/10) {
+    /* -------------------- NAVIGATION -------------------- */
+    nav {
+        /* border: 1px red solid; */
+        background-color: #32251d;
+        position: fixed;
+        top: 0vw;
+        left: 0vw;
+        right: 0vw;
+        height: 7vh;
+        display: flex;
+        flex-direction: row;
+        color: white;
+    }
+    #Hiraya_logo_div {
+        /* border: cyan 1px solid; */
+        width: auto;
+        /* height: 7vh; */
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 1vh 0 1vh;
+    }
+    #Hiraya_logo_div div {
+        font-size: 2.5vh;
+        /* margin-right: 2vh; */
+    }
+    #Hiraya_logo img {
+        height: 100%;
+    }
+    #nav_bar {
+        background-color: #66523e;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-right: 1vw;
+        gap: 1vw;
+        /* padding: 1vw; */
+    }
+    #nav_bar a {
+        /* border: red 1px solid; */
+        font-family: 'PlayfairDisplay-Regular';
+        font-size: 2vh;
+        display: flex;
+        align-items: center;
+        height: 70%;
+        color: white;
+        text-decoration: none;
+        padding-left: 1vw; padding-right: 1vw;
+        /* padding-top: 0.1vw; padding-bottom: 0.1vw; */
+        border-radius: 0.75vw;
+        overflow: hidden;
+    }
+    #nav_bar a:hover {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+    img {
+       height: 100%;
+    }
+
+    #drop_down_button_div {
+        width: 5%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #drop_down_button_div img {
+       height: 100%;
+    }
+    #x_icon_img {
+        display: none;
+    }
+    #burger_icon_img {
+        display: block;
+    }
+    #drop_down_options_div {
+        /* border: 1px red solid; */
+        /* background-color: #32251dc7; */
+        /* background-color: rgba(0, 0, 0, 0.25); */
+        visibility: hidden;
+        border-top-left-radius: 0.5vw; border-bottom-left-radius: 0.5vw;
+        position: fixed;
+        top: 8vh;
+        right: 2vw;
+        display: flex;
+        justify-content: end;
+        z-index: 101;
+    }
+    #category_options {
+        /* border: cyan 1px solid; */
+        /* background-color: #66523e; */
+        font-family: 'PlayfairDisplay-Regular';
+        font-size: 1.5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-evenly;
+        gap: 0.25vw;
+    }
+    #category_options a {
+        /* border: red 1px solid; */
+        background-color: #66523e;
+        /* border-radius: 0.5vw; */
+        clip-path: polygon(6% 0, 100% 0, 100% 50%, 97.5% 90%, 10% 100%);
+        /* width: 20vw; */
+        padding-top: 0.75vw;
+        padding-left: 8vw;
+        padding-right: 3vw;
+        padding-bottom: 1vw;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-align: left ;
+
+        will-change: transform;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #category_options a:hover {
+        /* border: white 0.1vw solid; */
+        animation-name: Scale_X_Expand;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        /* transform: scale(1.1);
+        transform: translate(-1vw, 0); */
+        /* background-color: #4c3d2e; */
+    }
+    #nav_Paintings_button:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/paintings/The Blood Compact.jpg");
+    }
+    #nav_Sculpture_button:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/sculptures/People Power Monument.JPG");
+    }
+    #nav_Photography_button:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/photography/Mayon Volcano.JPG");
+    }
+    #nav_Street_Arts_button:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/street arts and murals/Masigasig na Maynila by Gerilya.jpg");
+    }
+    #nav_Mixed_Media_Installation_button:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/mixed media and installation/Shallow Gardens of Apo Reef.jpg");
+    }
+    #nav_Crafts_Forms_button:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/crafts and forms/T’boli Beadwork.jpg");
+    }
+
+    #focus_div {
+        visibility: hidden;
+        /* background-color: rgba(0, 0, 0, 0.25); */
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+        position: fixed;
+        top: 7vh;
+        left: 0; right: 0;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,542 @@
+/* -------------------- HEADER -------------------- */
+/* header {
+    border: 1px red solid;
+} */
+#Title_and_info_lbl_div h1 {
+    font-family: 'Kenao';
+}
+#Web_Title_div {
+    background-color: #32251dc7;
+    float: right;
+    height: 100%;
+    width: 50%;
+    /* padding: 1vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#Title_and_info_lbl_div h2 {
+    font-family: 'The Seasons';
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+#header_quote_lbl {
+    /* border: 1px red solid; */
+    align-self: self-end;
+    justify-self: self-end;
+    margin-right: 1.5vw;
+    margin-bottom: 1vw;
+    font-family: 'Mansalva-Regular';
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+/* -------------------- WELCOME MSG -------------------- */
+#about_section {
+    /* border: 1px blue solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4vw;
+}
+#about_section h1 {
+    font-family: 'Kenao';
+}
+#about_section p {
+    font-family: 'The Seasons';
+    font-weight: bold;
+}
+
+
+ /* -------------------- ART DISPLAY -------------------- */
+#art_display {
+    /* border: 1px green solid; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#art_display div {
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    font-size: 1vw;
+}
+#art_display h1 {
+    font-family: 'Mistrully';
+    text-align: left;
+    align-self: self-start;
+}
+#art_display h3 {
+    font-family: 'The Seasons';
+    font-weight: bold;
+}
+#art_div_2 {
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 2vw;
+}
+#art_div_2 div {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#art_div_2_h3_1 {
+    align-self: self-start;
+    width: 75%;
+}
+#art_div_2_h3_2 {
+    text-align: right;
+    align-self: self-end;
+    margin-bottom: 2vw;
+}
+#art_div_3 h3 {
+    margin-top: 5vw;
+    text-align: left;
+}
+
+
+/* -------------------- CATEGORY ART DISPLAY -------------------- */
+.category_section {
+    margin-top: 5vh;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.category_section h1 {
+    font-family: 'The Seasons';
+    font-weight: bold;
+    margin: 0 0 1vh 1vh;
+}
+.Category_Title {
+    opacity: 0;
+}
+.art_nav {
+    /* border: blue 1px solid; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.art_box_container {
+    /* border: blue 1px solid; */
+    width: 100%;
+    display: flex;
+    gap: 1vh;
+
+    overflow-x: scroll;
+    padding: 0 30vw 0 30vw;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-snap-stop: always;
+
+    touch-action: pan-y;
+}
+.art_box_container::-webkit-scrollbar {
+    height: 0px;
+}
+.art_box {
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: unset;
+}
+.art_box h3, .art_box h5, .art_box h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    transform-origin: left center;
+}
+.art_image_div {
+    /* border: red 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 90%;
+    height: 70%;
+}
+.art_img_size_base-width-low {
+    width: 60%;
+    height: max-content;
+}
+.art_img_size_base-width-med {
+    width: 70%;
+    height: max-content;
+}
+.art_img_size_base-width-high {
+    width: 90%;
+    height: max-content;
+}
+.view_details_button {
+    padding: 0.5vw;
+    background-color: #66523e;
+    border: rgba(0, 0, 0, 0);
+    color: white;
+    font-family: 'Lancelot-Regular';
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 0.5vh;
+    margin-top: 0.5vh;
+    width: 40%;
+}
+.art_box h3 {
+    font-weight: bold;
+}
+.snap_able {
+    scroll-snap-align: center;
+}
+.prev_div, .next_div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+}
+.prev_div {
+    transform: scale(-1, -1);
+    left: 0;
+}
+.next_div {
+    right: 0;
+}
+.prev_div img, .next_div img {
+    /* border: 1px red solid; */
+    height: auto;
+    width: 100%;
+}
+.view_more_button {
+    /* display: flex;
+    justify-content: flex-end; */
+    border: rgba(0, 0, 0, 0);
+    background-color: #66523e;
+    color: white;
+    font-family: 'The Seasons';
+    text-align: left;
+    clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (orientation: landscape), (min-aspect-ratio: 9/10) {
+    /* -------------------- HEADER -------------------- */
+    header {
+        /* border: 1px red solid; */
+        margin-top: 7vh;
+        border-top: 0.1vw black solid;
+        background-image: url("assets/images/landing page/header image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 30vw;
+        color: white;
+        overflow: hidden;
+    }
+    #Title_and_info_lbl_div h1 {
+        font-size: 6vw;
+        margin-left: 1.5vw;
+    }
+    #Title_and_info_lbl_div h2 {
+        margin-top: 1vw;
+        font-size: 2vw;
+        width: 35%;
+    }
+    #header_quote_lbl {
+        font-size: 1.5vw;
+    }
+
+    
+    /* -------------------- WELCOME MSG -------------------- */
+    #about_section h1 {
+        font-size: 4vw;
+    }
+    #about_section p {
+        font-size: 1.5vw;
+        margin-top: 1.5vw;
+        line-height: 2vw;
+    }
+    
+    
+    /* -------------------- ART DISPLAY -------------------- */
+    #art_display {
+        flex-direction: row;
+    }
+    #art_div_1 {
+        width: 35%;
+        margin-top: 2vw;
+    }
+    #art_div_1 img {
+        width: 100%;
+    }
+    #art_div_2 {
+        width: 30%;
+        gap: 1vw;
+    }
+    #art_div_2 img {
+        width: 90%;
+    }
+    #art_div_2 div {
+        width: 90%;
+    }
+    #art_div_2_h3_1 {
+        font-size: 1.5vw; 
+        margin-left: 1vw;
+    }
+    #art_div_2_h3_2 {
+        font-size: 1.5vw;
+        width: 40%;
+    }
+    #art_div_3 {
+        width: 35%;
+    }
+    #art_display h1 {
+        font-size: 3vw;
+        margin-left: 0;
+    }
+    #art_div_3 img {
+        width: 57.5%;
+    }
+    #art_div_3 h3 {
+        margin-right: 0.75vw;
+        margin-left: 0.9vw;
+        font-size: 1.5vw; 
+    }
+
+    
+    /* -------------------- CATEGORY ART DISPLAY -------------------- */
+    .category_section {
+        /* border-top: 0.2vw solid #4c3d2e; */
+        font-size: 3.5vh;
+    }
+    .art_image_div img {
+        border: 1vh solid #4c3d2e;
+        border-radius: 0.2vw;
+    }
+    .art_img_size_base-width-low {
+        border-radius: 0.2vw;
+    }
+    .art_img_size_base-width-med {
+        border-radius: 0.2vw;
+    }
+    .art_img_size_base-width-high {
+        border-radius: 0.2vw;
+    }
+    .view_details_button {
+        font-size: 3vh;
+        padding: 0.5vw;
+        margin-top: 0.5vh;
+        width: 40%;
+    }
+    .view_details_button:hover {
+        background-color: #4c3d2e;
+        transform: scale(1.1);
+    }
+    .portrait_box_size {
+        width: 40vh;
+        flex: 0 0 40vh;
+    }
+    .landscape_box_size {
+        width: 50vh;
+        flex: 0 0 50vh;
+    }
+    .prev_div, .next_div {
+        width: 5%;
+    }
+    .next_div img:hover, .prev_div img:hover {
+        transform: scale(1.1);
+    }
+    .view_more_button {
+        font-size: 2.75vh;
+        margin: 3vh 3vh 3vh 0;
+        padding: 1vh;
+        padding-left: 2vh;
+        align-self: end;
+        width: 20vh;
+        height: 5vh;
+    }
+    .view_more_button:hover {
+        background-color: #4c3d2e;
+        transform: scale(1.1);
+    }
+}
+
+
+@media screen and (orientation: portrait) and (max-aspect-ratio: 9/10) {
+    /* -------------------- HEADER -------------------- */
+    header {
+        /* border: 1px red solid; */
+        border-top: 0.1vw black solid;
+        background-image: url("assets/images/landing page/header image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 50vw;
+        color: white;
+        overflow: hidden;
+        /* margin-top: 6vh; */
+        margin-top: 6vh;
+    }
+    #Title_and_info_lbl_div {
+        margin-top: 10%;
+    }
+    #Title_and_info_lbl_div h1 {
+        /* border: red 1px solid; */
+        font-size: 7.5vw;
+        margin-left: 1.5vh;
+    }
+    #Title_and_info_lbl_div h2 {
+        margin-top: 1vw;
+        font-size: 2.5vw;
+        width: 40%;
+    }
+    #header_quote_lbl {
+        font-size: 1.75vw;
+    }
+    
+    
+    /* -------------------- WELCOME MSG -------------------- */
+    #about_section {
+        margin-top: 2vh;
+    }
+    #about_section h1 {
+        font-size: 5.5vw; 
+    }
+    #about_section p {
+        font-size: 3.5vw;
+        margin-top: 1.5vh;
+        line-height: 110%;
+    }
+
+    
+    /* -------------------- ART DISPLAY -------------------- */
+    #art_display {
+        margin-top: 2vh;
+    }
+    #art_div_1 {
+        visibility: hidden;
+        width: 0%;
+    }
+    #art_div_1 img {
+        width: 95%;
+    }
+    #art_div_2 {
+        /* border: 1px red solid; */
+        width: 45%; 
+        gap: 3vw;
+    }
+    #art_div_2 img {
+        width: 95%;
+    }
+    #art_div_2 div {
+        /* border: 1px red solid; */
+        width: 95%;
+        gap: 6vw;
+    }
+    #art_div_2_h3_1 {
+        font-size: 2.75vw; 
+        margin-left: 1.5vw;
+    }
+    #art_div_2_h3_2 {
+        font-size: 2.75vw;
+        width: 60%;
+    }
+    #art_div_3 {
+        width: 65%;
+    }
+    #art_display h1 {
+        font-size: 4.75vw;
+        margin-left: 1.5vw;
+    }
+    #art_div_3 img {
+        width: 60%;
+    }
+    #art_div_3 h3 {
+        margin-right: 0.75vw;
+        margin-left: 1.75vw;
+        font-size: 2.75vw; 
+    }
+
+    
+    /* -------------------- CATEGORY ART DISPLAY -------------------- */
+    .category_section {
+        /* border-top: 0.2vh solid #4c3d2e; */
+        font-size: 3vh;
+    }
+    .art_image_div img {
+        border: 1vh solid #4c3d2e;
+        border-radius: 0.2vh;
+    }
+    .art_img_size_base-width-low {
+        border-radius: 0.2vh;
+    }
+    .art_img_size_base-width-med {
+        border-radius: 0.2vh;
+    }
+    .art_img_size_base-width-high {
+        border-radius: 0.2vh;
+    }
+    .view_details_button {
+        font-size: 2vh;
+        padding: 1vh;
+        margin-top: 0.75vh;
+        width: 30%;
+    }
+    .view_details_button:active {
+        background-color: #4c3d2e;
+    }
+    .portrait_box_size {
+        width: 42.5vh;
+        flex: 0 0 42.5vh;
+    }
+    .landscape_box_size {
+        width: 42.5vh;
+        flex: 0 0 42.5vh;
+    }
+    .prev_div, .next_div {
+        width: 10%;
+    }
+    .next_div img:active, .prev_div img:active {
+        transform: scale(1.1);
+    }
+    .view_more_button {
+        margin: 2vh 0 2vh 2vh;
+        padding: 0.5vh;
+        padding-left: 2vh;
+        align-self: self-start;
+        font-size: 2vh;
+        width: 15vh;
+        height: 4vh;
+    }
+    .view_more_button:active {
+        background-color: #4c3d2e;
+    }
+}
+
+@media screen and (max-aspect-ratio: 15/10) {
+    .art_box {
+        scroll-snap-align: center;
+    }
+}
+
+/* @media (max-aspect-ratio: 9/17) {
+    #about_section {
+        visibility: hidden;
+    }
+} */

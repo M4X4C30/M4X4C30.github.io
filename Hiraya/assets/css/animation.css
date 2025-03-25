@@ -1,0 +1,86 @@
+.To_Fade_In {
+    opacity: 0;
+}
+.Anim_Fade_In {
+    opacity: 0;
+    animation-name: Fade_In;
+    animation-fill-mode: forwards;
+}
+@keyframes Fade_In {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.To_Fade_Out {
+    opacity: 1;
+}
+.Anim_Fade_Out {
+    opacity: 0;
+    animation-name: Fade_Out;
+    animation-fill-mode: forwards;
+}
+@keyframes Fade_Out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.Anim_Scale_X_Expand {
+    animation-name: Scale_X_Expand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes Scale_X_Expand {
+    0% {
+        transform: scale(1);
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: scale(1.1);
+        transform: translate(-1vw, 0);
+    }
+}
+
+
+
+
+
+/* */
+.category_Arts_Show_Animation {
+    animation-name: Quarter_Fade_In;
+    animation-fill-mode: forwards;
+}
+@keyframes Quarter_Fade_In {
+    0% {
+        opacity: 0.25;
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.category_Arts_Hide_Animation {
+    animation-name: Quarter_Fade_Out;
+    animation-fill-mode: forwards;
+}
+@keyframes Quarter_Fade_Out {
+    0% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 0.25;
+        filter: blur(5px);
+    }
+}

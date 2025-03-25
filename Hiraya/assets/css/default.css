@@ -1,0 +1,70 @@
+body {
+    /* background-color: rgb(23, 21, 24); */
+    /* background-color: white; */
+    /* background: linear-gradient(to bottom, #3d2b1f, #0f0f0f); */
+    background-color: #cfcbbd;
+    margin: 0;
+    /* color: #e3d5c0; */
+    /* color: #121212; */
+    color: #503f2e;
+    overflow-x: hidden;
+}
+
+h1, h2 , h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+
+::-webkit-scrollbar-track {
+    /* background: rgba(34, 31, 35, 1); */
+    /* background: linear-gradient(to bottom, #3d2b1f, #0f0f0f); */
+    background-color: #32251d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #66523e;
+    border-bottom-left-radius: 0.3vw;
+    border-bottom-right-radius: 0.3vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* background: #e3d5c0; */
+    background: #4c3d2e;
+}
+
+.unselectable, 
+nav,
+#drop_down_options_div,
+.view_details_button,
+.view_more_button,
+img {
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For IE/Edge */
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+a:focus {
+    outline: none;
+}
+a {
+    -webkit-touch-callout: none;
+}
+
+
+@media screen and (orientation: portrait) and (max-aspect-ratio: 9/10) {
+    ::-webkit-scrollbar {
+        width: 0.5vw;
+    }
+}
+
+
+@media screen and (orientation: landscape), (min-aspect-ratio: 9/10) {
+    ::-webkit-scrollbar {
+        width: 0.75vw;
+    }
+}

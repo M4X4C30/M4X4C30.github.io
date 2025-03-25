@@ -1,0 +1,283 @@
+section h1 {
+    font-weight: bold;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    font-family: 'The Seasons';
+    font-weight: bold;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../../assets/images/about us/header.jpg");
+    background-size: cover;
+    background-position: center;
+}
+header div {
+    width: 100%;
+    height: 100%;
+    background-color: #32251dc7;
+    color: #ad9472;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------- ABOUT WEB -------------------- */
+#about_web_section {
+    /* border: black 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: solid 0.2vw #66523e;
+}
+#about_web_image_div {
+    /* border: red 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#about_web_text_div {
+    /* border: blue 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* -------------------- ABOUT TEAM -------------------- */
+#about_team_section {
+    /* border: black 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2vw;
+    border-bottom: solid 0.2vw #66523e;
+}
+#about_team_image_div {
+    /* border: red 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#about_team_text_div {
+    /* border: blue 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* -------------------- MEET OUR TEAM -------------------- */
+#meet_our_team_section {
+    font-family: 'PlayfairDisplay-Regular';
+    padding-bottom: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid 0.2vw #66523e;
+}
+#member_cards_div {
+    /* border: lime 1px solid; */
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.member_card {
+    background-color: #32251dc7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.member_card img {
+    width: 80%;
+    height: min-content;
+    border-radius: 50%;
+    margin-bottom: 2vw;
+}
+.member_card h5, .member_card h6 {
+    color: #f2f0e7;
+}
+.member_card h5 {
+    margin-bottom: 0.5vw;
+}
+
+/* -------------------- DISCLAIMER -------------------- */
+#disclaimer_section {
+    font-family: 'PlayfairDisplay-Regular';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+
+
+
+@media screen and (orientation: landscape), (min-aspect-ratio: 9/10) {
+    /* -------------------- HEADER -------------------- */
+    header {
+        height: 20vw; 
+        margin-top: 7vh;
+    }
+    header label {
+        font-size: 4vw;
+    }
+
+    /* -------------------- ABOUT WEB -------------------- */
+    #about_web_section {
+        padding: 2vh 5vw 4vh 5vw;
+        flex-direction: row;
+    }
+    #about_web_image_div {
+        width: 40%;
+    }
+    #about_web_image_div img {
+        width: 30vw;
+    }
+    #about_web_text_div {
+        width: 90%;
+        font-size: 5vw;
+    }
+    #about_web_text_div {
+        font-size: 2vw;
+        width: 60%;
+    }
+
+    /* -------------------- ABOUT TEAM -------------------- */
+    #about_team_section {
+        padding: 2vh 5vw 4vh 5vw;
+        flex-direction: row-reverse;
+    }
+    #about_team_image_div {
+        width: 40%;
+    }
+    #about_team_image_div img {
+        width: 30%;
+    }
+    #about_team_text_div {
+        font-size: 2vw;
+        width: 60%;
+    }
+
+    /* -------------------- MEET OUR TEAM -------------------- */
+    #meet_our_team_section {
+        font-size: 1.75vw;
+    }
+    #meet_our_team_section h1 {
+        margin: 0.5vw 0 4vw 0;
+    }
+    #member_cards_div {
+        gap: 2vw;
+    }
+    .member_card {
+        padding: 2vw 2vw 5vw 2vw;
+        width: 18.5vh;
+        height: 28vh;
+        border-radius: 0.5vw;
+    }
+    .member_card img {
+        border: 0.25vw solid #d4a373;
+    }
+    .member_card h5 {
+        font-size: 2.25vh;
+    }
+    .member_card h6 {
+        font-size: 1.75vh;
+    }
+
+    /* -------------------- DISCLAIMER -------------------- */
+    #disclaimer_section {
+        font-size: 2vw;
+        padding: 2vw 6vw 0 6vw;
+    }
+    #disclaimer_section h1 {
+        margin-bottom: 2vw;
+    }
+}
+
+
+@media screen and (orientation: portrait) and (max-aspect-ratio: 9/10) {
+    /* -------------------- HEADER -------------------- */
+    header {
+        height: 40vw; 
+        margin-top: 7vh;
+    }
+    header label {
+        font-size: 9vw;
+    }
+
+    /* -------------------- ABOUT WEB -------------------- */
+    #about_web_section {
+        padding: 2vh 0 4vh 0;
+        flex-direction: column;
+    }
+    #about_web_image_div {
+        width: 90%;
+    }
+    #about_web_image_div img {
+        width: 30vh;
+    }
+    #about_web_text_div {
+        font-size: 5vw;
+        width: 90%;
+    }
+
+    /* -------------------- ABOUT TEAM -------------------- */
+    #about_team_section {
+        padding: 2vh 0 4vh 0;
+        flex-direction: column;
+        gap: 2vh;
+    }
+    #about_team_image_div {
+        width: 90%;
+    }
+    #about_team_image_div img {
+        width: 30%;
+    }
+    #about_team_text_div {
+        font-size: 5vw;
+        width: 90%;
+    }
+
+    /* -------------------- MEET OUR TEAM -------------------- */
+    #meet_our_team_section {
+        font-size: 5vw;
+    }
+    #meet_our_team_section h1 {
+        margin: 0.5vh 0 4vh 0;
+    }
+    #member_cards_div {
+        gap: 1vh;
+    }
+    .member_card {
+        padding: 3vh 2vh 2vh 2vh;
+        width: 20vh;
+        height: 30vh;
+        border-radius: 0.5vh;
+    }
+    .member_card img {
+        border: 0.25vh solid #d4a373;
+    }
+    .member_card h5 {
+        font-size: 2.5vh;
+    }
+    .member_card h6 {
+        font-size: 1.75vh;
+    }
+
+    /* -------------------- DISCLAIMER -------------------- */
+    #disclaimer_section {
+        font-size: 5vw;
+        padding: 2vh 4vh 0 4vh;
+    }
+    #disclaimer_section h1 {
+        margin-bottom: 1vh;
+    }
+}

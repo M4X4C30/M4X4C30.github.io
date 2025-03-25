@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Kenao';
+    src: url('../../assets/fonts/Kenao.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url('../../assets/fonts/Fontspring Demo_Fonts/Fontspring-DEMO-theseasons-lt.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mansalva-Regular';
+    src: url('../../assets/fonts/mansalva/Mansalva-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boston Angel Regular';
+    src: url('../../assets/fonts/Boston_Angel_Font/Boston\ Angel\ Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mistrully';
+    src: url('../../assets/fonts/mistrully/Mistrully.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DMSerifDisplay-Regular';
+    src: url('../../assets/fonts/dm-serif-display/DMSerifDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Regular';
+    src: url('../../assets/fonts//Playfair_Display/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lancelot-Regular';
+    src: url('../../assets/fonts/lancelot/Lancelot-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alice-Regular';
+    src: url('../../assets/fonts/Alice/Alice-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

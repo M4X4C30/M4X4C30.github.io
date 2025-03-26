@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    /* line-height: 1.6; */
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.rectangle-container {
+    width: 900px;
+    max-width: 95%;
+    padding: 30px;
+    background:linear-gradient(135deg, rgba(57, 47, 35, 0.5), rgba(102, 82, 62, 0.385));
+    border: 3px solid rgba(57, 47, 35, 0.75);
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin: 90px auto 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.rectangle-container h1 {
+    align-self: center;
+    text-align: center;
+    color: #f2f0e7;
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #f2f0e7;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+.mural-image {
+    align-self: center;
+    width: auto;
+    height: 450px;
+    margin: 2vh;
+    border: 3px solid #66523e;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mural-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.rectangle-container p,
+.rectangle-container ul {
+    line-height: 1.8;
+    margin: 15px 0;
+    color: #f2f0e7;
+    font-size: 1.1em;
+}
+
+.rectangle-container strong {
+    color: #f2f0e7;
+    font-weight: 600;
+}
+
+.rectangle-container ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+@media (orientation: portrait) {
+    .rectangle-container {
+        width: 90%; 
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em; 
+    }
+}
+
+@media (orientation: landscape) {
+}

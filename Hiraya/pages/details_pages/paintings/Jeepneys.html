@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Detail Page</title>
+    
+    <link rel="icon" href="../../../../assets/images/icons/hiraya white logo.png">
+    <link rel="stylesheet" href="../../../assets/css/default.css">
+    <link rel="stylesheet" href="../../../assets/css/nav_bar_default.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/animation.css">
+
+    <link rel="stylesheet" href="css/paintings.css">
+
+    <style>
+        #background {
+            background-image: url("../../../assets/images/paintings/Jeepneys.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            filter: blur(10px);
+            z-index: -10;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="c:\Users\czarina\Downloads\detailpages\fonts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <div id="background"></div>
+
+    <!-- ------------------ NAVIGATION ------------------ -->
+    <nav>
+        <a href="../../../" id="Hiraya_logo_div">
+            <img src="../../../assets/images/icons/hiraya white logo.png">
+            <div>
+                <h4>iraya</h4>
+                <h5>Home</h5>
+            </div>
+        </a>
+        <div id="nav_bar">
+            <a href="../../../pages/about us/about us.html">About us</a>
+            <a id="drop_down_button_div">
+                <img id="x_icon_img" src="../../../assets/images/icons/x icon.png">
+                <img id="burger_icon_img" src="../../../assets/images/icons/burger icon.png">
+            </a>
+        </div>
+    </nav>
+
+    <div id="drop_down_options_div">
+        <div id="category_options">
+            <a id="nav_Paintings_button" href="../../../pages/category pages/painting_category.html">Paintings</a>
+            <a id="nav_Sculpture_button" href="../../../pages/category pages/sculpture_category.html">Sculpture</a>
+            <a id="nav_Photography_button" href="../../../pages/category pages/photography.html">Photography</a>
+            <a id="nav_Street_Arts_button" href="../../../pages/category pages/street_arts.html">Street Arts</a>
+            <a id="nav_Mixed_Media_Installation_button" href="../../../pages/category pages/mixed_media_and_installation.html">Mixed Media & Installation</a>
+            <a id="nav_Crafts_Forms_button" href="../../../pages/category pages/crafts_and_forms.html">Crafts & Forms</a>
+        </div>
+    </div>
+
+    <div id="focus_div"></div>
+
+
+    <div class="gallery-container">
+        <header>
+            <h1>Jeepneys
+            </h1>
+            <p class="date">Vicente Manansala</p>
+        </header>
+        <div class="artwork-section">
+            <div class="artwork-pictures">
+                <div class="artwork-images" id="artworkImages">
+                    <div class="artwork-image left-crop" id="leftCrop">
+                        <img src="../../../../assets/images/paintings/Jeepneys1.jpg" loading="lazy">
+                    </div>
+                    <br><br>
+                    <div class="artwork-image full-picture" id="fullPicture">
+                        <img src="../../../../assets/images/paintings/Jeepneys.jpg" loading="lazy">
+                    </div>
+                    <br><br>
+                    <div class="artwork-image right-crop" id="rightCrop">
+                        <img src="../../../../assets/images/paintings/Jeepneys2.jpg" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="artwork-details-section">
+                <div class="artwork-details" id="artworkDetails">
+                    <h3 class="fade-up">Details</h3>
+                    <ul class="fade-up">
+                        <li class="fade-up"><strong>Title:</strong>  Jeepneys</li>
+                        <li class="fade-up"><strong>Artist:</strong> Vicente Manansala </li>
+                        <li class="fade-up"><strong>Year Created:</strong> 1957</li>
+                        <li class="fade-up"><strong>Medium/Material Used:</strong> Enamel on Masonite board
+                            .</li>
+                        <li class="fade-up"><strong>Dimension/Size:</strong>51 cm by 59 cm </li>
+                        <li class="fade-up"><strong>Location:</strong>Ateneo Art Gallery at Quezon City, Philippines </li>
+                        
+                    </ul>
+                    <h2 class="fade-up">Artwork Description</h2>
+                    <p class="fade-up">Jeepneys is a painting by Vicente Manansala that depicts the busy, crowded, and polluted streets of Manila. The painting is considered a tribute to the jeepney, a popular form of transportation in the Philippines.  </p>
+                    <h3 class="fade-up">Theme</h3>
+                    <p class="fade-up">The theme of Jeepneys by Vicente Manansala revolves around urban life, Filipino culture, and social realism.</p>
+                    <h3 class="fade-up">Significance in Filipino Culture</h3>
+                    <p class="fade-up"> It captures the bustling urban life of Filipinos, showing the realities of commuting, social interactions, and economic struggles in the city.The painting highlights the jeepney, an iconic mode of transportation that represents Filipino ingenuity, resilience, and adaptability. </p>
+                    <h3 class="fade-up">Facts / Trivia</h3>
+                    <p class="fade-up"> Manansala employed his signature "transparent cubism" technique in this piece, superimposing delicate tones, shapes, and patterns to portray the bustling urban scene. </p>
+                    <h3 class="fade-up">References</h3>
+                    <ul class="fade-up">
+                        <li>Gallery, A. A. (2023, January 1). Jeepneys. Ateneo Art Gallery. Retrieved from <a href="https://ateneoartgallery.com/collections/jeepneys">https://ateneoartgallery.com/collections/jeepneys</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------ FOOTER ------------------ -->
+    <footer>
+        <div id="footer_messages_div">
+            <h3>More Than Just an Art Gallery</h3>
+            <h6>Hiraya Is a Tribute to the Boundless Talent of Filipino Artists, Bringing Their Visions to Life for the World to See.</h6>
+        </div>
+        <div id="footer_title_div" style="background-image: url('../../../../assets/images/landing page/footer image.jpg');">
+            <div id="hiraya_banner_div">
+                <h1>HIRAYA</h1>
+                <h3 id="hiraya_web_info_lbl">A Filipino Art Gallery</h3>
+                <h3 id="disclaimer_label">This site provides information on publicly known artworks in the Philippines. We do not own or claim rights to any displayed art.</h3>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../../assets/scripts/navigation_dropdown.js"></script>
+    <!-- <script src="Spolarium.js"></script> -->
+</body>
+</html>

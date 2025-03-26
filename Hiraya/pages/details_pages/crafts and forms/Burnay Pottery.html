@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Online Filipino Art Gallery</title>
+
+    <link rel="icon" href="../../../../assets/images/icons/hiraya white logo.png">
+    <link rel="stylesheet" href="../../../assets/css/default.css">
+    <link rel="stylesheet" href="../../../assets/css/nav_bar_default.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/animation.css">
+
+    <link rel="stylesheet" href="css/crafts and forms.css">
+    <style>
+        body {
+            background-image: url('../../../assets/images/crafts and forms/Burnay Pottery.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            padding-top: 8vh;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            backdrop-filter: blur(3px);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 6, 4, 0.5); 
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- ------------------ NAVIGATION ------------------ -->
+    <nav>
+        <a href="../../../" id="Hiraya_logo_div">
+            <img src="../../../assets/images/icons/hiraya white logo.png">
+            <div>
+                <h4>iraya</h4>
+                <h5>Home</h5>
+            </div>
+        </a>
+        <div id="nav_bar">
+            <a href="../../../pages/about us/about us.html">About us</a>
+            <a id="drop_down_button_div">
+                <img id="x_icon_img" src="../../../assets/images/icons/x icon.png">
+                <img id="burger_icon_img" src="../../../assets/images/icons/burger icon.png">
+            </a>
+        </div>
+    </nav>
+
+    <div id="drop_down_options_div">
+        <div id="category_options">
+            <a id="nav_Paintings_button" href="../../../pages/category pages/painting_category.html">Paintings</a>
+            <a id="nav_Sculpture_button" href="../../../pages/category pages/sculpture_category.html">Sculpture</a>
+            <a id="nav_Photography_button" href="../../../pages/category pages/photography.html">Photography</a>
+            <a id="nav_Street_Arts_button" href="../../../pages/category pages/street_arts.html">Street Arts</a>
+            <a id="nav_Mixed_Media_Installation_button" href="../../../pages/category pages/mixed_media_and_installation.html">Mixed Media & Installation</a>
+            <a id="nav_Crafts_Forms_button" href="../../../pages/category pages/crafts_and_forms.html">Crafts & Forms</a>
+        </div>
+    </div>
+
+    <div style = "text-align: center; margin: auto; width: 90%;">
+        <label class = "title-of-artwork">Burnay Pottery</label>
+    </div>
+    <table> 
+        <tr>
+            <th class = "row1">
+                <img src="../../../assets/images/crafts and forms/Burnay Pottery.jpg" alt="Artwork" class="artwork-image" id="artwork">
+            </th>
+        </tr>
+        <tr>
+            <td class = "row2">
+                <label class = "artist-name">Artist: Fidel Go</label><br>
+                <label class = "origin">Place of Origin: Vigan, Ilocos Sur</label>
+                <br><br>
+            </td>
+        </tr>
+    </table>         
+    <div class = "glass-container">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <label>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Fidel Go is a master potter known for preserving and perfecting the art of Burnay pottery, a 
+            centuries-old tradition in Vigan. Burnay refers to earthenware jars made from locally sourced clay, shaped using a potter’s 
+            wheel, and fired in a traditional dragon kiln. These jars were historically used for storing water, rice, vinegar, and 
+            fermented fish (bagoong).
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Burnay pottery is an iconic symbol of Vigan’s rich history and cultural identity, dating back to 
+            pre-colonial times. Fidel Go’s dedication to the craft has ensured its survival despite modernization, earning him the 
+            Gawad sa Manlilikha ng Bayan (National Living Treasures Award) in 1990.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Fidel Go learned the craft from his ancestors, continuing the tradition passed down through 
+            generations. His expertise and innovations in pottery have helped sustain Burnay-making as an important cultural heritage 
+            of Vigan.
+            <br><br>
+            <b>REFERENCE:</b><br>
+            https://farm4.staticflickr.com/3899/15049242157_4c457247af_o.jpg<br>
+            https://themixedculture.com/2013/11/04/burnay-vigan-ilocos-sur/<br><br>
+        </label>
+    </div>
+
+    <!-- ------------------ FOOTER ------------------ -->
+    <footer>
+        <div id="footer_messages_div">
+            <h3>More Than Just an Art Gallery</h3>
+            <h6>Hiraya Is a Tribute to the Boundless Talent of Filipino Artists, Bringing Their Visions to Life for the World to See.</h6>
+        </div>
+        <div id="footer_title_div" style="background-image: url('../../../../assets/images/landing page/footer image.jpg');">
+            <div id="hiraya_banner_div">
+                <h1>HIRAYA</h1>
+                <h3 id="hiraya_web_info_lbl">A Filipino Art Gallery</h3>
+                <h3 id="disclaimer_label">This site provides information on publicly known artworks in the Philippines. We do not own or claim rights to any displayed art.</h3>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../../assets/scripts/navigation_dropdown.js"></script>
+</body>
+</html>

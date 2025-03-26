@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Online Filipino Art Gallery</title>
+
+    <link rel="icon" href="../../../../assets/images/icons/hiraya white logo.png">
+    <link rel="stylesheet" href="../../../assets/css/default.css">
+    <link rel="stylesheet" href="../../../assets/css/nav_bar_default.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/animation.css">
+
+    <link rel="stylesheet" href="assets/MMAI.css">
+<style>
+    body {
+        background-image: url('../../../assets/images/mixed media and installation/Oblivious to Oblivion.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        padding-top: 8vh;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        backdrop-filter: blur(3px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(17, 6, 4, 0.5); 
+        z-index: -1;
+    }
+</style>
+</head>
+<body>
+    <!-- ------------------ NAVIGATION ------------------ -->
+    <nav>
+        <a href="../../../" id="Hiraya_logo_div">
+            <img src="../../../assets/images/icons/hiraya white logo.png">
+            <div>
+                <h4>iraya</h4>
+                <h5>Home</h5>
+            </div>
+        </a>
+        <div id="nav_bar">
+            <a href="../../../pages/about us/about us.html">About us</a>
+            <a id="drop_down_button_div">
+                <img id="x_icon_img" src="../../../assets/images/icons/x icon.png">
+                <img id="burger_icon_img" src="../../../assets/images/icons/burger icon.png">
+            </a>
+        </div>
+    </nav>
+
+    <div id="drop_down_options_div">
+        <div id="category_options">
+            <a id="nav_Paintings_button" href="../../../pages/category pages/painting_category.html">Paintings</a>
+            <a id="nav_Sculpture_button" href="../../../pages/category pages/sculpture_category.html">Sculpture</a>
+            <a id="nav_Photography_button" href="../../../pages/category pages/photography.html">Photography</a>
+            <a id="nav_Street_Arts_button" href="../../../pages/category pages/street_arts.html">Street Arts</a>
+            <a id="nav_Mixed_Media_Installation_button" href="../../../pages/category pages/mixed_media_and_installation.html">Mixed Media & Installation</a>
+            <a id="nav_Crafts_Forms_button" href="../../../pages/category pages/crafts_and_forms.html">Crafts & Forms</a>
+        </div>
+    </div>
+
+    <div id="focus_div"></div>
+    
+
+    <label class = "title-of-artwork">Oblivious to Oblivion</label>
+    <table> 
+        <tr>
+            <td class = "column1">
+                <img src = "../../../assets/images/mixed media and installation/Geraldine Javier.jpg" class = "artist-image" ><br>
+                <div style = "text-align: right;">
+                    <label class = "artist-name">Geraldine Javier</label><br>
+                    <label class = "year-created">Created in 2017</label><br>
+                    <label class = "year-created">352 cm in height, 354 cm in width, and 404 cm in depth, with individual panels ranging from 13 x 12 cm to 23 x 27.5 cm.</label>
+                </div><br><br>
+                <div style = "text-align: left;">
+                    <label class = "medium">acrylic painting with a Laxan component, a motor, and a steel armature</label>
+                </div>
+                <label></label>
+            </td>
+            <th class = "column2">
+                <div class="magnifier-container">
+                    <img src="../../../assets/images/mixed media and installation/Oblivious to Oblivion.jpg" alt="Artwork" class="artwork-image" id="artwork">
+                </div>
+            </th>
+        </tr>            
+    </table>
+    <div class="magnifier" id="magnifier"></div>
+
+    <div class = "glass-container">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <label>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Geraldine Javier's "Oblivious to Oblivion" is a large-scale, mixed media installation that delves 
+            into complex themes of human existence.  The title itself hints at the work's exploration of being unaware or detached from 
+            the concept of oblivion, possibly touching upon themes of denial, escapism, or the human tendency to avoid confronting 
+            mortality. Javier's signature style, which blends realism with a touch of the surreal and evokes intense emotions, is 
+            likely present in this installation. The combination of materials and the scale of the piece contribute to a 
+            thought-provoking experience for the viewer, inviting contemplation on the nature of life, death, and human psychology. 
+            <br><br>
+            <b>EXHIBITIONS:</b> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;The installation was prominently displayed at the 35th São Paulo Biennial in 2023, where it was 
+            described as a "nuvem de plantas e raízes bordada" (cloud of embroidered plants and roots).
+            <br><br>
+            <b>REFERENCE:</b><br>
+            https://www.arariogallery.com/artists/61-geraldine-javier/works/1045-geraldine-javier-oblivious-to-oblivion-2017/
+            <br><br>
+        </label>
+    </div>
+
+
+     <!-- ------------------ FOOTER ------------------ -->
+     <footer>
+        <div id="footer_messages_div">
+            <h3>More Than Just an Art Gallery</h3>
+            <h6>Hiraya Is a Tribute to the Boundless Talent of Filipino Artists, Bringing Their Visions to Life for the World to See.</h6>
+        </div>
+        <div id="footer_title_div" style="background-image: url('../../../../assets/images/landing page/footer image.jpg');">
+            <div id="hiraya_banner_div">
+                <h1>HIRAYA</h1>
+                <h3 id="hiraya_web_info_lbl">A Filipino Art Gallery</h3>
+                <h3 id="disclaimer_label">This site provides information on publicly known artworks in the Philippines. We do not own or claim rights to any displayed art.</h3>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../../assets/scripts/navigation_dropdown.js"></script>
+    <script src="assets/magnifier.js"></script>
+</body>
+</html>

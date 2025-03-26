@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Online Filipino Art Gallery</title>
+
+    <link rel="icon" href="../../../../assets/images/icons/hiraya white logo.png">
+    <link rel="stylesheet" href="../../../assets/css/default.css">
+    <link rel="stylesheet" href="../../../assets/css/nav_bar_default.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/animation.css">
+
+    <link rel="stylesheet" href="assets/MMAI.css">
+<style>
+    body {
+        background-image: url('../../../assets/images/mixed media and installation/Wood Things.png');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        padding-top: 8vh;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        backdrop-filter: blur(3px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(17, 6, 4, 0.5); 
+        z-index: -1;
+    }
+</style>
+</head>
+<body>
+    <!-- ------------------ NAVIGATION ------------------ -->
+    <nav>
+        <a href="../../../" id="Hiraya_logo_div">
+            <img src="../../../assets/images/icons/hiraya white logo.png">
+            <div>
+                <h4>iraya</h4>
+                <h5>Home</h5>
+            </div>
+        </a>
+        <div id="nav_bar">
+            <a href="../../../pages/about us/about us.html">About us</a>
+            <a id="drop_down_button_div">
+                <img id="x_icon_img" src="../../../assets/images/icons/x icon.png">
+                <img id="burger_icon_img" src="../../../assets/images/icons/burger icon.png">
+            </a>
+        </div>
+    </nav>
+
+    <div id="drop_down_options_div">
+        <div id="category_options">
+            <a id="nav_Paintings_button" href="../../../pages/category pages/painting_category.html">Paintings</a>
+            <a id="nav_Sculpture_button" href="../../../pages/category pages/sculpture_category.html">Sculpture</a>
+            <a id="nav_Photography_button" href="../../../pages/category pages/photography.html">Photography</a>
+            <a id="nav_Street_Arts_button" href="../../../pages/category pages/street_arts.html">Street Arts</a>
+            <a id="nav_Mixed_Media_Installation_button" href="../../../pages/category pages/mixed_media_and_installation.html">Mixed Media & Installation</a>
+            <a id="nav_Crafts_Forms_button" href="../../../pages/category pages/crafts_and_forms.html">Crafts & Forms</a>
+        </div>
+    </div>
+
+    <div id="focus_div"></div>
+    
+
+    <label class = "title-of-artwork">Wood Things</label>
+    <table> 
+        <tr>
+            <td class = "column1">
+                <img src = "../../../assets/images/mixed media and installation/Junyee (Luis Yee Jr.).jpg" class = "artist-image" ><br>
+                <div style = "text-align: right;">
+                    <label class = "artist-name">Junyee (Luis Yee Jr.)</label><br>
+                    <label class = "year-created">Created in 1981</label><br>
+                </div><br><br>
+                <div style = "text-align: left;">
+                    <label class = "medium">Kapok pods and Dry banana stalks</label>
+                </div>
+                <label></label>
+            </td>
+            <th class = "column2">
+                <div class="magnifier-container">
+                    <img src="../../../assets/images/mixed media and installation/Wood Things.png" alt="Artwork" class="artwork-image" id="artwork">
+                </div>
+            </th>
+        </tr>            
+    </table>
+    <div class="magnifier" id="magnifier"></div>
+    
+    <div class = "glass-container">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <label>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"Wood Things" consists of numerous kapok pods and banana stalks arranged in a way that suggests 
+            they are crawling or growing on the walls and floor of the exhibition space. The kapok pods, with their spiky exteriors, 
+            resemble strange insects or creatures from a primeval forest. The arrangement of the materials creates a sense of movement 
+            and dynamism, as if the "wood things" are alive and interacting with their environment.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"Wood Things" was a groundbreaking work in Philippine art, demonstrating the potential of 
+            installation art to create immersive and thought-provoking experiences. It marked a shift towards the use of indigenous 
+            and organic materials in contemporary art. The work's environmental themes were also prescient, anticipating growing 
+            concerns about ecological issues.
+            <br><br>
+            <b>EXHIBITIONS:</b> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"Wood Things" was first exhibited at the Cultural Center of the Philippines (CCP) in 1981.
+            It was later shown at the 12th Paris Biennale in 1982, representing the Philippines in this international exhibition.            
+            <br><br>
+            <b>REFERENCE:</b><br>
+            https://artandmarket.net/dialogues/2020/9/7/conversation-with-mindanao-artist-junyee
+            <br><br>
+        </label>
+    </div>
+
+
+     <!-- ------------------ FOOTER ------------------ -->
+     <footer>
+        <div id="footer_messages_div">
+            <h3>More Than Just an Art Gallery</h3>
+            <h6>Hiraya Is a Tribute to the Boundless Talent of Filipino Artists, Bringing Their Visions to Life for the World to See.</h6>
+        </div>
+        <div id="footer_title_div" style="background-image: url('../../../../assets/images/landing page/footer image.jpg');">
+            <div id="hiraya_banner_div">
+                <h1>HIRAYA</h1>
+                <h3 id="hiraya_web_info_lbl">A Filipino Art Gallery</h3>
+                <h3 id="disclaimer_label">This site provides information on publicly known artworks in the Philippines. We do not own or claim rights to any displayed art.</h3>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../../assets/scripts/navigation_dropdown.js"></script>
+    <script src="assets/magnifier.js"></script>
+</body>
+</html>

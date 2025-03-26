@@ -1,5 +1,6 @@
 footer {
     border-top: #66523e 0.2vw solid;
+    /* background-color: #cfcbbd; */
 }
 #footer_messages_div {
     display: flex;
